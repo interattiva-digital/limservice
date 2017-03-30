@@ -1,0 +1,25 @@
+.header {
+    @include clearfix();
+    @include flex-align(null, middle);
+    text-align: center;
+}
+
+.header__section {
+    display: inline-block;
+    vertical-align: middle;
+    @include grid-col(4);
+}
+
+.header__section--left {
+    text-align: left;
+}
+
+.header__section--right {
+    text-align: right;
+}
+
+.header__aligned {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
