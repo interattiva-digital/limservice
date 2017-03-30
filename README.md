@@ -1,10 +1,18 @@
-### Bolt Installer for Composer
+#LIM Service
 
-To start the install just run the following command replacing the project with
-the name you want to use.
+## Requirements
 
-`composer create-project bolt/composer-install:^3.2 <MYPROJECT> --prefer-dist`
+* `npm`
+* `composer`
 
+## Project Build
 
-After the packages have downloaded, you can choose whether you would like a
-separate public directory and if so choose a name.
+To build this project do the following:
+
+* `composer install`
+* `npm install`
+* `npm run dev` for development
+* `npm run production` for production
+* `npm run watch` to start BrowserSync
+
+The web root is located under `public`
