@@ -12,8 +12,10 @@
 
 {% include 'partials/_header.twig' %}
 
-{% block content %}
-{% endblock %}
+<div id="app">
+    {% block content %}
+    {% endblock %}
+</div>
 
 <script type="text/javascript" src="{{ asset('dist/js/app.js', 'theme') }}"></script>
 

@@ -2,20 +2,53 @@
 
 {% block content %}
 
-    <div class="row">
+<div class="front-container">
+    <slider>
+        <div slot="content">
+            <slide content-id="home">
+                <div class="row">
+                    <div class="front-panel">
+                        <div class="front-panel__title">
+                            <h3>Horeca</h3>
+                        </div>
+                        <div class="front-panel__description">Детская мебель</div>
+                        <div class="front-panel__link">
+                            <a href="">Подробнее</a>
+                        </div>
+                    </div>
 
-        <div class="column small-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nihil perspiciatis quis. Dicta, facilis ipsam?
+                    <div class="front-panel">
+                        <div class="front-panel__title">
+                            <h3>Business</h3>
+                        </div>
+                        <div class="front-panel__description">Детская мебель</div>
+                        <div class="front-panel__link">
+                            <a href="">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="front-panel">
+                        <div class="front-panel__title">
+                            <h3>Kids</h3>
+                        </div>
+                        <div class="front-panel__description">Детская мебель</div>
+                        <div class="front-panel__link">
+                            <a href="">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </slide>
         </div>
-
-        <div class="column small-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nihil perspiciatis quis. Dicta, facilis ipsam?
+        <div slot="controls">
+            <ul>
+                <li data-target="#home">Главная</li>
+                <li data-target="#about">О Нас</li>
+                <li data-target="#services">Услуги</li>
+                <li data-target="#portfolio">Портфолио</li>
+                <li data-target="#products">Продукция</li>
+            </ul>
         </div>
-
-        <div class="column small-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt nihil perspiciatis quis. Dicta, facilis ipsam?
-        </div>
-
-    </div>
+    </slider>
+</div>
 
 {% endblock %}

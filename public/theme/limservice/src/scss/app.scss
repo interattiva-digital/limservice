@@ -2,4 +2,13 @@
 
 @include foundation-everything(true);
 
+@import "pages/front";
+
 @import "partials/header";
+
+@import "components/front-panel";
+@import "components/slider-controls";
+
+.test-class-please-ignore {
+    background-color: red;
+}

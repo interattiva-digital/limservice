@@ -24,6 +24,7 @@ mix.browserSync({
     open: false,
     files: [
         'public/theme/limservice/src/js/**/*.js',
+        'public/theme/limservice/src/js/**/*.vue',
         'public/theme/limservice/dist/css/**/*.css',
         'public/theme/limservice/**/*.twig'
     ]
@@ -33,7 +34,8 @@ if(mix.config.inProduction) {
 
     let paths = [
         glob.sync(path.join(__dirname, 'public/theme/limservice/**/*.twig')),
-        glob.sync(path.join(__dirname, 'public/theme/limservice/src/js/**/*.js'))
+        glob.sync(path.join(__dirname, 'public/theme/limservice/src/js/**/*.js')),
+        glob.sync(path.join(__dirname, 'public/theme/limservice/src/js/**/*.vue'))
     ];
 
     options.purifyCss = {
