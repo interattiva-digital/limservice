@@ -1,0 +1,29 @@
+.slide-controls {
+    display: flex;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 0;
+
+    list-style-type: none;
+    padding: 21px 76px;
+    margin: 0;
+
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+
+    .slide-control {
+        display: inline-block;
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        cursor: pointer;
+
+        text-transform: uppercase;
+    }
+}
