@@ -1,21 +1,27 @@
 <template>
-    <div>
+    <div class="inherit-height">
         <div class="slider-container">
             <div class="wrapper clearfix" :style="wrapperStyle">
-                <slot name="content"></slot>
+                <slot></slot>
             </div>
         </div>
 
         <div class="slider-controls">
-            <slot name="controls"></slot>
+            <slide-controls>
+                <slide-control content-id="home" @change-slide="changeSlide">Главная</slide-control>
+                <slide-control content-id="about" @change-slide="changeSlide">О Нас</slide-control>
+                <slide-control content-id="services" @change-slide="changeSlide">Услуги</slide-control>
+                <slide-control content-id="portfolio" @change-slide="changeSlide">Портфолио</slide-control>
+                <slide-control content-id="products" @change-slide="changeSlide">Продукция</slide-control>
+            </slide-controls>
         </div>
     </div>
 </template>
 
-<style>
+<style scoped>
     .slider-container {
         overflow: hidden;
-        height: 500px;
+        height: 100%;
         position: relative;
     }
 
@@ -27,6 +33,10 @@
 
     .slider-container .slide {
         float: left;
+    }
+
+    .inherit-height {
+        height: inherit;
     }
 </style>
 
@@ -40,7 +50,8 @@
                 $slides: {},
                 $slideControls: {},
                 slideWidth: 0,
-                currentPosition: 0
+                currentPosition: 0,
+                wrapperWidth: 0
             }
         },
 
@@ -50,20 +61,36 @@
             }
         },
 
+        components: {
+            'slide-control': require('./slide-control.vue'),
+            'slide-controls': require('./slide-controls.vue'),
+            'slide': require('./slide.vue'),
+        },
+
         methods: {
             goToSlide(id, event) {
                 let slide = this.$slides.filter(`${id}`);
                 let slideIndex = this.$slides.index(slide);
 
-                this.currentPosition = -this.slideWidth * slideIndex;
+                if(slideIndex >= 0) {
+                    this.currentPosition = -this.slideWidth * slideIndex;
+                }
+            },
+
+            changeSlide(id) {
+                let slide = this.$slides.filter(`#${id}`);
+                let slideIndex = this.$slides.index(slide);
+
+                if(slideIndex >= 0) {
+                    this.currentPosition = -this.slideWidth * slideIndex;
+                }
             }
         },
 
         mounted() {
             this.$container = $(this.$el).children('.slider-container');
-            this.$wrapper = $(this.$el).find('.slider-container .wrapper');
-            this.$slides = $(this.$el).find('.slide');
-            this.$slideControls = $(this.$el).find('.slide-control');
+            this.$wrapper = $(this.$el).find('.slider-container > .wrapper');
+            this.$slides = this.$wrapper.children();
 
             this.slideWidth = this.$container.width();
             this.slideHeight = this.$container.height();
@@ -71,12 +98,6 @@
             this.$wrapper.css('width', this.slideWidth * this.$slides.length);
             $(this.$slides).css('width', this.slideWidth);
             $(this.$slides).css('height', this.slideHeight);
-
-            this.$slideControls.on('click', (e) => {
-                let target = $(e.target).attr('data-target');
-
-                this.goToSlide(target);
-            });
         }
     }
 </script>

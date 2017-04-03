@@ -2,10 +2,9 @@
 
 {% block content %}
 
-<div class="front-container">
-    <slider>
-        <div slot="content">
-            <div id="home" class="slide">
+    <div class="front-container">
+        <slider>
+            <slide content-id="home">
                 <div class="row">
                     <div class="front-panel">
                         <div class="front-panel__title">
@@ -37,8 +36,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="about" class="slide">
+            </slide>
+            <slide content-id="about">
                 <h1>test</h1>
                 <div class="row">
                     <div class="front-panel">
@@ -71,21 +70,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="services" class="slide">
+            </slide>
+            <slide content-id="services">
                 <h1>Services</h1>
-            </div>
-        </div>
-        <div slot="controls">
-            <ul class="slide-controls">
-                <li class="slide-control" data-target="#home">Главная</li>
-                <li class="slide-control" data-target="#about">О Нас</li>
-                <li class="slide-control" data-target="#services">Услуги</li>
-                <li class="slide-control" data-target="#portfolio">Портфолио</li>
-                <li class="slide-control" data-target="#products">Продукция</li>
-            </ul>
-        </div>
-    </slider>
-</div>
+            </slide>
+        </slider>
+    </div>
 
 {% endblock %}

@@ -2,6 +2,8 @@
     @include clearfix();
     @include flex-align(null, middle);
     text-align: center;
+
+    height: $header-height;
 }
 
 .header__section {

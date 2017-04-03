@@ -1,3 +1,5 @@
 .front-panel {
     @include flex-grid-column(4);
+
+    height: 100%;
 }

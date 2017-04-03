@@ -2,6 +2,8 @@
 
 @include foundation-everything(true);
 
+@import "variables";
+
 @import "pages/front";
 
 @import "partials/header";
@@ -9,6 +11,6 @@
 @import "components/front-panel";
 @import "components/slider-controls";
 
-.test-class-please-ignore {
-    background-color: red;
+html, body {
+    height: 100%;
 }

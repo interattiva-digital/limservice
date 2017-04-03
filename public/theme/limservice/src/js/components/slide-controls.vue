@@ -1,17 +1,15 @@
 <template>
-    <div class="slide" :id="contentId">
+    <ul class="slide-controls">
         <slot></slot>
-    </div>
+    </ul>
 </template>
 
-<style scoped>
+<style>
 
 </style>
 
 <script>
     export default {
-        props: ['contentId'],
-
         data() {
             return {
 
