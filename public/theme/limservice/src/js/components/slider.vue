@@ -23,16 +23,15 @@
         overflow: hidden;
         height: 100%;
         position: relative;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .slider-container .wrapper {
         position: relative;
 
         transition: transform 0.5s;
-    }
-
-    .slider-container .slide {
-        float: left;
     }
 
     .inherit-height {

@@ -1,5 +1,14 @@
 .front-container {
     position: relative;
 
-    height: 600px;
+    height: 700px;
+}
+
+.front-row {
+    @include flex-grid-row(collapse);
+    flex-wrap: nowrap;
+
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }

@@ -5,7 +5,9 @@
 </template>
 
 <style scoped>
-
+    .slide {
+        float: left;
+    }
 </style>
 
 <script>

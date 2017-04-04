@@ -15,6 +15,8 @@ let options = {};
  |
  */
 
+mix.setResourceRoot('public/theme/limservice/dist');
+
 mix.js('public/theme/limservice/src/js/app.js', 'public/theme/limservice/dist/js/app.js');
 
 mix.sass('public/theme/limservice/src/scss/app.scss', 'public/theme/limservice/dist/css/app.css');
