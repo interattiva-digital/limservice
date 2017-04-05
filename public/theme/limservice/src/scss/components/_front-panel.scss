@@ -1,6 +1,7 @@
 .front-panel {
     @include flex-grid-column(4, 0);
     position: relative;
+    //z-index: 1;
 
     max-width: none;
 
@@ -36,7 +37,7 @@
     }
 
     &:hover:after {
-        box-shadow: 0 5px 25px 0 rgba(68, 48, 77, 0.50);
+        box-shadow: 0 5px 15px 0 rgba(68, 48, 77, 0.50);
     }
 
 }

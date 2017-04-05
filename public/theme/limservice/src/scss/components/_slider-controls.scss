@@ -8,10 +8,10 @@
     left: 50%;
     transform: translateX(-50%);
 
-    bottom: 0;
+    bottom: -25px;
 
     list-style-type: none;
-    padding: 21px 76px;
+    padding: 21px 30px;
     margin: 0;
 
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
@@ -20,12 +20,22 @@
         display: inline-block;
         margin-right: 30px;
 
+
+        cursor: pointer;
+
+        font-family: $font-light;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #929292;
+
+        transition: color 0.5s;
+
         &:last-child {
             margin-right: 0;
         }
 
-        cursor: pointer;
-
-        text-transform: uppercase;
+        &.active {
+            color: $text-color;
+        }
     }
 }

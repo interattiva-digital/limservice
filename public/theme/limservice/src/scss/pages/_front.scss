@@ -6,9 +6,14 @@
 
 .front-row {
     @include flex-grid-row(collapse);
+    position: relative;
+    z-index: 0;
+    border-color: transparent;
     flex-wrap: nowrap;
 
     height: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    background-color: #ffffff;
+    background-clip: content-box;
 }

@@ -8,11 +8,11 @@
 
         <div class="slider-controls">
             <slide-controls>
-                <slide-control content-id="home" @change-slide="changeSlide">Главная</slide-control>
-                <slide-control content-id="about" @change-slide="changeSlide">О Нас</slide-control>
-                <slide-control content-id="services" @change-slide="changeSlide">Услуги</slide-control>
-                <slide-control content-id="portfolio" @change-slide="changeSlide">Портфолио</slide-control>
-                <slide-control content-id="products" @change-slide="changeSlide">Продукция</slide-control>
+                <slide-control content-id="home" @change-slide="changeSlide" :active-slide="activeSlide">Главная</slide-control>
+                <slide-control content-id="about" @change-slide="changeSlide" :active-slide="activeSlide">О Нас</slide-control>
+                <slide-control content-id="services" @change-slide="changeSlide" :active-slide="activeSlide">Услуги</slide-control>
+                <slide-control content-id="portfolio" @change-slide="changeSlide" :active-slide="activeSlide">Портфолио</slide-control>
+                <slide-control content-id="products" @change-slide="changeSlide" :active-slide="activeSlide">Продукция</slide-control>
             </slide-controls>
         </div>
     </div>
@@ -20,12 +20,11 @@
 
 <style scoped>
     .slider-container {
-        overflow: hidden;
+        overflow-y: visible;
         height: 100%;
         position: relative;
-
-        padding-top: 30px;
-        padding-bottom: 30px;
+        /*padding-top: 20px;*/
+        /*padding-bottom: 20px;*/
     }
 
     .slider-container .wrapper {
@@ -36,6 +35,7 @@
 
     .inherit-height {
         height: inherit;
+        overflow-x: hidden;
     }
 </style>
 
@@ -49,14 +49,19 @@
                 $slides: {},
                 $slideControls: {},
                 slideWidth: 0,
-                currentPosition: 0,
-                wrapperWidth: 0
+                wrapperWidth: 0,
+                currentSlideIndex: 0,
+                activeSlide: ''
             }
         },
 
         computed: {
             wrapperStyle: function () {
                 return `transform: translateX(${this.currentPosition}px);`;
+            },
+
+            currentPosition() {
+                return -this.slideWidth * this.currentSlideIndex;
             }
         },
 
@@ -67,21 +72,13 @@
         },
 
         methods: {
-            goToSlide(id, event) {
-                let slide = this.$slides.filter(`${id}`);
-                let slideIndex = this.$slides.index(slide);
-
-                if(slideIndex >= 0) {
-                    this.currentPosition = -this.slideWidth * slideIndex;
-                }
-            },
-
             changeSlide(id) {
                 let slide = this.$slides.filter(`#${id}`);
                 let slideIndex = this.$slides.index(slide);
 
                 if(slideIndex >= 0) {
-                    this.currentPosition = -this.slideWidth * slideIndex;
+                    this.currentSlideIndex = slideIndex;
+                    this.activeSlide = id;
                 }
             },
 
@@ -96,6 +93,8 @@
                 this.$wrapper.css('width', this.slideWidth * this.$slides.length);
                 $(this.$slides).css('width', this.slideWidth);
                 $(this.$slides).css('height', this.slideHeight);
+
+                this.activeSlide = this.$slides.first().attr('id');
             }
         },
 

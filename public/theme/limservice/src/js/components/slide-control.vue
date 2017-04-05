@@ -1,5 +1,5 @@
 <template>
-    <li class="slide-control" :data-target="contentId" @click="emitSlideChange">
+    <li class="slide-control" :class="{ 'active': isActive }" :data-target="contentId" @click="emitSlideChange">
         <slot></slot>
     </li>
 </template>
@@ -10,11 +10,17 @@
 
 <script>
     export default {
-        props: ['contentId'],
+        props: ['contentId', 'activeSlide'],
 
         data() {
             return {
 
+            }
+        },
+
+        computed: {
+            isActive() {
+                return this.contentId === this.activeSlide;
             }
         },
 
