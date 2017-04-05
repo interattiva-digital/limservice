@@ -1,7 +1,17 @@
+/* Font Variables */
+
+$text-color: #131431;
+$text-color-contrast: #ffffff;
+
 /* Header Variables */
 
-$header-height: 120px;
+$header-height: 12vh;
 
 /* Front Variables */
 
-$front-container-height: 600px;
+$front-container-height: 70vh;
+
+/* COMPONENTS */
+
+/* Front panel */
+$front-panel-animation-time: 0.5s;

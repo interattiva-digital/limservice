@@ -11,9 +11,16 @@
 
 @import "components/front-panel";
 @import "components/slider-controls";
+@import "components/buttons";
 
 html, body {
     height: 100%;
 
     background: #868686;
+
+    color: $text-color;
+}
+
+* {
+    color: inherit;
 }

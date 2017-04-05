@@ -83,20 +83,26 @@
                 if(slideIndex >= 0) {
                     this.currentPosition = -this.slideWidth * slideIndex;
                 }
+            },
+
+            setup() {
+                this.$container = $(this.$el).children('.slider-container');
+                this.$wrapper = $(this.$el).find('.slider-container > .wrapper');
+                this.$slides = this.$wrapper.children();
+
+                this.slideWidth = this.$container.width();
+                this.slideHeight = this.$container.height();
+
+                this.$wrapper.css('width', this.slideWidth * this.$slides.length);
+                $(this.$slides).css('width', this.slideWidth);
+                $(this.$slides).css('height', this.slideHeight);
             }
         },
 
         mounted() {
-            this.$container = $(this.$el).children('.slider-container');
-            this.$wrapper = $(this.$el).find('.slider-container > .wrapper');
-            this.$slides = this.$wrapper.children();
+            this.setup();
 
-            this.slideWidth = this.$container.width();
-            this.slideHeight = this.$container.height();
-
-            this.$wrapper.css('width', this.slideWidth * this.$slides.length);
-            $(this.$slides).css('width', this.slideWidth);
-            $(this.$slides).css('height', this.slideHeight);
+            $(window).on('resize', this.setup);
         }
     }
 </script>

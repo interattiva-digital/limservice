@@ -1,0 +1,25 @@
+.lim-button {
+    font-family: $font-light;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    padding: 12px 36px;
+    text-align: center;
+
+    background: white;
+
+    color: $text-color;
+
+    transition: box-shadow 0.3s;
+
+    * {
+        color: $text-color;
+    }
+
+    &:hover {
+        box-shadow: 0 5px 10px 0 rgba(19,20,50,0.30);
+
+        color: $text-color;
+    }
+}

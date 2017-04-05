@@ -21,6 +21,12 @@ mix.js('public/theme/limservice/src/js/app.js', 'public/theme/limservice/dist/js
 
 mix.sass('public/theme/limservice/src/scss/app.scss', 'public/theme/limservice/dist/css/app.css');
 
+mix.copyDirectory('public/theme/limservice/src/img', 'public/theme/limservice/dist/img');
+
+mix.copyDirectory('public/theme/limservice/src/fonts', 'public/theme/limservice/dist/fonts');
+
+mix.sourceMaps();
+
 mix.browserSync({
     proxy: 'limservice.dev',
     open: false,
@@ -44,5 +50,7 @@ if(mix.config.inProduction) {
         paths: [].concat.apply([], paths)
     }
 }
+
+options.processCssUrls = false;
 
 mix.options(options);
