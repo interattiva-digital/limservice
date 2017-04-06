@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/Burger</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.92307692,5.41666667 L9.92307692,6.41666667 L21,6.41666667 L21,5.41666667 L9.92307692,5.41666667 L9.92307692,5.41666667 Z M3,4 L7.15384615,4 L7.15384615,8.25 L3,8.25 L3,4 Z M4.38461538,5.41666667 L4.38461538,6.83333333 L5.76923077,6.83333333 L5.76923077,5.41666667 L4.38461538,5.41666667 Z M3,12.5 L3,13.5 L21,13.5 L21,12.5 L3,12.5 L3,12.5 Z M3,19.5833333 L3,20.5833333 L21,20.5833333 L21,19.5833333 L3,19.5833333 L3,19.5833333 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu/Primary" transform="translate(-1252.000000, -52.000000)">
+            <g id="Contacts-menu">
+                <g transform="translate(1143.000000, 40.000000)">
+                    <g id="Icons/contact" transform="translate(106.000000, 8.000000)">
+                        <rect id="Frame" x="0" y="0" width="24" height="24"></rect>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="document-list" fill="#929292" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="Colors/Primary" mask="url(#mask-2)" fill-rule="evenodd" fill="#44314D">
+                            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

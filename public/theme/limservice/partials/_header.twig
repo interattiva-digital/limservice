@@ -1,16 +1,24 @@
 <header>
     <nav class="row header">
         <div class="header__section header__section--left">
-            <button class="button header__menu header__aligned">Меню</button>
+            <button class="header__menu header__item">
+                <img src="{{ asset('dist/img/icon-menu.svg', 'theme') }}" alt="">
+                <span>Меню</span>
+            </button>
         </div>
 
         <div class="header__section header__section--center">
-            <img src="{{ asset('dist/img/logo.svg', 'theme') }}" alt="">
+            <a href="">
+                <img class="header__item" src="{{ asset('dist/img/logo.svg', 'theme') }}" alt="">
+            </a>
         </div>
 
         <div class="header__section header__section--right">
-            <a class="header__language header__aligned" href="">ENG</a>
-            <button class="button header__contacts header__aligned">Контакты</button>
+            <a class="header__language header__item" href="">ENG</a>
+            <button class="header__contacts header__item header__item--marginless">
+                <span>Контакты</span>
+                <img src="{{ asset('dist/img/icon-contacts.svg', 'theme') }}" alt="">
+            </button>
         </div>
     </nav>
 </header>

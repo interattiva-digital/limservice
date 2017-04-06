@@ -20,8 +20,26 @@
     text-align: right;
 }
 
-.header__aligned {
+.header__item {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
+    cursor: pointer;
+
+    &, span {
+        font-family: $font-light;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $text-color;
+
+        margin: 0 16px;
+    }
+
+    &:hover {
+        color: $text-color;
+    }
+
+    &.header__item--marginless {
+        margin: 0;
+    }
 }
