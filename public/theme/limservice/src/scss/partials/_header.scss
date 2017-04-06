@@ -1,4 +1,7 @@
 .header {
+    position: relative;
+    z-index: 5;
+
     @include clearfix();
     @include flex-align(null, middle);
     text-align: center;
@@ -26,20 +29,37 @@
     margin: 0;
     cursor: pointer;
 
-    &, span {
-        font-family: $font-light;
-        font-size: 16px;
-        text-transform: uppercase;
-        color: $text-color;
-
-        margin: 0 16px;
-    }
-
     &:hover {
         color: $text-color;
     }
+}
 
-    &.header__item--marginless {
-        margin: 0;
+.header__item--text {
+    font-family: $font-light;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $text-color;
+
+    margin: 0 16px;
+}
+
+.header__logo {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header__logo--white {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__contacts-wrap, .header__nav-wrap {
+    opacity: 1;
+
+    transition: opacity 0.5s, visibility 0.5s;
+
+    &.invisible {
+        opacity: 0;
     }
 }
