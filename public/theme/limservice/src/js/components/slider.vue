@@ -94,7 +94,9 @@
                 $(this.$slides).css('width', this.slideWidth);
                 $(this.$slides).css('height', this.slideHeight);
 
-                this.activeSlide = this.$slides.first().attr('id');
+                if(this.activeSlide === '') {
+                    this.activeSlide = this.$slides.first().attr('id');
+                }
             }
         },
 
