@@ -12,13 +12,16 @@
 @import "components/front-panel";
 @import "components/slider-controls";
 @import "components/buttons";
+@import "components/lin-jumbo";
 
 html, body {
     height: 100%;
+    width: 100%;
 
     background-image: url('/theme/limservice/dist/img/bg-pattern.png');
 
     color: $text-color;
+    overflow: hidden;
 }
 
 * {

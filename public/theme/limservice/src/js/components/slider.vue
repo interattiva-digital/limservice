@@ -20,7 +20,7 @@
 
 <style scoped>
     .slider-container {
-        overflow-y: visible;
+        /*overflow-x: hidden;*/
         height: 100%;
         position: relative;
         /*padding-top: 20px;*/
@@ -29,13 +29,15 @@
 
     .slider-container .wrapper {
         position: relative;
-
         transition: transform 0.5s;
     }
 
     .inherit-height {
         height: inherit;
-        overflow-x: hidden;
+        width: 100%;
+        /*overflow-y: visible;*/
+        /*overflow-x: hidden;*/
+        /*overflow-y: visible;*/
     }
 </style>
 

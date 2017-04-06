@@ -23,3 +23,13 @@
         color: $text-color;
     }
 }
+
+.lim-button--dark {
+    background: linear-gradient(to right top, #44314D, #30283D);
+
+    color: white;
+
+    &:hover {
+        color: white;
+    }
+}
