@@ -9,8 +9,10 @@
 
         <div class="header__section header__section--center">
             <a href="">
-                <img class="header__logo header__item" src="{{ asset('dist/img/logo.svg', 'theme') }}" alt="">
-                <img class="header__logo--white header__item" src="{{ asset('dist/img/logo-white.svg', 'theme') }}" alt="">
+                <div class="header__logo-wrap">
+                    <img class="header__logo header__item" src="{{ asset('dist/img/logo.svg', 'theme') }}" alt="">
+                    <img class="header__logo--white header__item" src="{{ asset('dist/img/logo-white.svg', 'theme') }}" alt="">
+                </div>
             </a>
         </div>
 
@@ -24,7 +26,52 @@
     </div>
 
     <div class="nav-menu">
+        <div class="nav-menu__content">
+            <div class="nav-menu__header">Меню</div>
 
+            <ul class="nav-menu__list">
+                <li class="nav-menu__list-item item-1">
+                    <a href="">Главная</a>
+                </li>
+
+                <li class="nav-menu__list-item item-2">
+                    <a href="">О Нас</a>
+                </li>
+
+                <li class="nav-menu__list-item item-3">
+                    <a href="">Услуги</a>
+                </li>
+
+                <li class="nav-menu__list-item item-4">
+                    <a href="">Портфолио</a>
+                </li>
+
+                <li class="nav-menu__list-item item-5">
+                    <a href="">Продукция</a>
+                </li>
+
+                <li class="nav-menu__list-item item-6">
+                    <a href="">Отзывы</a>
+                </li>
+
+                <li class="nav-menu__list-item item-7">
+                    <a href="">Контакты</a>
+                </li>
+            </ul>
+
+            <ul class="nav-menu__social">
+                <li>
+                    <a href="">
+                        <img src="{{ asset('dist/img/social-facebook.svg', 'theme') }}" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{{ asset('dist/img/social-instagram.svg', 'theme') }}" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="contacts-menu">

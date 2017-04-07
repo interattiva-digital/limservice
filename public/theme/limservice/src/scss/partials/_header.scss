@@ -41,6 +41,7 @@
     color: $text-color;
 
     margin: 0 16px;
+    transition: color 0.5s;
 }
 
 .header__logo {
@@ -61,5 +62,15 @@
 
     &.invisible {
         opacity: 0;
+    }
+}
+
+.header__logo-wrap {
+
+}
+
+.header__nav, .header__contacts {
+    &.active * {
+        color: white;
     }
 }
