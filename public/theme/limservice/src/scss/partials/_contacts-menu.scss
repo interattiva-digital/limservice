@@ -1,5 +1,27 @@
 .contacts-menu {
     transform: translateX(100%);
+
+    &.active {
+        .contacts-menu__info {
+            @include offside-reveal-to();
+
+            transition-delay: 1s;
+        }
+
+        .contacts-menu__form {
+            @include offside-reveal-to();
+
+            transition-delay: 1.5s;
+        }
+    }
+}
+
+.contacts-menu__info {
+    @include offside-reveal-from();
+}
+
+.contacts-menu__form {
+    @include offside-reveal-from();
 }
 
 .contacts-menu__title {
