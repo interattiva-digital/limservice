@@ -11,5 +11,6 @@ $(document).ready(() => {
         $('.contacts-menu').toggleClass('active');
         $('.header__nav-wrap').toggleClass('invisible');
         $('.header__logo-wrap').toggleClass('active');
+        $('.header__language').toggleClass('hidden');
     });
 });

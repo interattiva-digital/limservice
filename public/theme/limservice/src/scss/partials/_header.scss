@@ -28,9 +28,18 @@
     vertical-align: middle;
     margin: 0;
     cursor: pointer;
+    transition: color 0.5s, opacity 0.5s;
 
     &:hover {
         color: $text-color;
+    }
+}
+
+.header__language {
+    opacity: 1;
+
+    &.hidden {
+        opacity: 0;
     }
 }
 
@@ -41,7 +50,6 @@
     color: $text-color;
 
     margin: 0 16px;
-    transition: color 0.5s;
 }
 
 .header__logo {
