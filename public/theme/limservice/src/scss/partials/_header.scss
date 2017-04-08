@@ -58,9 +58,15 @@
 }
 
 .header__logo--white {
-    display: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    transform: translateX(-50%);
     visibility: hidden;
     opacity: 0;
+
+    transition: visibility 0.5s, opacity 0.5s;
 }
 
 .header__contacts-wrap, .header__nav-wrap {
@@ -74,7 +80,14 @@
 }
 
 .header__logo-wrap {
+    position: relative;
 
+    &.active {
+        .header__logo--white {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
 
 .header__nav, .header__contacts {

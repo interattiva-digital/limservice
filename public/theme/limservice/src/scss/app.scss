@@ -7,14 +7,16 @@
 
 @import "pages/front";
 
-@import "partials/header";
-@import "partials/nav-menu";
-@import "partials/contacts-menu";
-
 @import "components/front-panel";
 @import "components/slider-controls";
 @import "components/buttons";
-@import "components/lin-jumbo";
+@import "components/lim-jumbo";
+@import "components/offside";
+
+@import "partials/header";
+@import "partials/contacts-menu";
+@import "partials/nav-menu";
+
 
 html, body {
     height: 100%;
