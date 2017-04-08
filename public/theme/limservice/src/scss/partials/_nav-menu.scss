@@ -47,7 +47,7 @@
         .nav-menu__list-item {
             @include nav-menu-reveal-to();
 
-            @for $i from 1 through 7 {
+            @for $i from 1 through $nav-menu-item-quantity {
                 &.item-#{$i} {
                     transition-delay: #{$reveal-animation-base-time + $i/10};
                 }
@@ -132,7 +132,7 @@
         margin-bottom: 0;
     }
 
-    @for $i from 1 through 7 {
+    @for $i from 1 through $nav-menu-item-quantity {
         &.item-#{$i} {
             transition-property: opacity, transform;
             transition-duration: 0.5s;
