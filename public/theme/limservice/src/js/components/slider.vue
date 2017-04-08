@@ -4,27 +4,24 @@
             <div class="wrapper clearfix" :style="wrapperStyle">
                 <slot></slot>
             </div>
-        </div>
 
-        <div class="slider-controls">
-            <slide-controls>
-                <slide-control content-id="home" @change-slide="changeSlide" :active-slide="activeSlide">Главная</slide-control>
-                <slide-control content-id="about" @change-slide="changeSlide" :active-slide="activeSlide">О Нас</slide-control>
-                <slide-control content-id="services" @change-slide="changeSlide" :active-slide="activeSlide">Услуги</slide-control>
-                <slide-control content-id="portfolio" @change-slide="changeSlide" :active-slide="activeSlide">Портфолио</slide-control>
-                <slide-control content-id="products" @change-slide="changeSlide" :active-slide="activeSlide">Продукция</slide-control>
-            </slide-controls>
+            <div class="slider-controls">
+                <slide-controls>
+                    <slide-control content-id="home" @change-slide="changeSlide" :active-slide="activeSlide">Главная</slide-control>
+                    <slide-control content-id="about" @change-slide="changeSlide" :active-slide="activeSlide">О Нас</slide-control>
+                    <slide-control content-id="services" @change-slide="changeSlide" :active-slide="activeSlide">Услуги</slide-control>
+                    <slide-control content-id="portfolio" @change-slide="changeSlide" :active-slide="activeSlide">Портфолио</slide-control>
+                    <slide-control content-id="products" @change-slide="changeSlide" :active-slide="activeSlide">Продукция</slide-control>
+                </slide-controls>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
     .slider-container {
-        /*overflow-x: hidden;*/
-        height: 100%;
         position: relative;
-        /*padding-top: 20px;*/
-        /*padding-bottom: 20px;*/
+        height: 70vh;
     }
 
     .slider-container .wrapper {
@@ -35,9 +32,6 @@
     .inherit-height {
         height: inherit;
         width: 100%;
-        /*overflow-y: visible;*/
-        /*overflow-x: hidden;*/
-        /*overflow-y: visible;*/
     }
 </style>
 

@@ -1,0 +1,40 @@
+.lim-title {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+    margin-bottom: 30px;
+
+    font-family: $font-black;
+    font-size: 13px;
+    color:  #131431;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 0 60px;
+
+    &:before {
+        position: absolute;
+        left: 100%;
+        bottom: 30%;
+
+        content: "";
+        width: 195px;
+        height: 1px;
+        background-color: #131431;
+
+        transition: width 0.5s 0s;
+    }
+
+    &:after {
+        position: absolute;
+        right: 100%;
+        bottom: 30%;
+
+        content: "";
+        width: 195px;
+        height: 1px;
+        background-color: #131431;
+
+        transition: width 0.5s 0s;
+    }
+}

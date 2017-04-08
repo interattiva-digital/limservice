@@ -6,6 +6,7 @@
 @import "fonts";
 
 @import "pages/front";
+@import "pages/about";
 
 @import "components/front-panel";
 @import "components/slider-controls";
@@ -13,6 +14,7 @@
 @import "components/lim-jumbo";
 @import "components/offside";
 @import "components/forms";
+@import "components/lim-title";
 
 @import "partials/header";
 @import "partials/contacts-menu";
@@ -20,15 +22,25 @@
 
 
 html, body {
-    height: 100%;
+    //height: 100%;
     width: 100%;
 
     background-image: url('/theme/limservice/dist/img/bg-pattern.png');
 
     color: $text-color;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 * {
     color: inherit;
+}
+
+p {
+    font-family: $font-ultra-light;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    max-width: 770px;
+
+    margin: 0 auto;
 }

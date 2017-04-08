@@ -1,7 +1,5 @@
-.slide-controls {
+.slider-controls {
     background-color: white;
-
-    display: flex;
 
     position: absolute;
 
@@ -12,15 +10,17 @@
 
     list-style-type: none;
     padding: 21px 30px;
-    margin: 0;
 
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+
+    .slide-controls {
+        display: flex;
+        margin: 0;
+    }
 
     .slide-control {
         display: inline-block;
         margin-right: 30px;
-
-
         cursor: pointer;
 
         font-family: $font-light;

@@ -1,0 +1,18 @@
+.about__hero {
+    height: 88vh;
+
+    padding-bottom: 80px;
+
+    & > .row {
+        height: 100%;
+    }
+}
+
+.about__description {
+    text-align: center;
+    padding: 90px;
+
+    * {
+        text-align: center;
+    }
+}

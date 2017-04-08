@@ -1,0 +1,38 @@
+{% extends 'partials/_master.twig' %}
+
+{% block content %}
+
+    <section class="about__hero">
+        <div class="row">
+            <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                <div class="lim-jumbo__content">
+                    <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                    <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                </div>
+
+                <img src="{{ asset('dist/img/jumbo-arrow.svg', 'theme') }}" alt="" class="lim-jumbo__arrow">
+            </div>
+        </div>
+    </section>
+
+    <section class="about__description">
+        <div class="row column medium-12">
+            <h3 class="lim-title">О Нас</h3>
+        </div>
+
+        <div class="row column medium-12">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad, aliquid animi, asperiores consectetur culpa cum cupiditate deserunt ducimus error esse expedita explicabo harum ipsam itaque iusto laudantium, magni maxime minus mollitia necessitatibus neque nesciunt numquam officiis perspiciatis qui quis quod repellendus rerum soluta ullam unde veniam voluptatem! Ea, mollitia!</p>
+        </div>
+    </section>
+
+    <section class="about__team">
+        <h2 class="lim-heading"></h2>
+    </section>
+
+    <section class="about__history"></section>
+
+    <section class="about__clients"></section>
+
+    <section class="about__contacts"></section>
+
+{% endblock %}
