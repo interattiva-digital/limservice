@@ -153,20 +153,30 @@
 
         transition: border-bottom 0.3s;
 
-        &:before {
+        &:before, &:after {
             position: absolute;
-            left: 0;
-            bottom: 0;
+            bottom: 50%;
             content: "";
             height: 1px;
             background-color: rgba(255, 255, 255, 0.6);
             width: 0;
 
-            transition: width 0.3s;
+            transition: transform 0.3s, width 0.3s;
         }
 
-        &:hover:before {
-            width: 100%;
+        &:before {
+            left: -40px;
+            transform-origin: 100% 50%;
+        }
+
+        &:after {
+            right: -40px;
+            transform-origin: 0 50%;
+        }
+
+        &:hover:before, &:hover:after {
+            width: 1px;
+            transform: scaleX(40);
         }
     }
 }
