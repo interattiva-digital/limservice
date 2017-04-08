@@ -1,3 +1,40 @@
 .contacts-menu {
     transform: translateX(100%);
 }
+
+.contacts-menu__title {
+    font-family: $font-regular;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.contacts-menu__item {
+    margin-bottom: 20px;
+}
+
+.contacts-menu__text {
+    font-family: $font-light;
+    font-size: 16px;
+    color: white;
+}
+
+.contacts-menu__phones {
+    display: inline-block;
+    width: 320px;
+
+    margin: 0 0 60px;
+
+    list-style-type: none;
+}
+
+.contacts-menu__phones-item {
+    display: inline-block;
+    width: 50%;
+}
+
+.contacts-menu {
+    text-align: center;
+}

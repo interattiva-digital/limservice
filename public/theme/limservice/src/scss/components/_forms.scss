@@ -1,0 +1,38 @@
+.lim-input {
+    margin-bottom: 20px;
+
+    font-family: $font-regular;
+    font-size: 16px;
+    color: #131431;
+
+    border: 1px solid rgba(19, 21, 50, 0.5);
+    background: transparent none;
+
+    &:focus {
+        background: transparent none;
+        border: 1px solid rgba(19, 21, 50, 1);
+        box-shadow: none;
+    }
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+}
+
+.lim-input--bright {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    color: white;
+
+    &:focus {
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+}
+
+.lim-input[type="text"] {
+
+}
+
+textarea.lim-input {
+    resize: none;
+}
