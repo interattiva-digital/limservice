@@ -1,0 +1,14 @@
+.lim-heading {
+    font-family: $font-thin;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.lim-heading--vertical {
+    //transform: rotate(-90deg) translateY(-100%);
+    //transform-origin: left bottom 0;
+    //float: left;
+    //white-space: nowrap;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+}
