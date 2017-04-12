@@ -25,6 +25,7 @@
     .team__wrapper {
         position: relative;
         z-index: 1;
+        margin-bottom: 40px;
         &:after, &:before {
             position: absolute;
             z-index: 0;
@@ -91,7 +92,42 @@
         box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
     }
 
+    .history__heading {
+        margin-bottom: 30px;
+    }
+
     .history__text {
         padding-left: 95px;
+    }
+}
+
+.about__clients {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background-color: white;
+
+    background-image: url('../img/bg-patterned-rectangle.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 80% 40%;
+
+    .clients__header {
+        margin-bottom: 60px;
+    }
+
+    .clients__link {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .clients__grid {
+        .row {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }

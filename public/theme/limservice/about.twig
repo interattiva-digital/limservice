@@ -62,8 +62,8 @@
                 </div>
 
                 <div class="column medium-6">
-                    <h3 class="lim-mini-title">Профессионализм и опыт</h3>
-                    <p class="history__text">
+                    <h3 class="lim-mini-title history__heading">Профессионализм и опыт</h3>
+                    <p class="history__text big-text">
                         Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять
                     </p>
                 </div>
@@ -72,7 +72,35 @@
 
     </section>
 
-    <section class="about__clients"></section>
+    <section class="about__clients">
+        <div class="clients__header row align-right">
+            <div class="column medium-5 clients__title">
+                <h2 class="lim-heading">Нам доверяют</h2>
+            </div>
+            <div class="column medium-6 clients__link">
+                <a href="/" class="lim-link">Посмотреть портфолио</a>
+            </div>
+        </div>
+
+        <div class="clients__grid">
+            <div class="row align-center">
+                {% for i in 1..5  %}
+                    <div class="column medium-2">
+                        <img src="{{ asset('dist/img/kfc.png', 'theme') }}" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="row align-center">
+                {% for i in 1..5  %}
+                    <div class="column medium-2">
+                        <img src="{{ asset('dist/img/kfc.png', 'theme') }}" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
 
     <section class="about__contacts"></section>
 
