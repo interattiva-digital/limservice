@@ -1,0 +1,19 @@
+.lim-mini-title {
+    position: relative;
+    padding-left: 95px;
+    font-family: MullerBlack, sans-serif;
+    font-size: 13px;
+    color: #131431;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 20%;
+        width: 80px;
+        height: 1px;
+        background-color: $text-color;
+    }
+}
