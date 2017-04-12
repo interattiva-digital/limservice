@@ -8,3 +8,117 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+.services__pros {
+    padding-top: 60px;
+    padding-bottom: 130px;
+
+    .pros__tab-controls {
+        list-style-type: none;
+        margin: 0;
+        background: none;
+        border: none;
+
+        & > li {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            float: none;
+
+            font-family: $font-ultra-light;
+            font-size: 24px;
+            color: #929292;
+            letter-spacing: 0.5px;
+
+            transition: padding-left 0.5s, color 0.5s;
+
+            & > a {
+                color: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                background: none;
+                padding: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 45%;
+                height: 1px;
+                width: 30px;
+                background: #929292;
+                transition: width 0.5s, background 0.5s;
+            }
+
+            &.is-active {
+                padding-left: 100px;
+                color: #131431;
+            }
+
+            &.is-active:before {
+                width: 70px;
+                background: #131431;
+            }
+        }
+    }
+
+    .pros__tab-content {
+        border: none;
+    }
+
+    .pros__tab {
+        position: relative;
+        min-height: 400px;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        //opacity: 0;
+        //visibility: hidden;
+        //
+        //transition: opacity 0.5s, visibility 0.5s;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tab__image {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tab__description {
+            position: absolute;
+            display: inline-block;
+            max-width: 66.6666667%;
+            z-index: 2;
+            right: 0;
+            bottom: -20%;
+            padding: 30px;
+            min-width: 570px;
+            min-height: 132px;
+
+            background: #FFFFFF;
+            box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+
+            font-family: $font-light;
+            font-size: 16px;
+            color: #131431;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+}

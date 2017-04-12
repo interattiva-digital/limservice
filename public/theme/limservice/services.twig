@@ -21,4 +21,57 @@
         </p>
     </section>
 
+    <section class="services__pros">
+        <div class="row">
+            <div class="column medium-1">
+                <h2 class="lim-heading lim-heading--vertical">Преимущества</h2>
+            </div>
+
+            <div class="column medium-11">
+                <div class="row">
+                    <div class="column medium-2">
+                        <ul class="tabs pros__tab-controls" data-tabs id="pros-tabs">
+                            <li class="tabs-title is-active" aria-selected="true">
+                                <a href="#pro-1">1</a>
+                            </li>
+
+                            <li class="tabs-title">
+                                <a href="#pro-2">2</a>
+                            </li>
+
+                            <li class="tabs-title">
+                                <a href="#pro-3">3</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column medium-9">
+                        <div class="pros__tab-content tabs-content" data-tabs-content="pros-tabs">
+                            <div class="pros__tab tabs-panel is-active" id="pro-1" style="background-image: url('{{ asset('dist/img/pro.png', 'theme') }}')">
+                                <div class="tab__description">
+                                    Высокотехнологичный парк оборудования с числовым программным управлением от ведущих европейских производителей.
+                                </div>
+                            </div>
+
+                            <div class="pros__tab tabs-panel" id="pro-2" style="background-image: url('{{ asset('dist/img/pro.png', 'theme') }}')">
+                                <div class="tab__description">
+                                    Второй таб
+                                </div>
+                            </div>
+
+                            <div class="pros__tab tabs-panel" id="pro-3" style="background-image: url('{{ asset('dist/img/pro.png', 'theme') }}')">
+                                <div class="tab__description">
+                                    Третий таб
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="services__offers">
+
+    </div>
+
 {% endblock %}
