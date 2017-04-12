@@ -62,7 +62,8 @@ footer {
         position: relative;
         font-family: $font-light;
         font-size: 13px;
-        color: #FFFFFF;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color 0.3s;
     }
 
     a:before {
