@@ -1,0 +1,12 @@
+.lim-link {
+    font-family: $font-regular;
+    font-size: 13px;
+    color: #131431;
+
+    background: url('../img/lim-link-arrow.svg') no-repeat right center;
+    padding-right: 100px;
+
+    &:hover {
+        color: #131431;
+    }
+}

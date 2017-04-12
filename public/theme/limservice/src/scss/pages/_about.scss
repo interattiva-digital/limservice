@@ -10,9 +10,65 @@
 
 .about__description {
     text-align: center;
-    padding: 90px;
+    padding: 90px 0;
 
     * {
         text-align: center;
+    }
+}
+
+.about__team {
+    padding: 90px 0;
+    text-align: center;
+
+    .team__wrapper {
+        position: relative;
+        z-index: 1;
+        &:after, &:before {
+            position: absolute;
+            z-index: 0;
+            top: -10%;
+            right: 0;
+            width: 50%;
+            height: 50%;
+            content: "";
+            background-image: url('../img/bg-rectangle.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
+        }
+
+        &:before {
+            top: auto;
+            right: auto;
+            bottom: -10%;
+            left: 0;
+        }
+    }
+
+    .team__content {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+    }
+
+    .team__photo {
+        margin-bottom: 20px;
+        border: 10px solid white;
+        background: white;
+        box-shadow: 0 10px 15px 0 rgba(0,0,0,0.15);
+    }
+
+    .team__description {
+        font-family: $font-light;
+        font-size: 16px;
+        color: #44314D;
+        line-height: 24px;
+    }
+
+    .team__link {
+        display: block;
+        width: 100%;
+        text-align: right;
     }
 }
