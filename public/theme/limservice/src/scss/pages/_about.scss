@@ -131,3 +131,78 @@
         }
     }
 }
+
+.about__contacts {
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    background-color: white;
+
+    .contacts__wrapper {
+        position: relative;
+        height: 570px;
+    }
+
+    .contacts__map {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        min-height: 443px;
+        min-width: 66.66666667%;
+    }
+
+    .contacts__info {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        bottom: 0;
+        min-height: 254px;
+        min-width: 41.66666667%;
+        padding: 30px 0;
+
+        background: #FFFFFF;
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+
+        text-align: left;
+
+        .info__wrapper {
+            padding: 0 50px;
+        }
+
+        .info__title {
+            width: 85%;
+
+            font-family: $font-regular;
+            font-size: 24px;
+            color: #131431;
+            letter-spacing: 1px;
+            padding-left: 50px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
+            border-bottom: 1px solid #D2D2D2;
+        }
+
+        .info__text {
+            font-family: $font-light;
+            font-size: 16px;
+            color: #131431;
+            margin-bottom: 20px;
+        }
+
+        .info__phones {
+            display: inline-block;
+            width: 320px;
+            margin: 0;
+
+            list-style-type: none;
+        }
+
+        .info__phones-item {
+            display: inline-block;
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
