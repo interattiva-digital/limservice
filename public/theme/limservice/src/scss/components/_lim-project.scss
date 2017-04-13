@@ -1,8 +1,12 @@
 .lim-project {
     padding-top: 60px;
     padding-bottom: 60px;
-    overflow: hidden;
-    @include flex-grid-row();
+
+    background: white;
+
+    & > .row {
+        overflow: hidden;
+    }
 }
 
 .lim-project__heading {
@@ -53,6 +57,7 @@
     width: 100% * (5/8);
 
     position: absolute;
+    z-index: 2;
     right: 0;
     top: 0;
 }
@@ -61,6 +66,38 @@
     width: 50%;
 
     position: absolute;
+    z-index: 1;
     left: 0;
     bottom: 0;
+}
+
+.lim-project--inverse {
+
+    background: #F3F3F3;
+
+    .lim-project__heading {
+        order: 2;
+        text-align: right;
+
+        .heading__supertext:after {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    .lim-project__images {
+        order: 1;
+    }
+
+    .lim-project__front-image {
+        left: 0;
+        right: auto;
+        z-index: 1;
+    }
+
+    .lim-project__rear-image {
+        right: 0;
+        left: auto;
+        z-index: 2;
+    }
 }
