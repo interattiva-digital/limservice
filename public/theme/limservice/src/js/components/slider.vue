@@ -1,45 +1,30 @@
 <template>
     <div class="inherit-height">
-        <div class="slider-container">
+        <div class="slider-container" :class="{ 'centered' : isCentered }">
             <div class="wrapper clearfix" :style="wrapperStyle">
                 <slot></slot>
             </div>
 
             <div class="slider-controls">
-                <slide-controls>
-                    <slide-control content-id="home" @change-slide="changeSlide" :active-slide="activeSlide">Главная</slide-control>
-                    <slide-control content-id="about" @change-slide="changeSlide" :active-slide="activeSlide">О Нас</slide-control>
-                    <slide-control content-id="services" @change-slide="changeSlide" :active-slide="activeSlide">Услуги</slide-control>
-                    <slide-control content-id="portfolio" @change-slide="changeSlide" :active-slide="activeSlide">Портфолио</slide-control>
-                    <slide-control content-id="products" @change-slide="changeSlide" :active-slide="activeSlide">Продукция</slide-control>
-                </slide-controls>
+                <ul class="slide-controls">
+                    <slide-control v-for="item in slides" :key="item.id" :content-id="getContentId(item)" @change-slide="changeSlide" :active-slide="activeSlide">{{ getContentLabel(item) }}</slide-control>
+                </ul>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-    .slider-container {
-        position: relative;
-        height: 70vh;
-    }
+<style>
 
-    .slider-container .wrapper {
-        position: relative;
-        transition: transform 0.5s;
-    }
-
-    .inherit-height {
-        height: inherit;
-        width: 100%;
-    }
 </style>
 
 <script>
     export default {
+        props: ['isCentered'],
+
         data() {
             return {
-                slides: {},
+                slides: [],
                 $container: {},
                 $wrapper: {},
                 $slides: {},
@@ -93,6 +78,20 @@
                 if(this.activeSlide === '') {
                     this.activeSlide = this.$slides.first().attr('id');
                 }
+
+                this.slides = this.$slides.toArray();
+
+                if(this.isCentered) {
+
+                }
+            },
+
+            getContentLabel(el) {
+                return $(el).attr('data-content-label');
+            },
+
+            getContentId(el) {
+                return $(el).attr('id');
             }
         },
 

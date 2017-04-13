@@ -1,0 +1,28 @@
+{% extends 'partials/_front.twig' %}
+
+{% block content %}
+
+    <div class="front-container">
+        <slider is-centered="true">
+            {% for i in 1..10 %}
+                <slide content-id="costa-{{ i }}" content-label="Costa Coffee">
+                    <div class="front-row">
+                        <div class="lim-portfolio">
+                            <div class="lim-portfolio__content">
+                                <div class="lim-portfolio__content-wrap">
+                                    <h3 class="content__category lim-mini-title">Horeca</h3>
+                                    <h2 class="content__title text-uppercase">Costa Coffee</h2>
+
+                                    <p class="content__label">Что было сделано</p>
+                                    <p class="content__text">Настенные декор панели, бар, стол кухонный, шкафы в библиотека, ресепшн.</p>
+                                </div>
+                            </div>
+                            <div class="lim-portfolio__image" style="background-image: url('{{ asset('dist/img/test-portfolio.png', 'theme') }}')"></div>
+                        </div>
+                    </div>
+                </slide>
+            {% endfor %}
+        </slider>
+    </div>
+
+{% endblock %}

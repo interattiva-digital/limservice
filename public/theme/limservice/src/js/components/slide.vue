@@ -1,5 +1,5 @@
 <template>
-    <div class="slide" :id="contentId">
+    <div class="slide" :id="contentId" :data-content-label="contentLabel">
         <slot></slot>
     </div>
 </template>
@@ -12,7 +12,7 @@
 
 <script>
     export default {
-        props: ['contentId'],
+        props: ['contentId', 'contentLabel'],
 
         data() {
             return {

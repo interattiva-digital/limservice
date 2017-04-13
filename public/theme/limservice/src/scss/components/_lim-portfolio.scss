@@ -1,0 +1,56 @@
+.lim-portfolio {
+    @include clearfix();
+    width: 100%;
+}
+
+.lim-portfolio__content {
+    position: relative;
+
+    float: left;
+    width: 50%;
+    height: 100%;
+
+    padding-left: 70px;
+
+    .content__category {
+        margin-bottom: 30px;
+    }
+
+    .content__title {
+        margin-bottom: 60px;
+    }
+
+    .content__label {
+        margin-bottom: 10px;
+
+        font-family: $font-regular;
+        font-size: 16px;
+        color: #929292;
+        letter-spacing: normal;
+        line-height: normal;
+    }
+
+    .content__text {
+        font-family: $font-regular;
+        font-size: 16px;
+        color: $text-color;
+        letter-spacing: normal;
+        line-height: normal;
+    }
+}
+
+.lim-portfolio__content-wrap {
+    position: absolute;
+    top: 20%;
+    left: 70px;
+}
+
+.lim-portfolio__image {
+    float: right;
+    width: 50%;
+    height: 100%;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
