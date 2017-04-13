@@ -49,3 +49,18 @@
         border: 1px solid white;
     }
 }
+
+.lim-button--transparent-dark {
+    background: transparent;
+
+    border: 1px solid #9F98A4;
+    color: #9F98A4;
+
+    transition: border 0.3s, color 0.3s;
+
+    &:hover {
+        color: $text-color;
+        box-shadow: none;
+        border: 1px solid $text-color;
+    }
+}
