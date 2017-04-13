@@ -69,23 +69,28 @@
     }
 
     .pros__tab-content {
+        position: relative;
         border: none;
+        height: 400px;
     }
 
     .pros__tab {
-        position: relative;
-        min-height: 400px;
-
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
 
-        //opacity: 0;
-        //visibility: hidden;
-        //
-        //transition: opacity 0.5s, visibility 0.5s;
+        opacity: 0;
+        visibility: hidden;
 
-        &.active {
+        transition: opacity 0.5s, visibility 0.5s;
+
+        &.is-active {
             opacity: 1;
             visibility: visible;
         }
