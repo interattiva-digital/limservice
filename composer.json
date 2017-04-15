@@ -27,5 +27,8 @@
         "branch-alias": {
             "dev-release/3.2" : "3.2.x-dev"
         }
+    },
+    "require-dev": {
+        "laravel/homestead": "^5.2"
     }
 }
