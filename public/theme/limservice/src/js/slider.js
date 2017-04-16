@@ -8,8 +8,6 @@ $(document).ready(() => {
 
     centered = (typeof centered !== typeof undefined) && (centered !== false);
 
-    console.log(centered);
-
     let $sliderControls = $('.lim-slider__controls .controls__list-item');
 
     let $slides = $('.lim-slider__container .slide');

@@ -1,6 +1,7 @@
 require('./bootstrap.js');
 require('./nav-menu.js');
 require('./slider.js');
+require('./products.js');
 
 // let app = new Vue({
 //     el: '#app'

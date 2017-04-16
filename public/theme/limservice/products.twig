@@ -53,5 +53,28 @@
                 </div>
             </form>
         </div>
+
+        <div class="products__listing">
+            <div class="row">
+
+                {% for i in 1..25 %}
+                    <div class="column medium-6">
+                        <div class="products__item" id="product-{{ i }}">
+                            <img src="{{ asset('dist/img/product-photo.png', 'theme') }}" class="item__image">
+                            <div class="item__content">
+                                <div class="item__header">
+                                    <h3 class="item__name">ДИВАН «НЕАПОЛЬ» С КРЕСЛОМ</h3>
+                                    <div class="item__toggle" data-product-toggle="#product-{{ i }}">
+                                        <img src="{{ asset('dist/img/close-icon.svg', 'theme') }}" alt="" class="toggle__close">
+
+                                        <img src="{{ asset('dist/img/plus-icon.svg', 'theme') }}" alt="" class="toggle__open">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </section>
 {% endblock content %}
