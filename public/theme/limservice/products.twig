@@ -1,0 +1,57 @@
+{% extends 'partials/_master.twig' %}
+
+{% block content %}
+    <section class="products">
+        <div class="products__header">
+            <div class="row products__categories">
+                <div class="column medium-4">
+                    <h1 class="lim-heading text-uppercase">Продукция</h1>
+                </div>
+
+                <div class="column medium-8">
+                    <ul class="products__categories-list">
+                        <li class="products__categories-item active">
+                            <a href="">Все</a>
+                        </li>
+
+                        <li class="products__categories-item">
+                            <a href="">Buisness</a>
+                        </li>
+
+                        <li class="products__categories-item">
+                            <a href="">HoReCa</a>
+                        </li>
+
+                        <li class="products__categories-item">
+                            <a href="">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <form class="products__filters" action="">
+                <div class="row">
+                    <div class="column medium-5 flex-container align-middle">
+                        <span>Показано 25 продукта</span>
+                    </div>
+
+                    <div class="column medium-2 flex-container align-middle">
+                        <select name="price">
+                            <option value="0">Цена</option>
+                        </select>
+                    </div>
+
+                    <div class="column medium-2 flex-container align-middle">
+                        <select name="type">
+                            <option value="0">Тип</option>
+                        </select>
+                    </div>
+
+                    <div class="column medium-3 flex-container align-middle">
+                        <input type="text" name="search" placeholder="Поиск" class="lim-input filters__search">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock content %}
