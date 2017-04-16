@@ -3,111 +3,140 @@
 {% block content %}
 
     <div class="front-container">
-        <slider>
-            <slide content-id="home" content-label="Главная">
-                <div class="front-row">
-                    <div class="front-panel">
-                        <div class="front-panel__content">
-                            <h3 class="front-panel__title">Horeca</h3>
-                            <div class="front-panel__description">Решения для ресторанов и кафе</div>
-                            <div class="front-panel__link">
-                                <a href="" class="lim-button">Подробнее</a>
-                            </div>
 
-                            <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image">
+        <div class="lim-slider">
+            <div class="lim-slider__container">
+                <div class="slide" id="home">
+                    <div class="slider-row">
+                        <div class="front-panel">
+                            <div class="front-panel__content">
+                                <h3 class="front-panel__title">Horeca</h3>
+                                <div class="front-panel__description">Решения для ресторанов и кафе</div>
+                                <div class="front-panel__link">
+                                    <a href="" class="lim-button">Подробнее</a>
+                                </div>
+
+                                <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image">
+                            </div>
+                        </div>
+
+                        <div class="front-panel">
+                            <div class="front-panel__content">
+                                <h3 class="front-panel__title">Business</h3>
+                                <div class="front-panel__description">Детская мебель</div>
+                                <div class="front-panel__link">
+                                    <a href="" class="lim-button">Подробнее</a>
+                                </div>
+
+                                <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image front-panel__image--center">
+                            </div>
+                        </div>
+
+                        <div class="front-panel">
+                            <div class="front-panel__content">
+                                <h3 class="front-panel__title">Home</h3>
+                                <div class="front-panel__description">Детская мебель</div>
+                                <div class="front-panel__link">
+                                    <a href="" class="lim-button">Подробнее</a>
+                                </div>
+
+                                <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image front-panel__image--right">
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="front-panel">
-                        <div class="front-panel__content">
-                            <h3 class="front-panel__title">Business</h3>
-                            <div class="front-panel__description">Детская мебель</div>
-                            <div class="front-panel__link">
-                                <a href="" class="lim-button">Подробнее</a>
+                <div class="slide" id="about">
+                    <div class="slider-row">
+                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                            <div class="lim-jumbo__content">
+                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <div class="lim-jumbo__link">
+                                    <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                                </div>
                             </div>
 
-                            <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image front-panel__image--center">
-                        </div>
-                    </div>
-
-                    <div class="front-panel">
-                        <div class="front-panel__content">
-                            <h3 class="front-panel__title">Home</h3>
-                            <div class="front-panel__description">Детская мебель</div>
-                            <div class="front-panel__link">
-                                <a href="" class="lim-button">Подробнее</a>
-                            </div>
-
-                            <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image front-panel__image--right">
+                            <div class="lim-jumbo__number">1</div>
                         </div>
                     </div>
                 </div>
-            </slide>
 
-            <slide content-id="about" content-label="О Нас">
-                <div class="front-row">
-                    <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
-                        <div class="lim-jumbo__content">
-                            <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                            <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
-                            <div class="lim-jumbo__link">
-                                <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                <div class="slide" id="services">
+                    <div class="slider-row">
+                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                            <div class="lim-jumbo__content">
+                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <div class="lim-jumbo__link">
+                                    <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                                </div>
+
                             </div>
-                        </div>
 
-                        <div class="lim-jumbo__number">1</div>
+                            <div class="lim-jumbo__number">2</div>
+                        </div>
                     </div>
                 </div>
-            </slide>
 
-            <slide content-id="services" content-label="Услуги">
-                <div class="front-row">
-                    <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
-                        <div class="lim-jumbo__content">
-                            <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                            <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
-                            <div class="lim-jumbo__link">
-                                <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                <div class="slide" id="portfolio">
+                    <div class="slider-row">
+                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                            <div class="lim-jumbo__content">
+                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <div class="lim-jumbo__link">
+                                    <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="lim-jumbo__number">2</div>
+                            <div class="lim-jumbo__number">3</div>
+                        </div>
                     </div>
                 </div>
-            </slide>
 
-            <slide content-id="portfolio" content-label="Портфолио">
-                <div class="front-row">
-                    <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
-                        <div class="lim-jumbo__content">
-                            <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                            <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
-                            <div class="lim-jumbo__link">
-                                <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                <div class="slide" id="products">
+                    <div class="slider-row">
+                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                            <div class="lim-jumbo__content">
+                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <div class="lim-jumbo__link">
+                                    <a href="" class="lim-button lim-button--dark">Подробнее</a>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="lim-jumbo__number">3</div>
+                            <div class="lim-jumbo__number">4</div>
+                        </div>
                     </div>
                 </div>
-            </slide>
 
-            <slide content-id="products" content-label="Продукты">
-                <div class="front-row">
-                    <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
-                        <div class="lim-jumbo__content">
-                            <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                            <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
-                            <div class="lim-jumbo__link">
-                                <a href="" class="lim-button lim-button--dark">Подробнее</a>
-                            </div>
-                        </div>
+            </div>
 
-                        <div class="lim-jumbo__number">4</div>
-                    </div>
-                </div>
-            </slide>
-        </slider>
+            <div class="lim-slider__controls">
+                <ul class="controls__list">
+                    <li class="controls__list-item active" data-target="#home">
+                        Главная
+                    </li>
+
+                    <li class="controls__list-item" data-target="#about">
+                        О нас
+                    </li>
+
+                    <li class="controls__list-item" data-target="#services">
+                        Услуги
+                    </li>
+
+                    <li class="controls__list-item" data-target="#portfolio">
+                        Портфолио
+                    </li>
+
+                    <li class="controls__list-item" data-target="#products">
+                        Продукция
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 {% endblock %}

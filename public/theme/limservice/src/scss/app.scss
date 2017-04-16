@@ -1,4 +1,5 @@
 @import "~foundation-sites/scss/foundation";
+@import "~slick-carousel/slick/slick";
 
 @include foundation-everything(true);
 
@@ -22,6 +23,7 @@
 @import "components/lim-hero";
 @import "components/lim-project";
 @import "components/lim-portfolio";
+@import "components/lim-slider";
 @import "components/typography";
 @import "components/slider";
 
@@ -33,7 +35,6 @@
 
 
 html, body {
-    //height: 100%;
     width: 100%;
 
     background-image: url('/theme/limservice/dist/img/bg-pattern.png');
@@ -44,6 +45,7 @@ html, body {
 
 * {
     color: inherit;
+    outline: 0;
 }
 
 p {

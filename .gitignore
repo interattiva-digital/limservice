@@ -29,3 +29,4 @@ public/theme/base-2016
 public/bolt-public/*
 bolt.db
 Homestead.yaml
+mix-manifest.json

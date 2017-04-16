@@ -1,0 +1,56 @@
+.lim-slider {
+    position: relative;
+
+    .slide {
+        height: 70vh;
+    }
+}
+
+.lim-slider__container {
+    .slick-list {
+        overflow: visible;
+    }
+}
+
+.lim-slider__controls {
+    background-color: white;
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: -25px;
+
+    list-style-type: none;
+    padding: 21px 30px;
+
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+
+    .controls__list {
+        display: flex;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .controls__list-item {
+        display: inline-block;
+        margin-right: 30px;
+        cursor: pointer;
+
+        font-family: $font-light;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #929292;
+
+        transition: color 0.3s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            color: $text-color;
+        }
+    }
+}

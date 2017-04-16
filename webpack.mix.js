@@ -31,7 +31,7 @@ mix.browserSync({
     proxy: 'limservice.dev',
     open: false,
     files: [
-        'public/theme/limservice/src/js/**/*.js',
+        'public/theme/limservice/dist/js/**/*.js',
         'public/theme/limservice/src/js/**/*.vue',
         'public/theme/limservice/dist/css/**/*.css',
         'public/theme/limservice/**/*.twig'
