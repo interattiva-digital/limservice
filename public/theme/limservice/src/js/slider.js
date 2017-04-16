@@ -39,7 +39,9 @@ $(document).ready(() => {
 
         $target.addClass('active');
 
-        $controlsList.css('transform', `translateX(-${$target.position().left}px)`);
+        if(centered) {
+            $controlsList.css('transform', `translateX(-${$target.position().left}px)`);
+        }
     });
 
     $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
