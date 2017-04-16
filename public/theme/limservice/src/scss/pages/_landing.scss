@@ -3,6 +3,8 @@
 
     padding: 60px 0;
 
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+
     .desc__title {
         margin-bottom: 30px;
     }
@@ -83,4 +85,16 @@
             }
         }
     }
+}
+
+.landing__projects {
+    padding-top: 180px;
+    background-color: white;
+    background-image: url('../img/stick-vertical.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.landing__heading {
+    margin-bottom: 25px;
 }

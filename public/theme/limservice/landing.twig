@@ -57,4 +57,33 @@
         </div>
     </section>
 
+    <div class="landing__projects">
+
+        <div class="landing__heading text-center">
+            <h2 class="lim-heading">Проекты</h2>
+            <h3 class="lim-subtitle">Слоган для Home</h3>
+        </div>
+
+        {% for i in 1..5 %}
+            <div class="lim-project {{ loop.index % 2 == 0 ? 'lim-project--inverse':'' }}">
+                <div class="row">
+                    <div class="lim-project__heading">
+                        <h3 class="heading__supertext">CHINA GOLD</h3>
+
+                        <div class="heading__content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt eius ipsa laborum nihil omnis perferendis quia quibusdam quisquam rerum unde, velit veritatis voluptatum.</p>
+                        </div>
+                    </div>
+
+                    <div class="lim-project__images">
+                        <img class="lim-project__front-image" src="{{ asset('dist/img/lim-project.png', 'theme') }}" alt="">
+                        <img class="lim-project__rear-image" src="{{ asset('dist/img/lim-project.png', 'theme') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include 'partials/_form.twig' %}
+
 {% endblock content %}
