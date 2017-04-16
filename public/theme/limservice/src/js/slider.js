@@ -13,12 +13,20 @@ $(document).ready(() => {
 
         let $target = $(e.currentTarget);
 
-        let $targetSlide = $($target.children('a').attr('href'));
+        let $targetSlide = $($target.attr('data-target'));
 
         $slider.slick('slickGoTo', $slides.index($targetSlide));
 
         $sliderControls.removeClass('active');
 
         $target.addClass('active');
+    });
+
+    $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+        let target = $(slick.$slides[nextSlide]).attr('id');
+
+        $sliderControls.removeClass('active');
+
+        $sliderControls.filter(`[data-target="#${target}"]`).addClass('active');
     });
 });

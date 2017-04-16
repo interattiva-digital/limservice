@@ -38,25 +38,19 @@
         margin-right: 30px;
         cursor: pointer;
 
-        transition: color 0.5s;
+        font-family: $font-light;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #929292;
+
+        transition: color 0.3s;
 
         &:last-child {
             margin-right: 0;
         }
 
         &.active {
-            a {
-                color: $text-color;
-            }
-        }
-
-        a {
-            font-family: $font-light;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #929292;
-
-            transition: color 0.3s;
+            color: $text-color;
         }
     }
 }
