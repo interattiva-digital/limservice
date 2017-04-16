@@ -1,0 +1,60 @@
+{% extends 'partials/_master.twig' %}
+
+{% block content %}
+
+    <section class="landing__hero lim-hero">
+        <div class="row">
+            <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                <div class="lim-jumbo__content">
+                    <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                    <h3 class="lim-jumbo__heading">Home</h3>
+
+                    <div class="lim-jumbo__link">
+                        <a href="" class="lim-button lim-button--bright">Посмотреть продукцию</a>
+                    </div>
+                </div>
+
+                <img src="{{ asset('dist/img/jumbo-arrow.svg', 'theme') }}" alt="" class="lim-jumbo__arrow">
+            </div>
+        </div>
+    </section>
+
+    <section class="landing__desc">
+        <h3 class="lim-title desc__title">Home</h3>
+
+        <p class="desc__text">
+            В настоящее время рабочее место является неотъемлемой частью жизненного пространства.
+            Мебельная фабрика ЛИМ Сервис ставит своей целью сделать это пространство максимально комфортным, функциональным и просто красивым.
+        </p>
+    </section>
+
+    <section class="landing__slider">
+        <div class="row expanded align-center">
+            <div class="column medium-12">
+                <div class="slider">
+
+                    <img src="{{ asset('dist/img/prev-icon.svg', 'theme') }}" class="slider__prev">
+                    <img src="{{ asset('dist/img/next-icon.svg', 'theme') }}" class="slider__next">
+
+                    <div class="slider__container" data-landing-slider>
+                        <div class="slider__slide">
+                            <h3 class="slide__title">Детская мебель</h3>
+                            <p class="slide__content">Все углы в мебели завалены/округлены. Градус крепления всей фурнитуры проектируется/заглубляется, так, что у ребенка ограничен доступ к мелким деталям.</p>
+                        </div>
+
+                        <div class="slider__slide">
+                            <h3 class="slide__title">Детская мебель</h3>
+                            <p class="slide__content">Все углы в мебели завалены/округлены. Градус крепления всей фурнитуры проектируется/заглубляется, так, что у ребенка ограничен доступ к мелким деталям.</p>
+                        </div>
+
+                        <div class="slider__slide">
+                            <h3 class="slide__title">Детская мебель</h3>
+                            <p class="slide__content">Все углы в мебели завалены/округлены. Градус крепления всей фурнитуры проектируется/заглубляется, так, что у ребенка ограничен доступ к мелким деталям.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

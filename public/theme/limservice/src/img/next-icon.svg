@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="30" viewBox="0 0 18 30">
+  <defs>
+    <path id="arrowdown-a" d="M20.0005125,24.6925195 L6.96562064,11.6576276 L5.00118599,13.6220623 L19.9912323,28.6121086 L19.9994875,28.6038534 L20.0087677,28.6131336 L34.998814,13.6230873 L33.0343794,11.6586527 L20.0005125,24.6925195 Z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="rotate(-90 12 23)">
+    <rect width="40" height="40"/>
+    <mask id="arrowdown-b" fill="#fff">
+      <use xlink:href="#arrowdown-a"/>
+    </mask>
+    <use fill="#929292" fill-rule="nonzero" xlink:href="#arrowdown-a"/>
+    <g fill="#000" mask="url(#arrowdown-b)">
+      <rect width="40" height="40"/>
+    </g>
+  </g>
+</svg>
