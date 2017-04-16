@@ -1,5 +1,5 @@
 .products {
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 80%)
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0))
 }
 
 .products__categories {
@@ -107,9 +107,12 @@
 
     .item__header {
         display: flex;
+        margin-bottom: 10px;
         height: 70px;
         padding: 25px 20px;
         border-top: 1px solid $text-color;
+
+        cursor: pointer;
     }
 
     .item__toggle {
@@ -142,20 +145,92 @@
     }
 
     .item__name {
+        position: relative;
         display: inline-block;
         margin: 0;
         vertical-align: middle;
-        font-family: $font-light;
-        font-size: 16px;
-        color: #44314D;
-        line-height: 20px;
-        text-transform: uppercase;
+        width: 80%;
+
+        .name__open {
+            font-family: $font-light;
+            font-size: 16px;
+            color: #44314D;
+            line-height: 20px;
+            text-transform: uppercase;
+
+            visibility: visible;
+            opacity: 1;
+
+            transition: opacity $product-open-animation-time, visibility $product-open-animation-time;
+        }
+
+        .name__close {
+            font-family: $font-bold;
+            font-size: 16px;
+            color: #131431;
+            letter-spacing: 1px;
+            line-height: 20px;
+
+            position: absolute;
+            width: 100%;
+            left: 0;
+
+            top: 50%;
+            transform: translateY(-50%);
+
+            visibility: visible;
+            opacity: 0;
+
+            transition: opacity $product-open-animation-time, visibility $product-open-animation-time;
+        }
+    }
+
+    .item__description {
+        padding: 0 20px;
+
+        .desc--regular, .desc--bold {
+            font-size: 14px;
+            letter-spacing: 0.6px;
+            line-height: 22px;
+        }
+
+        .desc--regular {
+            font-family: $font-regular;
+            margin-bottom: 10px;
+        }
+
+        .desc--bold {
+            font-family: $font-bold;
+        }
+
+        .desc__list {
+            list-style-type: none;
+            margin: 0 0 10px;
+
+            li {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &.active {
         .item__content {
             transform: translateY(0);
             bottom: 0;
+        }
+
+        .item__name {
+            color: #131431;
+
+            & > .name__open {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            & > .name__close {
+                visibility: visible;
+                opacity: 1;
+            }
         }
 
         .item__toggle > .toggle__open {

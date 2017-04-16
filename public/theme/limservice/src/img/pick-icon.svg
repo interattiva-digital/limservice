@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="8" viewBox="0 0 12 8">
+  <defs>
+    <path id="pick-a" d="M8.00020501,9.8770078 L2.78624826,4.66305105 L2.0004744,5.44882491 L7.99649291,11.4448434 L7.99979499,11.4415413 L8.00350709,11.4452534 L13.9995256,5.44923492 L13.2137517,4.66346106 L8.00020501,9.8770078 Z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-2 -4)">
+    <rect width="16" height="16"/>
+    <mask id="pick-b" fill="#fff">
+      <use xlink:href="#pick-a"/>
+    </mask>
+    <use fill="#929292" fill-rule="nonzero" xlink:href="#pick-a"/>
+    <g fill="#929292" mask="url(#pick-b)">
+      <rect width="16" height="16"/>
+    </g>
+  </g>
+</svg>

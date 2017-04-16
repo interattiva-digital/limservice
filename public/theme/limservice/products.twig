@@ -36,13 +36,13 @@
                     </div>
 
                     <div class="column medium-2 flex-container align-middle">
-                        <select name="price">
+                        <select name="price" class="lim-input">
                             <option value="0">Цена</option>
                         </select>
                     </div>
 
                     <div class="column medium-2 flex-container align-middle">
-                        <select name="type">
+                        <select name="type" class="lim-input">
                             <option value="0">Тип</option>
                         </select>
                     </div>
@@ -62,13 +62,29 @@
                         <div class="products__item" id="product-{{ i }}">
                             <img src="{{ asset('dist/img/product-photo.png', 'theme') }}" class="item__image">
                             <div class="item__content">
-                                <div class="item__header">
-                                    <h3 class="item__name">ДИВАН «НЕАПОЛЬ» С КРЕСЛОМ</h3>
-                                    <div class="item__toggle" data-product-toggle="#product-{{ i }}">
+                                <div class="item__header" data-product-toggle="#product-{{ i }}">
+                                    <div class="item__name">
+                                        <h3 class="name__open">ДИВАН «НЕАПОЛЬ» С КРЕСЛОМ</h3>
+                                        <h3 class="name__close">ДИВАН «НЕАПОЛЬ» С КРЕСЛОМ</h3>
+                                    </div>
+                                    <div class="item__toggle">
                                         <img src="{{ asset('dist/img/close-icon.svg', 'theme') }}" alt="" class="toggle__close">
 
                                         <img src="{{ asset('dist/img/plus-icon.svg', 'theme') }}" alt="" class="toggle__open">
                                     </div>
+                                </div>
+
+                                <div class="item__description">
+                                    <p class="desc--regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur dolore expedita fugit incidunt nihil obcaecati voluptates voluptatibus. Aut eaque explicabo optio repellat repellendus suscipit?</p>
+
+                                    <p class="desc--bold">Технические характеристики:</p>
+
+                                    <ul class="desc__list">
+                                        <li class="desc--regular">Артикул: 00000</li>
+                                        <li class="desc--regular">Производитель: 00000</li>
+                                        <li class="desc--regular">Габариты: 00000</li>
+                                        <li class="desc--regular">Спальное место: 00000</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
