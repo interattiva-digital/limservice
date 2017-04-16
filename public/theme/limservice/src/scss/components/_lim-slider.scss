@@ -1,6 +1,44 @@
 .lim-slider {
     position: relative;
 
+    &.centered {
+        .lim-slider__controls {
+
+            max-width: 770px;
+            overflow: hidden;
+
+            &:before {
+                content: "";
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30%;
+                height: 100%;
+                pointer-events: none;
+                background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            }
+
+            &:after {
+                content: "";
+                z-index: 1;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 30%;
+                height: 100%;
+                pointer-events: none;
+                background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            }
+
+            .controls__list {
+                position: relative;
+                left: 45%;
+                transition: transform 0.5s;
+            }
+        }
+    }
+
     .slide {
         height: 70vh;
     }

@@ -4,9 +4,27 @@ $(document).ready(() => {
         infinite: false
     });
 
+    let centered  = $('.lim-slider__controls').attr('data-centered');
+
+    centered = (typeof centered !== typeof undefined) && (centered !== false);
+
+    console.log(centered);
+
     let $sliderControls = $('.lim-slider__controls .controls__list-item');
 
     let $slides = $('.lim-slider__container .slide');
+
+    let $controlsList = $('.lim-slider__controls .controls__list');
+
+    if(centered) {
+        let controlsWidth = 0;
+
+        $sliderControls.each((index, el) => {
+            controlsWidth += $(el).outerWidth(true);
+        });
+
+        $controlsList.css('width', controlsWidth);
+    }
 
     $sliderControls.on('click', (e) => {
         e.preventDefault();
@@ -20,6 +38,8 @@ $(document).ready(() => {
         $sliderControls.removeClass('active');
 
         $target.addClass('active');
+
+        $controlsList.css('transform', `translateX(-${$target.position().left}px)`);
     });
 
     $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
