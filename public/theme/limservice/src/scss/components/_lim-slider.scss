@@ -5,6 +5,7 @@
         .lim-slider__controls {
 
             max-width: 770px;
+            min-width: 300px;
             overflow: hidden;
 
             &:before {
@@ -33,7 +34,7 @@
 
             .controls__list {
                 position: relative;
-                left: 45%;
+                left: 25%;
                 transition: transform 0.5s;
             }
         }

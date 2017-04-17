@@ -1,24 +1,26 @@
 {% extends 'partials/_front.twig' %}
 
+{% setcontent projects = 'projects' %}
+
 {% block content %}
 
     <div class="front-container">
         <div class="lim-slider centered">
             <div class="lim-slider__container">
-                {% for i in 1..10 %}
-                    <div id="costa-{{ i }}" class="slide">
+                {% for item in projects %}
+                    <div id="project-{{ loop.index }}" class="slide">
                         <div class="slider-row">
                             <div class="lim-portfolio">
                                 <div class="lim-portfolio__content">
                                     <div class="lim-portfolio__content-wrap">
-                                        <h3 class="content__category lim-mini-title">Horeca</h3>
-                                        <h2 class="content__title text-uppercase">Costa Coffee</h2>
+                                        <h3 class="content__category lim-mini-title">{{ item.category }}</h3>
+                                        <h2 class="content__title text-uppercase">{{ item.title }}</h2>
 
                                         <p class="content__label">Что было сделано</p>
-                                        <p class="content__text">Настенные декор панели, бар, стол кухонный, шкафы в библиотека, ресепшн.</p>
+                                        <p class="content__text">{{ item.description }}</p>
                                     </div>
                                 </div>
-                                <div class="lim-portfolio__image" style="background-image: url('{{ asset('dist/img/test-portfolio.png', 'theme') }}')"></div>
+                                <div class="lim-portfolio__image" style="background-image: url('{{ item.image|image() }}')"></div>
                             </div>
                         </div>
                     </div>
@@ -27,9 +29,9 @@
 
             <div class="lim-slider__controls" data-centered>
                 <ul class="controls__list">
-                    {% for i in 1..10 %}
-                        <li class="controls__list-item {% if loop.first %} active {% endif %}" data-target="#costa-{{ i }}">
-                            Costa Coffee
+                    {% for item in projects %}
+                        <li class="controls__list-item {% if loop.first %} active {% endif %}" data-target="#project-{{ loop.index }}">
+                            {{ item.title }}
                         </li>
                     {% endfor %}
                 </ul>

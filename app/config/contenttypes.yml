@@ -55,6 +55,26 @@ pages:
     taxonomy: [ groups ]
     recordsperpage: 100
 
+projects:
+    name: Projects
+    singular_name: Project
+    slug: project
+    singular_slug: project
+    fields:
+        title:
+            label: Название
+            type: text
+        category:
+            label: Категория
+            type: select
+            values: ['HoReCa', 'Home', 'Business']
+        description:
+            label: Описание
+            type: textarea
+        image:
+            label: Фото
+            type: image
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.
