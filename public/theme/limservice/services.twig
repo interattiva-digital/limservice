@@ -6,8 +6,8 @@
         <div class="row">
             <div class="lim-jumbo" style="background-image: url({{ page.image|image() }})">
                 <div class="lim-jumbo__content">
-                    <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                    <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                    <h2 class="lim-jumbo__title">{{ page.subtitle }}</h2>
+                    <h3 class="lim-jumbo__heading">{{ page.title }}</h3>
                 </div>
 
                 <img src="{{ asset('dist/img/jumbo-arrow.svg', 'theme') }}" alt="" class="lim-jumbo__arrow" data-scroll-target="#about">
@@ -16,53 +16,33 @@
     </section>
 
     <section class="services__about" id="about">
-        <p class="big-text text-center">
-            Нашими ключевыми принципами являются высокотехнологичные процессы производства, использование только высококачественных материалов и сжатые сроки.
-        </p>
+        <p class="big-text text-center">{{ page.templatefields.about_body }}</p>
     </section>
 
     <section class="services__pros">
         <div class="row">
             <div class="column medium-1">
-                <h2 class="lim-heading lim-heading--vertical">Преимущества</h2>
+                <h2 class="lim-heading lim-heading--vertical">{{ page.templatefields.pros_heading }}</h2>
             </div>
 
             <div class="column medium-11">
                 <div class="row">
                     <div class="column medium-2">
                         <ul class="tabs pros__tab-controls" data-tabs id="pros-tabs">
-                            <li class="tabs-title is-active" aria-selected="true">
-                                <a href="#pro-1">1</a>
-                            </li>
-
-                            <li class="tabs-title">
-                                <a href="#pro-2">2</a>
-                            </li>
-
-                            <li class="tabs-title">
-                                <a href="#pro-3">3</a>
-                            </li>
+                            {% for item in page.templatefields.pros %}
+                                <li class="tabs-title {{ loop.first ? 'is-active':'' }}">
+                                    <a href="#pro-{{ loop.index }}">{{ loop.index }}</a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="column medium-9">
                         <div class="pros__tab-content tabs-content" data-tabs-content="pros-tabs">
-                            <div class="pros__tab tabs-panel is-active" id="pro-1" style="background-image: url('{{ asset('dist/img/pro.png', 'theme') }}')">
-                                <div class="tab__description">
-                                    Высокотехнологичный парк оборудования с числовым программным управлением от ведущих европейских производителей.
+                            {% for item in page.templatefields.pros %}
+                                <div class="pros__tab tabs-panel {{ loop.first ? 'is-active':'' }}" id="pro-{{ loop.index }}" style="background-image: url('{{ item.image|image() }}')">
+                                    <div class="tab__description">{{ item.description }}</div>
                                 </div>
-                            </div>
-
-                            <div class="pros__tab tabs-panel" id="pro-2" style="background-image: url('{{ asset('dist/img/pro.png', 'theme') }}')">
-                                <div class="tab__description">
-                                    Второй таб
-                                </div>
-                            </div>
-
-                            <div class="pros__tab tabs-panel" id="pro-3" style="background-image: url('{{ asset('dist/img/pro.png', 'theme') }}')">
-                                <div class="tab__description">
-                                    Третий таб
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -72,22 +52,22 @@
 
     <section class="services__offers">
         <div class="offers__heading text-center">
-            <h2 class="lim-heading">Лим Сервис</h2>
-            <h3 class="lim-subtitle">Предлагает вам</h3>
+            <h2 class="lim-heading">{{ page.templatefields.offers_heading }}</h2>
+            <h3 class="lim-subtitle">{{ page.templatefields.offers_subheading }}</h3>
         </div>
 
         <div class="offers__projects">
-            {% for i in 1..5 %}
+            {% for item in page.templatefields.offers %}
                 <div class="lim-project {{ loop.index % 2 == 0 ? 'lim-project--inverse':'' }}">
                     <div class="row">
                         <div class="lim-project__heading">
-                            <h3 class="heading__supertext">{{ i }}</h3>
-                            <h3 class="heading__subtext">Офисная мебель и перегородки</h3>
+                            <h3 class="heading__supertext">{{ loop.index }}</h3>
+                            <h3 class="heading__subtext">{{ item.title }}</h3>
                         </div>
 
                         <div class="lim-project__images">
-                            <img class="lim-project__front-image" src="{{ asset('dist/img/lim-project.png', 'theme') }}" alt="">
-                            <img class="lim-project__rear-image" src="{{ asset('dist/img/lim-project.png', 'theme') }}" alt="">
+                            <img class="lim-project__front-image" src="{{ item.front_image|image() }}" alt="">
+                            <img class="lim-project__rear-image" src="{{ item.rear_image|image() }}" alt="">
                         </div>
                     </div>
                 </div>

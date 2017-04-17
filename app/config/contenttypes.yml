@@ -21,6 +21,9 @@ pages:
             class: large
             group: content
             is_translateable: true
+        subtitle:
+            label: Подзаголовок
+            type: text
         slug:
             label: Ссылка
             type: slug

@@ -64,3 +64,45 @@ templatefields:
         map_coordinates:
             label: Заголовок Координаты
             type: geolocation
+
+    services.twig:
+        about_body:
+            label: Текст Описание
+            type: textarea
+
+        pros_heading:
+            label: Заголовок Преимущества
+            type: text
+
+        pros:
+            label: Преимущества
+            type: repeater
+            fields:
+                image:
+                    label: Картинка
+                    type: image
+                description:
+                    label: Описание
+                    type: textarea
+
+        offers_heading:
+            label: Заголовок Предложения
+            type: text
+
+        offers_subheading:
+            label: Подзаголовок Предложения
+            type: text
+
+        offers:
+            label: Предложения
+            type: repeater
+            fields:
+                title:
+                    label: Заголовок
+                    type: text
+                front_image:
+                    label: Большая картинка
+                    type: image
+                rear_image:
+                    label: Маленькая картинка
+                    type: image
