@@ -27,6 +27,7 @@ Vagrantfile
 dist
 public/theme/base-2016
 public/bolt-public/*
+public/files
 bolt.db
 Homestead.yaml
 mix-manifest.json
