@@ -31,6 +31,10 @@ pages:
         template:
             type: templateselect
             filter: '*.twig'
+        seo:
+            type: seo
+            is_translateable: true
+            group: SEO
         locale:
             type: locale
             group: content
