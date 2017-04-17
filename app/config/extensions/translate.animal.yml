@@ -1,11 +1,11 @@
 # The locales the site should be available in
 locales:
+    ru_RU:
+        label: Russian
+        slug: ru
     en_GB:
         label: English
         slug: en
-    de_AT:
-        label: Deutsch
-        slug: de
 
 # Enable/disable automatic routing override.
 # Enabling this will prefix all routes with {_locale} which leads to links like
@@ -31,14 +31,14 @@ url_generator_override: true
 # Enable/disable translated slugs.
 # Enabling this will use translated slugs instead of using the same slug for
 # all languages. Only set to false if you also don't set your slugs to `is_translateable`.
-translate_slugs: true
+translate_slugs: false
 
 # Enable/disable using Accept-Language header to determine the locale for
 # redirection on `/`.
 # Enabling this will redirect visitors on `/` to the preferred locale based on
 # the Accept-Language header. Disabling this will always redirect `/` to the
 # first locale set in `locales` above.
-use_accept_language_header: false
+use_accept_language_header: true
 
 # Enable/disable translation of the dashboard.
 translate_dashboard: false

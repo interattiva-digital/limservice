@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a59f7525696b5287a4b47237983e9302",
+    "content-hash": "b70ec31842546299a13ca9d0025d885d",
     "packages": [
         {
             "name": "animal/translate",
@@ -115,6 +115,71 @@
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
             "time": "2017-04-06T15:36:42+00:00"
+        },
+        {
+            "name": "bolt/labels",
+            "version": "3.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/labels.git",
+                "reference": "2c18a11d5acf812a14a041a82bbb7ea6d7087f06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/labels/zipball/2c18a11d5acf812a14a041a82bbb7ea6d7087f06",
+                "reference": "2c18a11d5acf812a14a041a82bbb7ea6d7087f06",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bolt\\Labels\\LabelsExtension",
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\Labels\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Tests\\": {
+                        "Bolt\\Extension\\Bolt\\Labels\\Tests\\": "tests/",
+                        "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                    }
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Two Kings",
+                    "email": "info@twokings.nl"
+                },
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                },
+                {
+                    "name": "Tobias Dammers",
+                    "email": "tdammers@twokings.nl"
+                }
+            ],
+            "description": "Database-backed translation labels",
+            "support": {
+                "source": "https://github.com/bolt/labels/tree/master",
+                "issues": "https://github.com/bolt/labels/issues"
+            },
+            "time": "2017-02-16T20:22:11+00:00"
         },
         {
             "name": "bolt/sitemap",
