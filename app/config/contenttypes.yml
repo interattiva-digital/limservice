@@ -11,6 +11,22 @@
 # list the different types of services a company provides, you can group these
 # together.
 
+__nodes:
+    language_defaults: &language_defaults
+        locale:
+            type: locale
+            group: content
+        rudata:
+            type: hidden
+        ruslug:
+            type: locale_data
+            index: true
+        endata:
+            type: hidden
+        enslug:
+            type: locale_data
+            index: true
+
 pages:
     name: Pages
     singular_name: Page
@@ -39,41 +55,83 @@ pages:
             type: seo
             is_translateable: true
             group: SEO
-        locale:
-            type: locale
-            group: content
-        rudata:
-            type: hidden
-        ruslug:
-            type: locale_data
-            index: true
-        endata:
-            type: hidden
-        enslug:
-            type: locale_data
-            index: true
+        <<: *language_defaults
     taxonomy: [ groups ]
     recordsperpage: 100
 
 projects:
     name: Projects
     singular_name: Project
-    slug: project
-    singular_slug: project
+    slug: projects
+    singular_slug: projects
     fields:
         title:
             label: Название
             type: text
+            is_translateable: true
+            group: content
         category:
             label: Категория
             type: select
             values: ['HoReCa', 'Home', 'Business']
+            group: content
         description:
             label: Описание
             type: textarea
+            is_translateable: true
+            group: content
         image:
             label: Фото
             type: image
+            group: content
+        <<: *language_defaults
+    viewless: true
+
+products:
+    name: Products
+    singular_name: Product
+    slug: products
+    singular_slug: products
+    fields:
+        title:
+            label: Название
+            type: text
+            is_translateable: true
+            group: content
+        image:
+            label: Картинка
+            type: image
+            group: content
+        description:
+            label: Описание
+            type: html
+            is_translateable: true
+            group: content
+        category:
+            label: Категория
+            type: select
+            values: ['HoReCa', 'Home', 'Business']
+            group: content
+
+        <<: *language_defaults
+    viewless: true
+    relations:
+        product_types:
+            label: Тип
+            multiple: false
+
+product_types:
+    name: Product Types
+    singular_name: Product Type
+    slug: product_types
+    singular_slug: product_types
+    fields:
+        title:
+            label: Название
+            type: text
+            is_translateable: true
+            group: content
+        <<: *language_defaults
 
 # Possible field types:
 #
