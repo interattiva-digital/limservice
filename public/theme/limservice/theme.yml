@@ -1,0 +1,66 @@
+templatefields:
+    about.twig:
+        about_heading:
+            label: Заголовок О Нас
+            type: text
+
+        about_body:
+            label: Текст О Нас
+            type: textarea
+
+        work_heading:
+            label: Заголовок Работа
+            type: text
+        work_subheading:
+            label: Подзаголовок Работа
+            type: text
+        work_slides:
+            label: Слайды Работа
+            type: repeater
+            fields:
+                title:
+                    label: Слайд заголовок
+                    type: text
+                content:
+                    label: Слайд текст
+                    type: textarea
+
+        team_heading:
+            label: Заголовок Команда
+            type: text
+        team_image:
+            label: Фото Команда
+            type: image
+        team_body:
+            label: Текст Команда
+            type: textarea
+
+        history_heading:
+            label: Заголовок История
+            type: text
+        history_subheading:
+            label: Подзаголовок История
+            type: text
+        history_image:
+            label: Картинка История
+            type: image
+        history_body:
+            label: Текст История
+            type: textarea
+
+        clients_heading:
+            label: Заголовок Клиенты
+            type: text
+        clients_list:
+            label: Клиенты
+            type: repeater
+            fields:
+                image:
+                    type: image
+
+        map_heading:
+            label: Заголовок Карта
+            type: text
+        map_coordinates:
+            label: Заголовок Координаты
+            type: geolocation

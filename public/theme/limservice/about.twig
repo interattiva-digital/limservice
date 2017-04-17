@@ -17,28 +17,26 @@
 
     <section class="about__description" id="description">
         <div class="row column medium-12">
-            <h3 class="lim-title">О Нас</h3>
+            <h3 class="lim-title">{{ page.templatefields.about_heading }}</h3>
         </div>
 
         <div class="row column medium-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad, aliquid animi, asperiores consectetur culpa cum cupiditate deserunt ducimus error esse expedita explicabo harum ipsam itaque iusto laudantium, magni maxime minus mollitia necessitatibus neque nesciunt numquam officiis perspiciatis qui quis quod repellendus rerum soluta ullam unde veniam voluptatem! Ea, mollitia!</p>
+            <p>{{ page.templatefields.about_body }}</p>
         </div>
     </section>
 
     <section class="about__team">
         <div class="row">
             <div class="column medium-1">
-                <h2 class="lim-heading lim-heading--vertical">Наша Команда</h2>
+                <h2 class="lim-heading lim-heading--vertical">{{ page.templatefields.team_heading }}</h2>
             </div>
 
             <div class="row align-center column medium-11 team__wrapper">
                 <div class="team__content column medium-9">
                     <div class="team__photo">
-                        <img src="{{ asset('dist/img/our-team.png', 'theme') }}" alt="">
+                        <img src="{{ page.templatefields.team_image|image() }}" alt="">
                     </div>
-                    <p class="team__description">
-                        В команде  харизматичные личности, обучавшиеся в Казахстане и за рубежом. Коллектив имеет опыт работы более 15 лет в производстве мебели и ведение проектов масштабного уровня. Реализовано более 100 успешных проектов. 
-                    </p>
+                    <p class="team__description">{{ page.templatefields.team_body }}</p>
                 </div>
             </div>
 
@@ -50,22 +48,20 @@
 
     <section class="about__history">
         <div class="row align-right">
-            <h2 class="lim-heading">История компании</h2>
+            <h2 class="lim-heading">{{ page.templatefields.history_heading }}</h2>
         </div>
 
         <div class="history__content">
             <div class="row">
                 <div class="column medium-6">
                     <div class="history__image">
-                        <img src="{{ asset('dist/img/history.png', 'theme') }}" alt="">
+                        <img src="{{ page.templatefields.history_image|image() }}" alt="">
                     </div>
                 </div>
 
                 <div class="column medium-6">
-                    <h3 class="lim-mini-title history__heading">Профессионализм и опыт</h3>
-                    <p class="history__text big-text">
-                        Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание модели развития. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять
-                    </p>
+                    <h3 class="lim-mini-title history__heading">{{ page.templatefields.history_subheading }}</h3>
+                    <p class="history__text big-text">{{ page.templatefields.history_body }}</p>
                 </div>
             </div>
         </div>
@@ -75,7 +71,7 @@
     <section class="about__clients">
         <div class="clients__header row align-right">
             <div class="column medium-5 clients__title">
-                <h2 class="lim-heading">Нам доверяют</h2>
+                <h2 class="lim-heading">{{ page.templatefields.clients_heading }}</h2>
             </div>
             <div class="column medium-6 clients__link">
                 <a href="{{ path('pagebinding', {'slug':'career'}) }}" class="lim-link">Посмотреть портфолио</a>
@@ -83,21 +79,15 @@
         </div>
 
         <div class="clients__grid">
-            <div class="row align-center">
-                {% for i in 1..5  %}
-                    <div class="column medium-2">
-                        <img src="{{ asset('dist/img/kfc.png', 'theme') }}" alt="">
-                    </div>
-                {% endfor %}
-            </div>
-
-            <div class="row align-center">
-                {% for i in 1..5  %}
-                    <div class="column medium-2">
-                        <img src="{{ asset('dist/img/kfc.png', 'theme') }}" alt="">
-                    </div>
-                {% endfor %}
-            </div>
+            {% for batch in page.templatefields.clients_list|batch(5) %}
+                <div class="row align-center">
+                    {% for item in batch  %}
+                        <div class="column medium-2">
+                            <img src="{{ item.image|image() }}" alt="">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
 
     </section>

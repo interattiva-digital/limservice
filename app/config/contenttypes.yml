@@ -30,6 +30,7 @@ pages:
             type: image
         template:
             type: templateselect
+            is_translateable: true
             filter: '*.twig'
         seo:
             type: seo
