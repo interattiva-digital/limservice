@@ -1,0 +1,169 @@
+.career__description {
+    text-align: center;
+    padding: 90px 0;
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+
+    * {
+        text-align: center;
+    }
+}
+
+.career__vacancies {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background: white;
+
+    .vacancies__tab-controls {
+        list-style-type: none;
+        margin: 0;
+        background: none;
+        border: none;
+
+        & > li {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            float: none;
+
+            font-family: $font-ultra-light;
+            font-size: 24px;
+            color: #929292;
+            letter-spacing: 0.5px;
+
+            transition: padding-left 0.5s, color 0.5s;
+
+            & > a {
+                color: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                background: none;
+                padding: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 45%;
+                height: 1px;
+                width: 30px;
+                background: #929292;
+                transition: width 0.5s, background 0.5s;
+            }
+
+            &.is-active {
+                padding-left: 100px;
+                color: #131431;
+            }
+
+            &.is-active:before {
+                width: 70px;
+                background: #131431;
+            }
+        }
+    }
+
+    .vacancies__tab-content {
+        position: relative;
+        border: none;
+        height: 400px;
+    }
+
+    .vacancies__tab {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: opacity 0.5s, visibility 0.5s;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .tab__image {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tab__description {
+            position: absolute;
+            display: inline-block;
+            max-width: 66.6666667%;
+            z-index: 2;
+            right: 0;
+            bottom: -20%;
+            padding: 30px;
+            min-width: 570px;
+            min-height: 132px;
+
+            background: #FFFFFF;
+            box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+
+            font-family: $font-light;
+            font-size: 16px;
+            color: #131431;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .tab__title {
+            margin-bottom: 20px;
+
+            text-align: center;
+            font-family: $font-ultra-light;
+            font-size: 24px;
+            color: #131431;
+            letter-spacing: 0.5px;
+            line-height: 30px;
+        }
+
+        .tab__list {
+            font-family: $font-regular;
+            font-size: 16px;
+            color: #131431;
+            line-height: 24px;
+
+            li {
+                padding-left: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.career__action {
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    .action__subtitle {
+        margin-bottom: 30px;
+
+        font-family: $font-light;
+        font-size: 16px;
+        color: #131431;
+        line-height: 24px;
+    }
+
+    background: white;
+}

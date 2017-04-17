@@ -1,0 +1,76 @@
+{% extends 'partials/_master.twig' %}
+
+{% block content %}
+
+    <section class="career__hero lim-hero">
+        <div class="row">
+            <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                <div class="lim-jumbo__content">
+                    <h2 class="lim-jumbo__title">Лим Сервис</h2>
+                    <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                </div>
+
+                <img src="{{ asset('dist/img/jumbo-arrow.svg', 'theme') }}" alt="" class="lim-jumbo__arrow">
+            </div>
+        </div>
+    </section>
+
+    <section class="career__description">
+        <div class="row column medium-12">
+            <h3 class="lim-title">О Нас</h3>
+        </div>
+
+        <div class="row column medium-12">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad, aliquid animi, asperiores consectetur culpa cum cupiditate deserunt ducimus error esse expedita explicabo harum ipsam itaque iusto laudantium, magni maxime minus mollitia necessitatibus neque nesciunt numquam officiis perspiciatis qui quis quod repellendus rerum soluta ullam unde veniam voluptatem! Ea, mollitia!</p>
+        </div>
+    </section>
+
+    <section class="career__vacancies">
+        <div class="row">
+            <div class="column medium-1">
+                <h2 class="lim-heading lim-heading--vertical">Требуются</h2>
+            </div>
+
+            <div class="column medium-11">
+                <div class="row">
+                    <div class="column medium-4">
+                        <ul class="tabs vacancies__tab-controls" data-tabs id="vacancies-tabs">
+                            {% for i in 1..3 %}
+                                <li class="tabs-title {{ loop.first ? 'is-active':'' }}" aria-selected="true">
+                                    <a href="#pro-{{ i }}">Дизайнер {{ i }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="column medium-7">
+                        <div class="vacancies__tab-content tabs-content" data-tabs-content="vacancies-tabs">
+                            {% for i in 1..3 %}
+                                <div class="vacancies__tab tabs-panel {{ loop.first ? 'is-active':'' }}" id="pro-{{ i }}">
+
+                                    <h3 class="tab__title">Требования к сотруднику:</h3>
+
+                                    <ul class="tab__list">
+                                        <li>Lorem ipsum dolor. {{ i }}</li>
+                                        <li>Nemo, quia, velit?</li>
+                                        <li>Accusantium, maxime quod!</li>
+                                        <li>At, eos, suscipit!</li>
+                                        <li>Error saepe, temporibus.</li>
+                                        <li>Deleniti obcaecati, officiis?</li>
+                                    </ul>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="career__action text-center">
+        <h2 class="text-uppercase">Станьте частью нашей команды</h2>
+        <h3 class="action__subtitle">Отправьте свое резюме к нам на почту</h3>
+
+        <a href="mailto:info@limservice.kz" class="lim-button lim-button--transparent-dark">info@limservice.kz</a>
+    </section>
+
+{% endblock content %}
