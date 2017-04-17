@@ -1,0 +1,183 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a59f7525696b5287a4b47237983e9302",
+    "packages": [
+        {
+            "name": "animal/translate",
+            "version": "4.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AnimalDesign/bolt-translate.git",
+                "reference": "dedaee52df698498ebde55b9f29c6c20b3a8c51c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AnimalDesign/bolt-translate/zipball/dedaee52df698498ebde55b9f29c6c20b3a8c51c",
+                "reference": "dedaee52df698498ebde55b9f29c6c20b3a8c51c",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0.11"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-icon": "icon-language.png",
+                "bolt-class": "Bolt\\Extension\\Animal\\Translate\\TranslateExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Animal\\Translate\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Extension\\Animal\\Translate\\Tests\\": "tests",
+                    "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Svante Richter",
+                    "email": "svante.richter@gmail.com"
+                },
+                {
+                    "name": "Animal Design OG",
+                    "email": "studio@animal.at"
+                }
+            ],
+            "description": "This extension provides translation of records. Has support for repeaters, templatefields and extension fieldtypes.",
+            "keywords": [
+                "Content",
+                "Frontend",
+                "Language",
+                "Languages",
+                "Localisation",
+                "Localization",
+                "Multilanguage",
+                "Translation",
+                "i18n"
+            ],
+            "support": {
+                "source": "https://github.com/AnimalDesign/bolt-translate/tree/master",
+                "issues": "https://github.com/AnimalDesign/bolt-translate/issues"
+            },
+            "time": "2017-04-12T19:22:21+00:00"
+        },
+        {
+            "name": "bobdenotter/seo",
+            "version": "v0.14.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobdenotter/seo.git",
+                "reference": "1d9bd647137124852c799470754b4054e3b88f99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/1d9bd647137124852c799470754b4054e3b88f99",
+                "reference": "1d9bd647137124852c799470754b4054e3b88f99",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\BobdenOtter\\Seo\\SeoExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\BobdenOtter\\Seo\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "An extension to easily manage SEO title, meta description and OG tags.",
+            "support": {
+                "source": "https://github.com/bobdenotter/seo/tree/v0.14.2",
+                "issues": "https://github.com/bobdenotter/seo/issues"
+            },
+            "time": "2017-04-06T15:36:42+00:00"
+        },
+        {
+            "name": "bolt/sitemap",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/Sitemap.git",
+                "reference": "5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1",
+                "reference": "5867c9a0d86ea0de21e2c910b5f0fe40c1db15e1",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-icon": "icon-sitemap.png",
+                "bolt-class": "Bolt\\Extension\\Bolt\\Sitemap\\SitemapExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\Sitemap\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                },
+                {
+                    "name": "Patrick van Kouteren",
+                    "email": "info@wedesignit.nl"
+                },
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "An extension to create XML sitemaps for your Bolt website.",
+            "keywords": [
+                "SEO",
+                "sitemap"
+            ],
+            "support": {
+                "source": "https://github.com/bolt/Sitemap/tree/master",
+                "issues": "https://github.com/bolt/Sitemap/issues"
+            },
+            "time": "2017-02-26T13:59:52+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

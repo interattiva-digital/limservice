@@ -16,20 +16,18 @@ pages:
     singular_name: Page
     fields:
         title:
+            label: Название
             type: text
             class: large
             group: content
         slug:
+            label: Ссылка
             type: slug
             uses: title
         image:
+            label: Изображение
             type: image
-        teaser:
-            type: html
-            height: 150px
-        body:
-            type: html
-            height: 300px
+
         template:
             type: templateselect
             filter: '*.twig'
