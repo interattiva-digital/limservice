@@ -6,8 +6,8 @@
         <div class="row">
             <div class="lim-jumbo" style="background-image: url({{ page.image|image() }})">
                 <div class="lim-jumbo__content">
-                    <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                    <h3 class="lim-jumbo__heading">Home</h3>
+                    <h2 class="lim-jumbo__title">{{ page.subtitle }}</h2>
+                    <h3 class="lim-jumbo__heading">{{ page.title }}</h3>
 
                     <div class="lim-jumbo__link">
                         <a href="{{ path('pagebinding', {'slug':'products', 'category':'home'}) }}" class="lim-button lim-button--bright">Посмотреть продукцию</a>
@@ -20,64 +20,57 @@
     </section>
 
     <section class="landing__desc" id="desc">
-        <h3 class="lim-title desc__title">Home</h3>
+        <h3 class="lim-title desc__title">{{ page.templatefields.about_heading }}</h3>
 
-        <p class="desc__text">
-            В настоящее время рабочее место является неотъемлемой частью жизненного пространства.
-            Мебельная фабрика ЛИМ Сервис ставит своей целью сделать это пространство максимально комфортным, функциональным и просто красивым.
-        </p>
+        <p class="desc__text">{{ page.templatefields.about_body }}</p>
     </section>
 
-    <section class="landing__slider">
-        <div class="row expanded align-center">
-            <div class="column medium-12">
-                <div class="slider">
+    {% if page.templatefields.slides is not empty %}
+        <section class="landing__slider">
+            <div class="row expanded align-center">
+                <div class="column medium-12">
+                    <div class="slider">
 
-                    <img src="{{ asset('dist/img/prev-icon.svg', 'theme') }}" class="slider__prev">
-                    <img src="{{ asset('dist/img/next-icon.svg', 'theme') }}" class="slider__next">
+                        <img src="{{ asset('dist/img/prev-icon.svg', 'theme') }}" class="slider__prev">
+                        <img src="{{ asset('dist/img/next-icon.svg', 'theme') }}" class="slider__next">
 
-                    <div class="slider__container" data-landing-slider>
-                        <div class="slider__slide">
-                            <h3 class="slide__title">Детская мебель</h3>
-                            <p class="slide__content">Все углы в мебели завалены/округлены. Градус крепления всей фурнитуры проектируется/заглубляется, так, что у ребенка ограничен доступ к мелким деталям.</p>
-                        </div>
+                        <div class="slider__container" data-landing-slider>
 
-                        <div class="slider__slide">
-                            <h3 class="slide__title">Детская мебель</h3>
-                            <p class="slide__content">Все углы в мебели завалены/округлены. Градус крепления всей фурнитуры проектируется/заглубляется, так, что у ребенка ограничен доступ к мелким деталям.</p>
-                        </div>
+                            {% for item in page.templatefields.slides %}
+                                <div class="slider__slide">
+                                    <h3 class="slide__title">{{ item.heading }}</h3>
+                                    <p class="slide__content">{{ item.body }}</p>
+                                </div>
+                            {% endfor %}
 
-                        <div class="slider__slide">
-                            <h3 class="slide__title">Детская мебель</h3>
-                            <p class="slide__content">Все углы в мебели завалены/округлены. Градус крепления всей фурнитуры проектируется/заглубляется, так, что у ребенка ограничен доступ к мелким деталям.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% endif %}
 
     <div class="landing__projects">
 
         <div class="landing__heading text-center">
-            <h2 class="lim-heading">Проекты</h2>
-            <h3 class="lim-subtitle">Слоган для Home</h3>
+            <h2 class="lim-heading">{{ page.templatefields.projects_heading }}</h2>
+            <h3 class="lim-subtitle">{{ page.templatefields.projects_subheading }}</h3>
         </div>
 
-        {% for i in 1..5 %}
+        {% for item in page.templatefields.projects %}
             <div class="lim-project {{ loop.index % 2 == 0 ? 'lim-project--inverse':'' }}">
                 <div class="row">
                     <div class="lim-project__heading">
-                        <h3 class="heading__supertext">CHINA GOLD</h3>
+                        <h3 class="heading__supertext">{{ item.title }}</h3>
 
-                        <div class="heading__content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt eius ipsa laborum nihil omnis perferendis quia quibusdam quisquam rerum unde, velit veritatis voluptatum.</p>
+                        <div class="heading__content html-content">
+                            {{ item.body|raw }}
                         </div>
                     </div>
 
                     <div class="lim-project__images">
-                        <img class="lim-project__front-image" src="{{ asset('dist/img/lim-project.png', 'theme') }}" alt="">
-                        <img class="lim-project__rear-image" src="{{ asset('dist/img/lim-project.png', 'theme') }}" alt="">
+                        <img class="lim-project__front-image" src="{{ item.front_image|image() }}" alt="">
+                        <img class="lim-project__rear-image" src="{{ item.rear_image|image() }}" alt="">
                     </div>
                 </div>
             </div>

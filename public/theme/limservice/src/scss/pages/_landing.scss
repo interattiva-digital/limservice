@@ -34,6 +34,10 @@
         }
     }
 
+    .slider__container {
+
+    }
+
     .slider__next, .slider__prev {
         position: absolute;
         z-index: 1;
@@ -51,7 +55,6 @@
 
     .slider__slide {
         text-align: center;
-
         .slide__title {
             font-family: $font-regular;
             font-size: 36px;
