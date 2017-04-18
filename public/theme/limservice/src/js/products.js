@@ -4,4 +4,8 @@ $(document).ready(() => {
 
         $(target).toggleClass('active');
     });
+
+    $('[data-reloading-form] *').on('change', () => {
+       $('[data-reloading-form]').submit();
+    });
 });

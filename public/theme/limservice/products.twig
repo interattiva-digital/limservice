@@ -1,73 +1,85 @@
 {% extends 'partials/_master.twig' %}
 
-{% set sorting = app.request.get('sorting') %}
-{% set search = app.request.get('search') ? app.request.get('search') : '' %}
+{% set search = app.request.get('search') ?: '' %}
+{% set category = app.request.get('category') ?: '' %}
 
 {% if app.request.get('type') %}
     {% setcontent type = 'product_types/' ~ app.request.get('type') %}
 {% endif %}
 
 {% if type is not defined %}
-    {% setcontent products = 'products' where { title: '%' ~ search ~ '%' } %}
+    {% setcontent products = 'products' where { category: '%' ~ category ~ '%' } %}
 {% else %}
-    {% set products = type.related('products') %}
+    {% set ids = type.relation.products|join(" || ") %}
+    {% setcontent products = 'products' where { id: ids, category: '%' ~ category ~ '%' } %}
+
+    {% if products|length == 1 %}
+        {% set products = [products] %}
+    {% endif %}
 {% endif %}
+
+{% set filtered_products = [] %}
+
+{% for item in products %}
+    {% if search|lower in item.title|lower %}
+        {% set filtered_products = filtered_products|merge([item]) %}
+    {% endif %}
+{% endfor %}
 
 {% setcontent product_types = 'product_types' %}
 
 {% block content %}
-    {{ dump(products|first) }}
     <section class="products">
         <div class="products__header">
-            <div class="row products__categories">
-                <div class="column medium-4">
-                    <h1 class="lim-heading text-uppercase">Продукция</h1>
+            <form method="get" data-reloading-form>
+                <div class="row products__categories">
+                    <div class="column medium-4">
+                        <h1 class="lim-heading text-uppercase">Продукция</h1>
+                    </div>
+
+                    <div class="column medium-8 products__categories-list">
+                        <ul class="products__categories-list">
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-all" value="0" {{ category == 0 ? 'checked':'' }}>
+                                <label for="category-all">Все</label>
+                            </li>
+
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-business" value="Business" {{ category == 'Business' ? 'checked':'' }}>
+                                <label for="category-business">Business</label>
+                            </li>
+
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-horeca" value="HoReCa" {{ category == 'HoReCa' ? 'checked':'' }}>
+                                <label for="category-horeca">HoReCa</label>
+                            </li>
+
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-home" value="Home" {{ category == 'Home' ? 'checked':'' }}>
+                                <label for="category-home">Home</label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="column medium-8">
-                    <ul class="products__categories-list">
-                        <li class="products__categories-item active">
-                            <a href="">Все</a>
-                        </li>
+                <div class="products__filters">
+                    <div class="row">
+                        <div class="column medium-5 flex-container align-middle">
+                            <span>Показано {{ filtered_products|length }} продукта</span>
+                        </div>
 
-                        <li class="products__categories-item">
-                            <a href="">Buisness</a>
-                        </li>
+                        <div class="column medium-2 flex-container align-middle">
+                            <select name="type" class="lim-input">
+                                <option value="0">Тип (все)</option>
+                                {% for item in product_types %}
+                                    <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
 
-                        <li class="products__categories-item">
-                            <a href="">HoReCa</a>
-                        </li>
-
-                        <li class="products__categories-item">
-                            <a href="">Home</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <form class="products__filters">
-                <div class="row">
-                    <div class="column medium-5 flex-container align-middle">
-                        <span>Показано {{ products|length }} продукта</span>
-                    </div>
-
-                    <div class="column medium-2 flex-container align-middle">
-                        <select name="sorting" class="lim-input">
-                            <option value="0">Сортировка</option>
-                        </select>
-                    </div>
-
-                    <div class="column medium-2 flex-container align-middle">
-                        <select name="type" class="lim-input">
-                            <option value="0">Тип (все)</option>
-                            {% for item in product_types %}
-                                <option value="{{ item.id }}">{{ item.title }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <div class="column medium-3 flex-container align-middle">
-                        <input type="text" name="search" placeholder="Поиск" class="lim-input filters__search" value="{{ search }}">
+                        <div class="column medium-3 flex-container align-middle">
+                            <input type="text" name="search" placeholder="Поиск" class="lim-input filters__search">
+                        </div>
                     </div>
                 </div>
             </form>
@@ -76,7 +88,7 @@
         <div class="products__listing">
             <div class="row">
 
-                {% for item in products %}
+                {% for item in filtered_products %}
                     <div class="column medium-6">
                         <div class="products__item" id="product-{{ loop.index }}">
                             <img src="{{ item.image|image() }}" class="item__image">

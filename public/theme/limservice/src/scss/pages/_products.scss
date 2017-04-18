@@ -20,41 +20,47 @@
     display: inline-block;
     vertical-align: middle;
     min-width: 150px;
-    padding-left: 60px;
     margin-right: 30px;
-
-    &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 30%;
-        height: 1px;
-        width: 30px;
-        background: #929292;
-    }
 
     &:last-child {
         margin-right: 0;
     }
 
-    &.active {
-        padding-left: 100px;
-
-        a {
-            color: $text-color;
-        }
-    }
-
-    &.active:before {
-        width: 70px;
-        background: $text-color;
-    }
-
-    a {
+    label {
         font-family: $font-ultra-light;
         font-size: 24px;
         color: #929292;
         letter-spacing: 0.5px;
+        cursor: pointer;
+
+        padding-left: 70px;
+
+        transition: color 0.3s;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 49%;
+            height: 1px;
+            width: 30px;
+            background: #929292;
+
+            transition: width 0.3s;
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    input[type="radio"]:checked + label {
+        color: $text-color;
+
+        &:before {
+            width: 70px;
+            background: $text-color;
+        }
     }
 }
 
