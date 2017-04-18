@@ -40,6 +40,7 @@ pages:
         subtitle:
             label: Подзаголовок
             type: text
+            is_translateable: true
         slug:
             label: Ссылка
             type: slug

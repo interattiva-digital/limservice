@@ -148,3 +148,26 @@ templatefields:
                 rear_image:
                     label: Маленькое фото
                     type: image
+
+    career.twig:
+        about_heading:
+            label: Заголовок Описание
+            type: text
+        about_body:
+            label: Подзаголовок Описание
+            type: textarea
+
+        vacancies_heading:
+            label: Заголовок Вакансии
+            type: text
+
+        vacancies:
+            label: Вакансии
+            type: repeater
+            fields:
+                title:
+                    label: Название
+                    type: text
+                description:
+                    label: Описание
+                    type: html
