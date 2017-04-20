@@ -39,14 +39,6 @@
     }
 }
 
-.header__language {
-    opacity: 1;
-
-    &.hidden {
-        opacity: 0;
-    }
-}
-
 .header__item--text {
     font-family: $font-light;
     font-size: 16px;
@@ -54,6 +46,18 @@
     color: $text-color;
 
     margin: 0 16px;
+}
+
+.header__language {
+    opacity: 1;
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    @include breakpoint(small down) {
+        margin-left: 0;
+    }
 }
 
 .header__logo {
