@@ -16,4 +16,9 @@
     padding-right: 15px;
     background-color: #ffffff;
     background-clip: content-box;
+
+    @include breakpoint(small down) {
+        padding: 0;
+        flex-direction: column;
+    }
 }
