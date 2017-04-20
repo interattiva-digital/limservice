@@ -42,12 +42,24 @@
 
     .slide {
         height: 70vh;
+
+        @include breakpoint(small down) {
+            height: calc(83vh - 70px);
+        }
+    }
+
+    @include breakpoint(small down) {
+        height: 100%;
     }
 }
 
 .lim-slider__container {
     .slick-list {
         overflow: visible;
+    }
+
+    @include breakpoint(small down) {
+        height: 100%;
     }
 }
 

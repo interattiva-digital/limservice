@@ -2,6 +2,10 @@
     position: relative;
 
     height: $front-container-height;
+
+    @include breakpoint(small down) {
+        height: calc(83vh - 70px);
+    }
 }
 
 .slider-row {

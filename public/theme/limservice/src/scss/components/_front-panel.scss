@@ -100,12 +100,22 @@
 .front-panel__image--center {
     left: 50%;
     transform: translateX(-50%);
+
+    @include breakpoint(small down) {
+        transform: none;
+        left: 0;
+    }
 }
 
 .front-panel__image--right {
     right: 0;
 
     left: auto;
+
+    @include breakpoint(small down) {
+        left: 0;
+        right: auto;
+    }
 }
 
 .front-panel__title {
