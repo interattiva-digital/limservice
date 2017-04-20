@@ -16,7 +16,7 @@
                                     <a href="{{ path('pagebinding', {'slug':'horeca'}) }}" class="lim-button">Подробнее</a>
                                 </div>
 
-                                <img src="{{ page.templatefields.horeca_image }}" alt="" class="front-panel__image">
+                                <img src="{{ page.templatefields.horeca_image|image() }}" alt="" class="front-panel__image">
                             </div>
                         </div>
 
@@ -28,7 +28,7 @@
                                     <a href="{{ path('pagebinding', {'slug':'business'}) }}" class="lim-button">Подробнее</a>
                                 </div>
 
-                                <img src="{{ page.templatefields.business_title }}" alt="" class="front-panel__image front-panel__image--center">
+                                <img src="{{ page.templatefields.business_image|image() }}" alt="" class="front-panel__image front-panel__image--center">
                             </div>
                         </div>
 
@@ -40,7 +40,7 @@
                                     <a href="{{ path('pagebinding', {'slug':'home'}) }}" class="lim-button">Подробнее</a>
                                 </div>
 
-                                <img src="{{ page.templatefields.home_title }}" alt="" class="front-panel__image front-panel__image--right">
+                                <img src="{{ page.templatefields.home_image|image() }}" alt="" class="front-panel__image front-panel__image--right">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
 
                 <div class="slide" id="services">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.services_image }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.services_image|image() }})">
                             <div class="lim-jumbo__content">
                                 <h2 class="lim-jumbo__title">{{ page.templatefields.services_title }}</h2>
                                 <h3 class="lim-jumbo__heading">{{ page.templatefields.services_text }}</h3>
@@ -81,7 +81,7 @@
 
                 <div class="slide" id="portfolio">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.portfolio_image }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.portfolio_image|image() }})">
                             <div class="lim-jumbo__content">
                                 <h2 class="lim-jumbo__title">{{ page.templatefields.portfolio_title }}</h2>
                                 <h3 class="lim-jumbo__heading">{{ page.templatefields.portfolio_text }}</h3>
@@ -97,7 +97,7 @@
 
                 <div class="slide" id="products">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.products_image }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.products_image|image() }})">
                             <div class="lim-jumbo__content">
                                 <h2 class="lim-jumbo__title">{{ page.templatefields.products_title }}</h2>
                                 <h3 class="lim-jumbo__heading">{{ page.templatefields.products_text }}</h3>

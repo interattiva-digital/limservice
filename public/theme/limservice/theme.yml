@@ -41,7 +41,7 @@ templatefields:
             type: image
         about_link:
             label: О Нас текст ссылки
-            type: image
+            type: text
 
         services_title:
             label: Услуги заголовок
@@ -54,7 +54,7 @@ templatefields:
             type: image
         services_link:
             label: Услуги текст ссылки
-            type: image
+            type: text
 
         portfolio_title:
             label: Портфолио заголовок
@@ -67,7 +67,7 @@ templatefields:
             type: image
         portfolio_link:
             label: Портфолио текст ссылки
-            type: image
+            type: text
 
         products_title:
             label: Продукция заголовок
@@ -80,7 +80,7 @@ templatefields:
             type: image
         products_link:
             label: Продукция текст ссылки
-            type: image
+            type: text
 
     about.twig:
         about_heading:
