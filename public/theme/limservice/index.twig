@@ -10,37 +10,37 @@
                     <div class="slider-row">
                         <div class="front-panel">
                             <div class="front-panel__content">
-                                <h3 class="front-panel__title">Horeca</h3>
-                                <div class="front-panel__description">Решения для ресторанов и кафе</div>
+                                <h3 class="front-panel__title">{{ page.templatefields.horeca_title }}</h3>
+                                <div class="front-panel__description">{{ page.templatefields.horeca_text }}</div>
                                 <div class="front-panel__link">
                                     <a href="{{ path('pagebinding', {'slug':'horeca'}) }}" class="lim-button">Подробнее</a>
                                 </div>
 
-                                <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image">
+                                <img src="{{ page.templatefields.horeca_image }}" alt="" class="front-panel__image">
                             </div>
                         </div>
 
                         <div class="front-panel">
                             <div class="front-panel__content">
-                                <h3 class="front-panel__title">Business</h3>
-                                <div class="front-panel__description">Детская мебель</div>
+                                <h3 class="front-panel__title">{{ page.templatefields.business_title }}</h3>
+                                <div class="front-panel__description">{{ page.templatefields.business_text }}</div>
                                 <div class="front-panel__link">
                                     <a href="{{ path('pagebinding', {'slug':'business'}) }}" class="lim-button">Подробнее</a>
                                 </div>
 
-                                <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image front-panel__image--center">
+                                <img src="{{ page.templatefields.business_title }}" alt="" class="front-panel__image front-panel__image--center">
                             </div>
                         </div>
 
                         <div class="front-panel">
                             <div class="front-panel__content">
-                                <h3 class="front-panel__title">Home</h3>
-                                <div class="front-panel__description">Детская мебель</div>
+                                <h3 class="front-panel__title">{{ page.templatefields.home_title }}</h3>
+                                <div class="front-panel__description">{{ page.templatefields.home_text }}</div>
                                 <div class="front-panel__link">
                                     <a href="{{ path('pagebinding', {'slug':'home'}) }}" class="lim-button">Подробнее</a>
                                 </div>
 
-                                <img src="http://fillmurray.com/600/500" alt="" class="front-panel__image front-panel__image--right">
+                                <img src="{{ page.templatefields.home_title }}" alt="" class="front-panel__image front-panel__image--right">
                             </div>
                         </div>
                     </div>
@@ -48,12 +48,12 @@
 
                 <div class="slide" id="about">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.about_image|image() }})">
                             <div class="lim-jumbo__content">
-                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <h2 class="lim-jumbo__title">{{ page.templatefields.about_title }}</h2>
+                                <h3 class="lim-jumbo__heading">{{ page.templatefields.about_text }}</h3>
                                 <div class="lim-jumbo__link">
-                                    <a href="{{ path('pagebinding', {'slug':'about'}) }}" class="lim-button lim-button--dark">О Нас</a>
+                                    <a href="{{ path('pagebinding', {'slug':'about'}) }}" class="lim-button lim-button--dark">{{ page.templatefields.about_link }}</a>
                                 </div>
                             </div>
 
@@ -64,12 +64,12 @@
 
                 <div class="slide" id="services">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.services_image }})">
                             <div class="lim-jumbo__content">
-                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <h2 class="lim-jumbo__title">{{ page.templatefields.services_title }}</h2>
+                                <h3 class="lim-jumbo__heading">{{ page.templatefields.services_text }}</h3>
                                 <div class="lim-jumbo__link">
-                                    <a href="{{ path('pagebinding', {'slug':'services'}) }}" class="lim-button lim-button--dark">Услуги</a>
+                                    <a href="{{ path('pagebinding', {'slug':'services'}) }}" class="lim-button lim-button--dark">{{ page.templatefields.services_link }}</a>
                                 </div>
 
                             </div>
@@ -81,12 +81,12 @@
 
                 <div class="slide" id="portfolio">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.portfolio_image }})">
                             <div class="lim-jumbo__content">
-                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <h2 class="lim-jumbo__title">{{ page.templatefields.portfolio_title }}</h2>
+                                <h3 class="lim-jumbo__heading">{{ page.templatefields.portfolio_text }}</h3>
                                 <div class="lim-jumbo__link">
-                                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}" class="lim-button lim-button--dark">Портфолио</a>
+                                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}" class="lim-button lim-button--dark">{{ page.templatefields.portfolio_link }}</a>
                                 </div>
                             </div>
 
@@ -97,12 +97,12 @@
 
                 <div class="slide" id="products">
                     <div class="slider-row">
-                        <div class="lim-jumbo" style="background-image: url({{ asset('dist/img/test-bg.png', 'theme') }})">
+                        <div class="lim-jumbo" style="background-image: url({{ page.templatefields.products_image }})">
                             <div class="lim-jumbo__content">
-                                <h2 class="lim-jumbo__title">Лим Сервис</h2>
-                                <h3 class="lim-jumbo__heading">Для тех, кто ценит вкус</h3>
+                                <h2 class="lim-jumbo__title">{{ page.templatefields.products_title }}</h2>
+                                <h3 class="lim-jumbo__heading">{{ page.templatefields.products_text }}</h3>
                                 <div class="lim-jumbo__link">
-                                    <a href="{{ path('pagebinding', {'slug':'products'}) }}" class="lim-button lim-button--dark">Продукты</a>
+                                    <a href="{{ path('pagebinding', {'slug':'products'}) }}" class="lim-button lim-button--dark">{{ page.templatefields.products_link }}</a>
                                 </div>
                             </div>
 

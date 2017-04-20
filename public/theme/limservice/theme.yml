@@ -1,4 +1,87 @@
 templatefields:
+    index.twig:
+        horeca_title:
+            label: HoReCa заголовок
+            type: text
+        horeca_text:
+            label: HoReCa текст
+            type: text
+        horeca_image:
+            label: HoReCa картинка
+            type: image
+
+        business_title:
+            label: Business заголовок
+            type: text
+        business_text:
+            label: Business текст
+            type: text
+        business_image:
+            label: Business картинка
+            type: image
+
+        home_title:
+            label: Home заголовок
+            type: text
+        home_text:
+            label: Home текст
+            type: text
+        home_image:
+            label: Home картинка
+            type: image
+
+        about_title:
+            label: О Нас заголовок
+            type: text
+        about_text:
+            label: О Нас текст
+            type: text
+        about_image:
+            label: О Нас картинка
+            type: image
+        about_link:
+            label: О Нас текст ссылки
+            type: image
+
+        services_title:
+            label: Услуги заголовок
+            type: text
+        services_text:
+            label: Услуги текст
+            type: text
+        services_image:
+            label: Услуги картинка
+            type: image
+        services_link:
+            label: Услуги текст ссылки
+            type: image
+
+        portfolio_title:
+            label: Портфолио заголовок
+            type: text
+        portfolio_text:
+            label: Портфолио текст
+            type: text
+        portfolio_image:
+            label: Портфолио картинка
+            type: image
+        portfolio_link:
+            label: Портфолио текст ссылки
+            type: image
+
+        products_title:
+            label: Продукция заголовок
+            type: text
+        products_text:
+            label: Продукция текст
+            type: text
+        products_image:
+            label: Продукция картинка
+            type: image
+        products_link:
+            label: Продукция текст ссылки
+            type: image
+
     about.twig:
         about_heading:
             label: Заголовок О Нас
