@@ -66,30 +66,91 @@
 
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 
+    @include breakpoint(small down) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        padding: 10px 0 0 0;
+        transform: none;
+    }
+
     .controls__list {
         display: flex;
         margin: 0;
         list-style-type: none;
+        justify-content: space-around;
     }
 
     .controls__list-item {
         display: inline-block;
+        position: relative;
+        text-align: center;
         margin-right: 30px;
         cursor: pointer;
-
-        font-family: $font-light;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        color: #929292;
-
-        transition: color 0.3s;
 
         &:last-child {
             margin-right: 0;
         }
 
         &.active {
-            color: $text-color;
+            span {
+                color: $text-color;
+            }
+
+            .item__icon {
+                opacity: 1;
+            }
+        }
+
+        span {
+            display: block;
+            font-family: $font-light;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #929292;
+            white-space: nowrap;
+            transition: color 0.3s;
+        }
+
+        .item__icon {
+            display: none;
+            width: 40px;
+            height: 40px;
+            //margin-bottom: 5px;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .item__icon--active {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        @include breakpoint(small down) {
+
+            .item__icon, .item__icon--active {
+                display: inline-block;
+            }
+
+            margin-right: 5px;
+            //min-width: 60px;
+
+            span {
+                font-size: 11px;
+                text-transform: none;
+                letter-spacing: normal;
+            }
         }
     }
 }

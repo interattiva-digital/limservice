@@ -2,6 +2,8 @@
 
 {% block content %}
 
+    {#{% include 'partials/_front-svg-symbols.twig' %}#}
+
     <div class="front-container">
 
         <div class="lim-slider">
@@ -116,23 +118,28 @@
             <div class="lim-slider__controls">
                 <ul class="controls__list">
                     <li class="controls__list-item active" data-target="#home">
-                        Главная
+                        <img class="item__icon" src="{{ asset('dist/img/slider-home-icon.svg', 'theme') }}" alt="">
+                        <span>Главная</span>
                     </li>
 
                     <li class="controls__list-item" data-target="#about">
-                        О нас
+                        <img class="item__icon" src="{{ asset('dist/img/slider-about-icon.svg', 'theme') }}" alt="">
+                        <span>О нас</span>
                     </li>
 
                     <li class="controls__list-item" data-target="#services">
-                        Услуги
+                        <img class="item__icon" src="{{ asset('dist/img/slider-services-icon.svg', 'theme') }}" alt="">
+                        <span>Услуги</span>
                     </li>
 
                     <li class="controls__list-item" data-target="#portfolio">
-                        Портфолио
+                        <img class="item__icon" src="{{ asset('dist/img/slider-portfolio-icon.svg', 'theme') }}" alt="">
+                        <span>Портфолио</span>
                     </li>
 
                     <li class="controls__list-item" data-target="#products">
-                        Продукция
+                        <img class="item__icon" src="{{ asset('dist/img/slider-products-icon.svg', 'theme') }}" alt="">
+                        <span>Продукция</span>
                     </li>
                 </ul>
             </div>
