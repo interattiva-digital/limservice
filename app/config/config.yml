@@ -209,7 +209,7 @@ thumbnails:
     notfound_image: view/img/default_notfound.png
     error_image: view/img/default_error.png
     save_files: false
-    allow_upscale: false
+    allow_upscale: true
     exif_orientation: true
     only_aliases: false
 #    browser_cache_time: 2592000

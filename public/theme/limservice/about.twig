@@ -47,19 +47,19 @@
     </section>
 
     <section class="about__history">
-        <div class="row align-right">
+        <div class="row column small-12 align-right history__heading">
             <h2 class="lim-heading">{{ page.templatefields.history_heading }}</h2>
         </div>
 
         <div class="history__content">
             <div class="row">
-                <div class="column medium-6">
+                <div class="column medium-6 small-12">
                     <div class="history__image">
-                        <img src="{{ page.templatefields.history_image|image() }}" alt="">
+                        <img src="{{ page.templatefields.history_image|image(300, null, 'r') }}" alt="">
                     </div>
                 </div>
 
-                <div class="column medium-6">
+                <div class="column medium-6 small-12">
                     <h3 class="lim-mini-title history__heading">{{ page.templatefields.history_subheading }}</h3>
                     <p class="history__text big-text">{{ page.templatefields.history_body }}</p>
                 </div>
@@ -82,7 +82,7 @@
             {% for batch in page.templatefields.clients_list|batch(5) %}
                 <div class="row align-center">
                     {% for item in batch  %}
-                        <div class="column medium-2">
+                        <div class="column medium-2 small-6">
                             <img src="{{ item.image|image() }}" alt="">
                         </div>
                     {% endfor %}
@@ -94,15 +94,15 @@
 
     <section class="about__contacts">
         <div class="row">
-            <div class="column medium-1">
+            <div class="column medium-1 small-12">
                 <h2 class="lim-heading lim-heading--vertical">Как нас найти</h2>
             </div>
 
-            <div class="row column medium-11 contacts__wrapper">
-                <div class="column medium-8 contacts__map">
+            <div class="row column medium-11 small-12 contacts__wrapper">
+                <div class="column medium-8 small-12 contacts__map">
                     <lim-map></lim-map>
                 </div>
-                <div class="column medium-5 contacts__info">
+                <div class="column medium-5 small-12 contacts__info">
                     <h2 class="info__title">ТОО ЛИМ СЕРВИС</h2>
 
                     <div class="info__wrapper">

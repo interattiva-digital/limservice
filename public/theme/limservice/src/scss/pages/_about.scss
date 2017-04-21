@@ -121,6 +121,10 @@
             text-align: center;
         }
     }
+
+    @include breakpoint(small down) {
+        padding-bottom: 60px;
+    }
 }
 
 .about__history {
@@ -128,16 +132,42 @@
     padding-bottom: 60px;
     background-color: white;
 
+    .history__heading {
+        @include breakpoint(small down) {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .lim-heading {
+            font-size: 28px;
+        }
+    }
+
     .history__content {
         padding-top: 60px;
         padding-bottom: 80px;
 
         background: url('../img/bg-patterned-rectangle.png') no-repeat right center;
         background-size: 60% 100%;
+
+        @include breakpoint(small down) {
+            background-size: 85% 100%;
+            padding-top: 0;
+            padding-bottom: 60px;
+        }
     }
 
     .history__image {
         box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @include breakpoint(small down) {
+            margin-bottom: 20px;
+        }
     }
 
     .history__heading {
@@ -146,6 +176,14 @@
 
     .history__text {
         padding-left: 95px;
+
+        @include breakpoint(small down) {
+            padding: 0;
+        }
+    }
+
+    @include breakpoint(small down) {
+        padding-top: 60px;
     }
 }
 
@@ -189,6 +227,10 @@
     .contacts__wrapper {
         position: relative;
         height: 570px;
+
+        @include breakpoint(small down) {
+            height: 640px;
+        }
     }
 
     .contacts__map {
@@ -198,6 +240,11 @@
         top: 0;
         min-height: 443px;
         min-width: 66.66666667%;
+        background: red;
+
+        @include breakpoint(small down) {
+            width: 100%;
+        }
     }
 
     .contacts__info {
@@ -216,6 +263,10 @@
 
         .info__wrapper {
             padding: 0 50px;
+
+            @include breakpoint(small down) {
+                padding: 0 20px;
+            }
         }
 
         .info__title {
@@ -230,6 +281,10 @@
             margin-bottom: 10px;
 
             border-bottom: 1px solid #D2D2D2;
+
+            @include breakpoint(small down) {
+                padding-left: 20px;
+            }
         }
 
         .info__text {
@@ -237,6 +292,10 @@
             font-size: 16px;
             color: #131431;
             margin-bottom: 20px;
+
+            @include breakpoint(small down) {
+                margin-bottom: 10px;
+            }
         }
 
         .info__phones {
@@ -245,12 +304,26 @@
             margin: 0;
 
             list-style-type: none;
+
+            @include breakpoint(small down) {
+                width: 100%;
+            }
         }
 
         .info__phones-item {
             display: inline-block;
             width: 50%;
             margin: 0;
+
+            @include breakpoint(small down) {
+                //width: 100%;
+            }
+        }
+
+        @include breakpoint(small down) {
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
         }
     }
 }

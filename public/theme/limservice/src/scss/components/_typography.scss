@@ -26,6 +26,10 @@ h2 {
     color: #131431;
     letter-spacing: 0.5px;
     line-height: 30px;
+
+    @include breakpoint(small down) {
+        font-size: 18px;
+    }
 }
 
 .lim-subtitle {
