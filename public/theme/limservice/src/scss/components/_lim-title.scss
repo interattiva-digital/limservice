@@ -37,4 +37,12 @@
 
         transition: width 0.5s 0s;
     }
+
+    @include breakpoint(small down) {
+        padding: 0 30px;
+
+        &:before, &:after {
+            width: 80px;
+        }
+    }
 }

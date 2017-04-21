@@ -36,3 +36,9 @@ h2 {
     line-height: 24px;
     text-transform: uppercase;
 }
+
+p {
+    @include breakpoint(small down) {
+        font-size: 18px;
+    }
+}

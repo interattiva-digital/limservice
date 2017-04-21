@@ -3,6 +3,10 @@
     font-size: 48px;
     text-transform: uppercase;
     margin: 0;
+
+    @include breakpoint(small down) {
+        font-size: 28px;
+    }
 }
 
 .lim-heading--vertical {
@@ -12,4 +16,9 @@
     //white-space: nowrap;
     writing-mode: tb-rl;
     transform: rotate(180deg);
+
+    @include breakpoint(small down) {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
 }

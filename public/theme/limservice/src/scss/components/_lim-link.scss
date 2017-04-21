@@ -10,4 +10,8 @@
     &:hover {
         color: #131431;
     }
+
+    @include breakpoint(small down) {
+        padding-right: 80px;
+    }
 }
