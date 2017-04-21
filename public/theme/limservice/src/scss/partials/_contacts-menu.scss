@@ -1,6 +1,10 @@
 .contacts-menu {
     transform: translateX(100%);
 
+    .offside__content {
+        justify-content: space-around;
+    }
+
     &.active {
         .contacts-menu__info {
             @include offside-reveal-to();
@@ -31,25 +35,42 @@
     color: white;
 
     margin-bottom: 20px;
+
+    @include breakpoint(small down) {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 }
 
 .contacts-menu__item {
     margin-bottom: 20px;
+
+    @include breakpoint(small down) {
+        margin-bottom: 10px;
+    }
 }
 
 .contacts-menu__text {
     font-family: $font-light;
     font-size: 16px;
     color: white;
+
+    @include breakpoint(small down) {
+        font-size: 13px;
+    }
 }
 
 .contacts-menu__phones {
     display: inline-block;
     width: 320px;
 
-    margin: 0 0 60px;
+    margin: 0 0 40px;
 
     list-style-type: none;
+
+    @include breakpoint(small down) {
+        margin-bottom: 20px;
+    }
 }
 
 .contacts-menu__phones-item {
