@@ -24,7 +24,7 @@
     list-style-type: none;
     text-align: center;
     margin: 0;
-    margin-bottom: 110px;
+    //margin-bottom: 110px;
 }
 
 .nav-menu__list-item {
@@ -84,6 +84,10 @@
         &:hover:before, &:hover:after {
             width: 1px;
             transform: scaleX(40);
+        }
+
+        @include breakpoint(small down) {
+            font-size: 18px;
         }
     }
 }

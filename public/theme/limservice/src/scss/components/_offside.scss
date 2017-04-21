@@ -27,7 +27,7 @@
     transition: transform 0.5s;
 
     text-align: center;
-
+    padding-top: 17vh;
     &.active {
         transform: translateX(0);
 
@@ -42,22 +42,36 @@
             }
         }
     }
+
+    @include breakpoint(small down) {
+        &.active {
+            .offside__header {
+                &:before, &:after {
+                    width: 80px;
+                }
+            }
+        }
+    }
 }
 
 .offside__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+    position: relative;
+    height: 83vh;
+    padding-bottom: 20px;
     transition: opacity 0.5s 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
 }
 
 .offside__header {
     display: inline-block;
     position: relative;
-
-    margin-bottom: 30px;
+    text-align: center;
+    width: auto;
+    max-width: 200px;
 
     color:  #9C96A2;
     font-family: $font-black;
@@ -73,7 +87,6 @@
         bottom: 30%;
 
         content: "";
-        //width: 195px;
         width: 0;
         height: 1px;
         background-color: #9C96A2;
@@ -87,11 +100,16 @@
         bottom: 30%;
 
         content: "";
-        //width: 195px;
         width: 0;
         height: 1px;
         background-color: #9C96A2;
 
         transition: width 0.5s 0s;
+    }
+
+    @include breakpoint(small down) {
+        font-size: 13px;
+
+        padding: 0 40px;
     }
 }
