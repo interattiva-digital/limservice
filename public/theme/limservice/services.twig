@@ -21,13 +21,13 @@
 
     <section class="services__pros">
         <div class="row">
-            <div class="column medium-1">
+            <div class="column medium-1 small-12">
                 <h2 class="lim-heading lim-heading--vertical">{{ page.templatefields.pros_heading }}</h2>
             </div>
 
-            <div class="column medium-11">
+            <div class="column medium-11 small-12 hide-for-small-only">
                 <div class="row">
-                    <div class="column medium-2">
+                    <div class="column medium-2 small-12 medium-order-1 small-order-2">
                         <ul class="tabs pros__tab-controls" data-tabs id="pros-tabs">
                             {% for item in page.templatefields.pros %}
                                 <li class="tabs-title {{ loop.first ? 'is-active':'' }}">
@@ -36,7 +36,7 @@
                             {% endfor %}
                         </ul>
                     </div>
-                    <div class="column medium-9">
+                    <div class="column medium-9 small-12 medium-order-2 small-order-1">
                         <div class="pros__tab-content tabs-content" data-tabs-content="pros-tabs">
                             {% for item in page.templatefields.pros %}
                                 <div class="pros__tab tabs-panel {{ loop.first ? 'is-active':'' }}" id="pro-{{ loop.index }}" style="background-image: url('{{ item.image|image() }}')">
@@ -46,6 +46,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="column small-12 pros__slider-mobile show-for-small-only">
+                {% for item in page.templatefields.pros %}
+                    <div class="pros__slide" style="background-image: url('{{ item.image|image() }}')">
+                        <div class="slide__description">{{ item.description }}</div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </section>
