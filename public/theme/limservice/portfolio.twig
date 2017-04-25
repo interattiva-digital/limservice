@@ -31,7 +31,7 @@
                 <ul class="controls__list">
                     {% for item in projects %}
                         <li class="controls__list-item {% if loop.first %} active {% endif %}" data-target="#project-{{ loop.index }}">
-                            {{ item.title }}
+                            <span>{{ item.title }}</span>
                         </li>
                     {% endfor %}
                 </ul>

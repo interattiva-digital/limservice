@@ -43,6 +43,18 @@ $(document).ready(() => {
     });
 
     $slider.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
+        console.log('hello');
+
+        let target = $(slick.$slides[nextSlide]).attr('id');
+
+        $sliderControls.removeClass('active');
+
+        $sliderControls.filter(`[data-target="#${target}"]`).addClass('active');
+    });
+
+    $slider.on('swipe', (event, slick, direction) => {
+        console.log(direction);
+
         let target = $(slick.$slides[nextSlide]).attr('id');
 
         $sliderControls.removeClass('active');
