@@ -37,7 +37,7 @@
                         <h1 class="lim-heading text-uppercase">Продукция</h1>
                     </div>
 
-                    <div class="column medium-8 products__categories-list">
+                    <div class="column medium-8 products__categories-list hide-for-small-only">
                         <ul class="products__categories-list">
                             <li class="products__categories-item">
                                 <input type="radio" name="category" id="category-all" value="0" {{ category == 0 ? 'checked':'' }}>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="products__filters">
+                <div class="products__filters hide-for-small-only">
                     <div class="row">
                         <div class="column medium-5 flex-container align-middle">
                             <span>Показано {{ filtered_products|length }} продукта</span>
@@ -81,6 +81,14 @@
                             <input type="text" name="search" placeholder="Поиск" class="lim-input filters__search">
                         </div>
                     </div>
+                </div>
+
+                <div class="products__filters--mobile">
+
+                </div>
+
+                <div class="products__filters-toggle">
+
                 </div>
             </form>
         </div>
