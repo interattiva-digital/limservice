@@ -11,8 +11,10 @@ $(document).ready(() => {
 
     $('.products__filters-toggle').on('click', (e) => {
         $(e.currentTarget).toggleClass('active');
+        $('.header').toggleClass('active');
         $('.header__nav-wrap').toggleClass('active');
         $('.header__logo-wrap').toggleClass('active');
         $('.products__filters--mobile').toggleClass('active');
+        $('body').toggleClass('menu-open');
     });
 });

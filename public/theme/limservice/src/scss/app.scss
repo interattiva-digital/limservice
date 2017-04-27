@@ -45,6 +45,12 @@ html, body {
     overflow-x: hidden;
 }
 
+#app {
+    @include breakpoint(small down) {
+        padding-top: 17vh;
+    }
+}
+
 * {
     color: inherit;
     outline: 0;

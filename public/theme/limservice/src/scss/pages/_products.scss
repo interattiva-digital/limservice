@@ -136,7 +136,10 @@
     bottom: 10px;
 
     .filters-toggle__open {
+        opacity: 1;
+        visibility: visible;
 
+        transition: opacity 0.3s, visibility 0.3s;
     }
 
     .filters-toggle__close {
@@ -329,5 +332,9 @@
             visibility: visible;
             opacity: 1;
         }
+    }
+
+    @include breakpoint(small down) {
+        margin-bottom: 10px;
     }
 }

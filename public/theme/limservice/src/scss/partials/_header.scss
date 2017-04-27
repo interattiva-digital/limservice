@@ -1,6 +1,7 @@
 .header {
     position: relative;
-    z-index: 5;
+    z-index: 6;
+    width: 100%;
 
     @include clearfix();
     @include flex-align(null, middle);
@@ -8,12 +9,28 @@
 
     height: $header-height;
 
+    transition: background-color 0.5s;
+
+    &.white {
+        background-color: white;
+    }
+
+    &.active.white {
+        background-color: #30283D;
+    }
+
     @include breakpoint(small down) {
         height: 17vh;
+
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 }
 
 .header__section {
+    position: relative;
+    z-index: 6;
     display: inline-block;
     vertical-align: middle;
     @include grid-col(4);

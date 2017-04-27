@@ -18,6 +18,10 @@
             transition-delay: 0.5s;
         }
     }
+
+    @include breakpoint(small down) {
+        transform: translateY(100%);
+    }
 }
 
 .nav-menu__list {

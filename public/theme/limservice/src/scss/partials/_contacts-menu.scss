@@ -18,6 +18,10 @@
             transition-delay: 1.5s;
         }
     }
+
+    @include breakpoint(small down) {
+        transform: translateY(100%);
+    }
 }
 
 .contacts-menu__info {
