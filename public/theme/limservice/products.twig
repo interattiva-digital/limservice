@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="column medium-2 flex-container align-middle">
-                            <select name="type" class="lim-input">
+                            <select name="type" class="lim-input" title="type">
                                 <option value="0">Тип (все)</option>
                                 {% for item in product_types %}
                                     <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
@@ -83,12 +83,44 @@
                     </div>
                 </div>
 
-                <div class="products__filters--mobile">
+                <div class="products__filters--mobile offside">
+                    <div class="offside__content">
+                        <ul class="products__categories-list">
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-all" value="0" {{ category == 0 ? 'checked':'' }}>
+                                <label for="category-all">Все</label>
+                            </li>
 
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-business" value="Business" {{ category == 'Business' ? 'checked':'' }}>
+                                <label for="category-business">Business</label>
+                            </li>
+
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-horeca" value="HoReCa" {{ category == 'HoReCa' ? 'checked':'' }}>
+                                <label for="category-horeca">HoReCa</label>
+                            </li>
+
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" id="category-home" value="Home" {{ category == 'Home' ? 'checked':'' }}>
+                                <label for="category-home">Home</label>
+                            </li>
+                        </ul>
+
+                        <select name="type" class="lim-input lim-input--bright" title="type">
+                            <option value="0">Тип (все)</option>
+                            {% for item in product_types %}
+                                <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <input type="text" name="search" placeholder="Поиск" class="lim-input lim-input--bright filters__search">
+                    </div>
                 </div>
 
                 <div class="products__filters-toggle">
-
+                    <img class="filters-toggle__close" src="{{ asset('dist/img/icon-close-round.svg', 'theme') }}" alt="">
+                    <img class="filters-toggle__open" src="{{ asset('dist/img/icon-open-round.svg', 'theme') }}" alt="">
                 </div>
             </form>
         </div>

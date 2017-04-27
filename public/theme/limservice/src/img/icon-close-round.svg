@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="84" viewBox="0 0 84 84">
+  <defs>
+    <rect id="contacts-a" width="64" height="64" rx="32"/>
+    <filter id="contacts-b" width="154.7%" height="154.7%" x="-27.3%" y="-19.5%" filterUnits="objectBoundingBox">
+      <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0"/>
+    </filter>
+    <path id="contacts-d" d="M3.9343422,3.32508767 L2.9979326,4.26149728 L19.6993983,20.962963 L20.6358079,20.0265534 L3.9343422,3.32508767 L3.9343422,3.32508767 Z M3.36860765,19.7385027 L4.30501726,20.6749123 L21.006483,3.97344659 L20.0700734,3.03703699 L3.36860765,19.7385027 L3.36860765,19.7385027 Z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(10 5)">
+    <mask id="contacts-c" fill="#fff">
+      <use xlink:href="#contacts-a"/>
+    </mask>
+    <use fill="#000" filter="url(#contacts-b)" xlink:href="#contacts-a"/>
+    <use fill="#FFF" xlink:href="#contacts-a"/>
+    <g fill="#FFF" mask="url(#contacts-c)">
+      <rect width="64" height="64"/>
+    </g>
+    <g mask="url(#contacts-c)">
+      <g transform="translate(20 20)">
+        <rect width="24" height="24"/>
+        <mask id="contacts-e" fill="#fff">
+          <use xlink:href="#contacts-d"/>
+        </mask>
+        <use fill="#929292" fill-rule="nonzero" xlink:href="#contacts-d"/>
+        <g mask="url(#contacts-e)">
+          <rect width="24" height="24" fill="#000"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
