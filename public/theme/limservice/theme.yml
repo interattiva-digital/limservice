@@ -198,16 +198,16 @@ templatefields:
             label: Текст Описание
             type: textarea
 
-#        slides:
-#            label: Слайды
-#            type: repeater
-#            fields:
-#                heading:
-#                    label: Заголовок
-#                    type: text
-#                body:
-#                    label: Текст
-#                    type: textarea
+        slides:
+            label: Слайды
+            type: repeater
+            fields:
+                heading:
+                    label: Заголовок
+                    type: text
+                body:
+                    label: Текст
+                    type: textarea
 
         projects_heading:
             label: Заголовок Проекты
@@ -215,22 +215,22 @@ templatefields:
         projects_subheading:
             label: Подзаголовок Проекты
             type: text
-#        projects:
-#            label: Проекты
-#            type: repeater
-#            fields:
-#                title:
-#                    label: Название
-#                    type: text
-#                body:
-#                    label: Описание
-#                    type: html
-#                front_image:
-#                    label: Большое фото
-#                    type: image
-#                rear_image:
-#                    label: Маленькое фото
-#                    type: image
+        projects:
+            label: Проекты
+            type: repeater
+            fields:
+                title:
+                    label: Название
+                    type: text
+                body:
+                    label: Описание
+                    type: html
+                front_image:
+                    label: Большое фото
+                    type: image
+                rear_image:
+                    label: Маленькое фото
+                    type: image
 
     career.twig:
         about_heading:

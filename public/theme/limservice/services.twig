@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="column small-12 pros__slider-mobile show-for-small-only">
+            <div class="column small-12 pros__slider-mobile show-for-small-only lim-text-slider">
                 {% for item in page.templatefields.pros %}
                     <div class="pros__slide" style="background-image: url('{{ item.image|image() }}')">
                         <div class="slide__description">{{ item.description }}</div>

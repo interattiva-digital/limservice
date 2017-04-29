@@ -35,7 +35,7 @@
     }
 
     .slider__container {
-
+        width: 100%;
     }
 
     .slider__next, .slider__prev {
@@ -43,6 +43,10 @@
         z-index: 1;
         top: 50%;
         transform: translateY(-50%);
+
+        @include breakpoint(small down) {
+            display: none;
+        }
     }
 
     .slider__next {
@@ -62,6 +66,10 @@
             letter-spacing: 0.75px;
             text-transform: uppercase;
             margin-bottom: 60px;
+
+            @include breakpoint(small down) {
+                font-size: 32px;
+            }
         }
 
         .slide__content {
@@ -87,6 +95,10 @@
                 background-repeat: repeat-y;
             }
         }
+    }
+
+    @include breakpoint(small down) {
+        padding-top: 60px;
     }
 }
 
