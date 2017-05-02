@@ -243,14 +243,14 @@ templatefields:
         vacancies_heading:
             label: Заголовок Вакансии
             type: text
-
-#        vacancies:
-#            label: Вакансии
-#            type: repeater
-#            fields:
-#                title:
-#                    label: Название
-#                    type: text
-#                description:
-#                    label: Описание
-#                    type: html
+            
+        vacancies:
+            label: Вакансии
+            type: repeater
+            fields:
+                title:
+                    label: Название
+                    type: text
+                description:
+                    label: Описание
+                    type: html

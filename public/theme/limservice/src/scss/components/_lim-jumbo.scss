@@ -65,6 +65,15 @@
     }
 }
 
+.lim-jumbo__link {
+    .lim-button {
+        @include breakpoint(small down) {
+            letter-spacing: 2px;
+            font-size: 12px;
+        }
+    }
+}
+
 .lim-jumbo__heading {
     font-family: $font-thin;
     font-size: 48px;
