@@ -243,7 +243,7 @@ templatefields:
         vacancies_heading:
             label: Заголовок Вакансии
             type: text
-            
+
         vacancies:
             label: Вакансии
             type: repeater

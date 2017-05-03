@@ -14,6 +14,13 @@
     padding-bottom: 120px;
     background: white;
 
+    .vacancies__title {
+        @include breakpoint(small down) {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    }
+
     .vacancies__tab-controls {
         list-style-type: none;
         margin: 0;
@@ -67,12 +74,16 @@
                 background: #131431;
             }
         }
+
+        @include breakpoint(small down) {
+            margin-bottom: 60px;
+        }
     }
 
     .vacancies__tab-content {
         position: relative;
         border: none;
-        height: 400px;
+        min-height: 200px;
     }
 
     .vacancies__tab {
