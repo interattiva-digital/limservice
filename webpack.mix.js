@@ -42,8 +42,7 @@ if(mix.config.inProduction) {
 
     let paths = [
         glob.sync(path.join(__dirname, 'public/theme/limservice/**/*.twig')),
-        glob.sync(path.join(__dirname, 'public/theme/limservice/src/js/**/*.js')),
-        glob.sync(path.join(__dirname, 'public/theme/limservice/src/js/**/*.vue'))
+        glob.sync(path.join(__dirname, 'public/theme/limservice/dist/js/**/*.js'))
     ];
 
     options.purifyCss = {
