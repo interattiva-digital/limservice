@@ -1,14 +1,15 @@
 {% extends 'partials/_master.twig' %}
 
-{% set search = app.request.get('search') ?: '' %}
-{% set category = app.request.get('category') ?: '' %}
+{% set category = app.request.get('category')|default(false) %}
+{% set search = app.request.get('search')|default(false) %}
 
-{% if app.request.get('type') %}
+{% if app.request.get('type') is not empty %}
     {% setcontent type = 'product_types/' ~ app.request.get('type') %}
 {% endif %}
 
-{% if type is not defined %}
+{% if type is empty %}
     {% setcontent products = 'products' where { category: '%' ~ category ~ '%' } %}
+
 {% else %}
     {% set ids = type.relation.products|join(" || ") %}
     {% setcontent products = 'products' where { id: ids, category: '%' ~ category ~ '%' } %}
@@ -40,7 +41,7 @@
                     <div class="column medium-8 products__categories-list hide-for-small-only">
                         <ul class="products__categories-list">
                             <li class="products__categories-item">
-                                <input type="radio" name="category" id="category-all" value="0" {{ category == 0 ? 'checked':'' }}>
+                                <input type="radio" name="category" id="category-all" value="" {{ category is empty ? 'checked':'' }}>
                                 <label for="category-all">Все</label>
                             </li>
 
@@ -69,7 +70,7 @@
                         </div>
 
                         <div class="column medium-2 flex-container align-middle">
-                            <select name="type" class="lim-input" title="type">
+                            <select name="type" class="lim-input" title="type" data-sync-select="#product-types-mobile" id="product-types">
                                 <option value="0">Тип (все)</option>
                                 {% for item in product_types %}
                                     <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
@@ -83,40 +84,42 @@
                     </div>
                 </div>
 
-                <div class="products__filters--mobile offside">
-                    <div class="offside__content">
-                        <ul class="products__categories-list">
-                            <li class="products__categories-item">
-                                <input type="radio" name="category" id="category-all" value="0" {{ category == 0 ? 'checked':'' }}>
-                                <label for="category-all">Все</label>
-                            </li>
+                {% if ismobileclient() %}
+                    <div class="products__filters--mobile offside">
+                        <div class="offside__content">
+                            <ul class="products__categories-list">
+                                <li class="products__categories-item">
+                                    <input type="radio" name="category" id="category-all" value="" {{ category is empty ? 'checked':'' }} >
+                                    <label for="category-all">Все</label>
+                                </li>
 
-                            <li class="products__categories-item">
-                                <input type="radio" name="category" id="category-business" value="Business" {{ category == 'Business' ? 'checked':'' }}>
-                                <label for="category-business">Business</label>
-                            </li>
+                                <li class="products__categories-item">
+                                    <input type="radio" name="category" id="category-business" value="Business" {{ category == 'Business' ? 'checked':'' }} >
+                                    <label for="category-business">Business</label>
+                                </li>
 
-                            <li class="products__categories-item">
-                                <input type="radio" name="category" id="category-horeca" value="HoReCa" {{ category == 'HoReCa' ? 'checked':'' }}>
-                                <label for="category-horeca">HoReCa</label>
-                            </li>
+                                <li class="products__categories-item">
+                                    <input type="radio" name="category" id="category-horeca" value="HoReCa" {{ category == 'HoReCa' ? 'checked':'' }} >
+                                    <label for="category-horeca">HoReCa</label>
+                                </li>
 
-                            <li class="products__categories-item">
-                                <input type="radio" name="category" id="category-home" value="Home" {{ category == 'Home' ? 'checked':'' }}>
-                                <label for="category-home">Home</label>
-                            </li>
-                        </ul>
+                                <li class="products__categories-item">
+                                    <input type="radio" name="category" id="category-home" value="Home" {{ category == 'Home' ? 'checked':'' }} >
+                                    <label for="category-home">Home</label>
+                                </li>
+                            </ul>
 
-                        <select name="type" class="lim-input lim-input--bright" title="type">
-                            <option value="0">Тип (все)</option>
-                            {% for item in product_types %}
-                                <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
-                            {% endfor %}
-                        </select>
+                            <select name="type" class="lim-input lim-input--bright" title="type" id="product-types-mobile" data-sync-select="#product-types" >
+                                <option value="0">Тип (все)</option>
+                                {% for item in product_types %}
+                                    <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
+                                {% endfor %}
+                            </select>
 
-                        <input type="text" name="search" placeholder="Поиск" class="lim-input lim-input--bright filters__search">
+                            <input type="text" name="search" placeholder="Поиск" class="lim-input lim-input--bright filters__search" >
+                        </div>
                     </div>
-                </div>
+                {% endif %}
 
                 <div class="products__filters-toggle">
                     <img class="filters-toggle__close" src="{{ asset('dist/img/icon-close-round.svg', 'theme') }}" alt="">

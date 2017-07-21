@@ -36,14 +36,18 @@
 @import "partials/nav-menu";
 @import "partials/contact-form";
 
-
 html, body {
     width: 100%;
-
+    height: 100%;
     background-image: url('/theme/limservice/dist/img/bg-pattern.png');
 
     color: $text-color;
     overflow-x: hidden;
+}
+
+body.menu-open {
+    height: 100%;
+    overflow: hidden;
 }
 
 #app {

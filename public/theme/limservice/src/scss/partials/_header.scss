@@ -11,10 +11,6 @@
 
     transition: background-color 0.5s;
 
-    &.white {
-        background-color: white;
-    }
-
     &.active.white {
         background-color: #30283D;
     }
@@ -25,6 +21,10 @@
         position: fixed;
         top: 0;
         left: 0;
+
+        &.white {
+            background-color: white;
+        }
     }
 }
 

@@ -5,6 +5,13 @@ $(document).ready(() => {
         $(target).toggleClass('active');
     });
 
+    // $('[data-sync-select]').on('change', (e) => {
+    //     let value = $(e.currentTarget).val();
+    //     let target = $(e.currentTarget).attr('data-sync-select');
+    //
+    //     $(target).val(value);
+    // });
+
     $('[data-reloading-form] *').on('change', () => {
        $('[data-reloading-form]').submit();
     });
