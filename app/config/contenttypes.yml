@@ -37,6 +37,10 @@ pages:
             class: large
             group: content
             is_translateable: true
+        title_color:
+            label: Цвет заголовка
+            type: select
+            values: { 'dark': "Темный", 'light': "Светлый" }
         subtitle:
             label: Подзаголовок
             type: text
@@ -81,9 +85,9 @@ projects:
             type: textarea
             is_translateable: true
             group: content
-        image:
+        images:
             label: Фото
-            type: image
+            type: imagelist
             group: content
         <<: *language_defaults
     viewless: true

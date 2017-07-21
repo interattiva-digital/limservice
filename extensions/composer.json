@@ -18,7 +18,7 @@
     "name": "bolt/extensions",
     "prefer-stable": true,
     "provide": {
-        "bolt/bolt": "3.2.10"
+        "bolt/bolt": "3.2.15"
     },
     "repositories": {
         "packagist": false,
@@ -27,15 +27,15 @@
             "url": "https://market.bolt.cm/satis/"
         }
     },
-    "scripts": {
-        "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
-        "post-package-install": "Bolt\\Composer\\EventListener\\PackageEventListener::handle",
-        "post-package-update": "Bolt\\Composer\\EventListener\\PackageEventListener::handle"
-    },
     "require": {
         "animal/translate": "^4.0",
         "bobdenotter/seo": "^0.14.2",
         "bolt/labels": "^3.0",
         "bolt/sitemap": "^2.1"
+    },
+    "scripts": {
+        "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
+        "post-package-install": "Bolt\\Composer\\EventListener\\PackageEventListener::handle",
+        "post-package-update": "Bolt\\Composer\\EventListener\\PackageEventListener::handle"
     }
 }
