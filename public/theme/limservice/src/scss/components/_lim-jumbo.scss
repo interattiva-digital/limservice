@@ -24,6 +24,34 @@
         padding: 0 10px 10px 10px;
         background-clip: content-box;
     }
+
+    &.dark {
+        .lim-jumbo__title {
+            color: $text-color;
+
+            &:before {
+                background-color: $text-color;
+            }
+        }
+
+        .lim-jumbo__heading {
+
+        }
+    }
+
+    &.light {
+        .lim-jumbo__title {
+            color: $text-color-contrast;
+
+            &:before {
+                background-color: $text-color-contrast;
+            }
+        }
+
+        .lim-jumbo__heading {
+            color: $text-color-contrast;
+        }
+    }
 }
 
 .lim-jumbo__content {
