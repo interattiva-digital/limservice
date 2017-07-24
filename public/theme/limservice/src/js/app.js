@@ -6,6 +6,7 @@ require('./portfolio.js');
 require('./landing.js');
 require('./services.js');
 require('./smooth-scrolling.js');
+require('./map.js');
 
 $(document).ready(() => {
     $(document).foundation();

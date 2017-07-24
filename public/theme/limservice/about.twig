@@ -41,7 +41,7 @@
             </div>
 
             <div class="team__link">
-                <a class="lim-link" href="{{ path('pagebinding', {'slug':'career'}) }}">Карьера в Лим Сервис</a>
+                <a class="lim-link" href="{{ path('pagebinding', {'slug':'career'}) }}">{{ l('Карьера в Лим Сервис') }}</a>
             </div>
         </div>
     </section>
@@ -74,7 +74,7 @@
                 <h2 class="lim-heading">{{ page.templatefields.clients_heading }}</h2>
             </div>
             <div class="column medium-6 clients__link">
-                <a href="{{ path('pagebinding', {'slug':'career'}) }}" class="lim-link">Посмотреть портфолио</a>
+                <a href="{{ path('pagebinding', {'slug':'career'}) }}" class="lim-link">{{ l('Посмотреть портфолио') }}</a>
             </div>
         </div>
 
@@ -95,12 +95,11 @@
     <section class="about__contacts">
         <div class="row">
             <div class="column medium-1 small-12">
-                <h2 class="lim-heading lim-heading--vertical">Как нас найти</h2>
+                <h2 class="lim-heading lim-heading--vertical">{{ l('Как нас найти') }}</h2>
             </div>
 
             <div class="row column medium-11 small-12 contacts__wrapper">
-                <div class="column medium-8 small-12 contacts__map">
-                    <lim-map></lim-map>
+                <div class="column medium-8 small-12 contacts__map" id="map">
                 </div>
                 <div class="column medium-5 small-12 contacts__info">
                     <h2 class="info__title">ТОО ЛИМ СЕРВИС</h2>
@@ -118,6 +117,15 @@
                 </div>
             </div>
         </div>
+
+        <input type="hidden" class="js-location-input"
+               data-longitude="{{ page.templatefields.map_coordinates.longitude }}"
+               data-latitude="{{ page.templatefields.map_coordinates.latitude }}"
+        >
     </section>
 
+{% endblock %}
+
+{% block page_scripts %}
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ config.get('general/google_api_key') }}"></script>
 {% endblock %}

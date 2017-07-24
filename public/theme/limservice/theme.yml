@@ -191,13 +191,16 @@ templatefields:
                     type: image
 
     landing.twig:
+        category:
+            label: Категория
+            type: select
+            values: {'horeca': 'HoReCa', 'home': 'Home', 'business': 'Business'}
         about_heading:
             label: Заголовок Описание
             type: text
         about_body:
             label: Текст Описание
             type: textarea
-
         slides:
             label: Слайды
             type: repeater

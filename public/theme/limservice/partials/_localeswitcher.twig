@@ -1,0 +1,5 @@
+{% for locale in locales %}
+    <a title="{{ locale.get('label') }}" class="header__language header__item header__item--text {{ locale.get('active') ? 'hide':'' }}" href="{{ locale.get('url') }}">
+        {{ locale.get('label') }}
+    </a>
+{% endfor %}

@@ -82,9 +82,14 @@
     opacity: 1;
 
     max-width: 30%;
+
+    @include breakpoint(small down) {
+        max-width: 80%;
+    }
 }
 
 .header__logo--white {
+    max-width: 30%;
     position: absolute;
     left: 50%;
     top: 0;
@@ -94,6 +99,10 @@
     opacity: 0;
 
     transition: visibility 0.5s, opacity 0.5s;
+
+    @include breakpoint(small down) {
+        max-width: 80%;
+    }
 }
 
 .header__contacts-wrap, .header__nav-wrap {

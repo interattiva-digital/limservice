@@ -3,7 +3,7 @@
         <div class="header__section header__section--left header__nav-wrap">
             <button class="header__nav header__item">
                 <img src="{{ asset('dist/img/icon-menu.svg', 'theme') }}" alt="">
-                <span class="header__item header__item--text hide-for-small-only">Меню</span>
+                <span class="header__item header__item--text hide-for-small-only">{{ l('Меню') }}</span>
             </button>
         </div>
 
@@ -11,15 +11,15 @@
             <a href="{{ path('homepage') }}">
                 <div class="header__logo-wrap">
                     <img class="header__logo header__item" src="{{ asset('dist/img/logo.png', 'theme') }}" alt="">
-                    <img class="header__logo--white header__item" src="{{ asset('dist/img/logo-white.svg', 'theme') }}" alt="">
+                    <img class="header__logo--white header__item" src="{{ asset('dist/img/logo-white.png', 'theme') }}" alt="">
                 </div>
             </a>
         </div>
 
         <div class="header__section header__section--right header__contacts-wrap">
-            <a class="header__language header__item header__item--text" href="">ENG</a>
+            {{ localeswitcher(template = 'partials/_localeswitcher.twig') }}
             <button class="header__contacts header__item">
-                <span class="header__item header__item--text hide-for-small-only">Контакты</span>
+                <span class="header__item header__item--text hide-for-small-only">{{ l('Контакты') }}</span>
                 <img src="{{ asset('dist/img/icon-contacts.svg', 'theme') }}" alt="">
             </button>
         </div>
@@ -27,43 +27,43 @@
 
     <div class="offside nav-menu">
         <div class="offside__content">
-            <div class="offside__header">Меню</div>
+            <div class="offside__header">{{ l('Меню') }}</div>
 
             <ul class="nav-menu__list">
                 <li class="nav-menu__list-item item-1">
-                    <a href="{{ path('homepage') }}">Главная</a>
+                    <a href="{{ path('homepage') }}">{{ l('Главная') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-2">
-                    <a href="{{ path('pagebinding', {'slug':'about'}) }}">О Нас</a>
+                    <a href="{{ path('pagebinding', {'slug':'about'}) }}">{{ l('О Нас') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-3">
-                    <a href="{{ path('pagebinding', {'slug':'services'}) }}">Услуги</a>
+                    <a href="{{ path('pagebinding', {'slug':'services'}) }}">{{ l('Услуги') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-4">
-                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}">Портфолио</a>
+                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}">{{ l('Портфолио') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-5">
-                    <a href="{{ path('pagebinding', {'slug':'products'}) }}">Продукция</a>
+                    <a href="{{ path('pagebinding', {'slug':'products'}) }}">{{ l('Продукция') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-6">
-                    <a href="{{ path('pagebinding', {'slug':'home'}) }}">Home</a>
+                    <a href="{{ path('pagebinding', {'slug':'home'}) }}">{{ l('Home') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-7">
-                    <a href="{{ path('pagebinding', {'slug':'horeca'}) }}">HoReCa</a>
+                    <a href="{{ path('pagebinding', {'slug':'horeca'}) }}">{{ l('HoReCa') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-8">
-                    <a href="{{ path('pagebinding', {'slug':'business'}) }}">Business</a>
+                    <a href="{{ path('pagebinding', {'slug':'business'}) }}">{{ l('Business') }}</a>
                 </li>
 
                 <li class="nav-menu__list-item item-9">
-                    <a href="{{ path('pagebinding', {'slug':'career'}) }}">Карьера</a>
+                    <a href="{{ path('pagebinding', {'slug':'career'}) }}">{{ l('Карьера') }}</a>
                 </li>
             </ul>
 
@@ -84,7 +84,7 @@
 
     <div class="offside contacts-menu">
         <div class="offside__content">
-            <div class="offside__header">Контакты</div>
+            <div class="offside__header">{{ l('Контакты') }}</div>
 
             <div class="contacts-menu__info">
                 <h2 class="contacts-menu__title">ТОО ЛИМ СЕРВИС</h2>
@@ -99,7 +99,7 @@
                 </ul>
             </div>
 
-            <form action="" method="post" class="contacts-menu__form">
+            <form action="/form" method="post" class="contacts-menu__form">
                 <div class="row">
                     <div class="column medium-6">
                         <input type="text" name="name" class="lim-input lim-input--bright" placeholder="Имя">
@@ -112,13 +112,15 @@
 
                 <div class="row">
                     <div class="column medium-12">
-                        <textarea name="question" class="lim-input lim-input--bright" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
+                        <textarea name="message" class="lim-input lim-input--bright" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
                     </div>
                 </div>
 
                 <div class="contacts-menu__submit">
                     <input type="submit" class="lim-button lim-button--transparent" value="Отправить">
                 </div>
+
+                <input type="hidden" name="language" value="{{ app.locale|split('_')|first }}">
             </form>
         </div>
     </div>

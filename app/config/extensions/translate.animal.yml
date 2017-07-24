@@ -1,10 +1,10 @@
 # The locales the site should be available in
 locales:
     ru_RU:
-        label: Russian
+        label: RU
         slug: ru
     en_GB:
-        label: English
+        label: EN
         slug: en
 
 # Enable/disable automatic routing override.

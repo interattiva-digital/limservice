@@ -1,8 +1,8 @@
 # Configuration file for Labels
 
 # The array of supported languages. It's advisable to stick to two-letter language codes.
-languages: [ nl, la, en, sl, de, fr, it, pt ]
-default: nl
+languages: [ ru, en ]
+default: ru
 
 # Automatically add missing labels to the translation file?
 add_missing: true
