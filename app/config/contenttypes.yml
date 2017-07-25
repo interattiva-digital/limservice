@@ -138,6 +138,32 @@ product_types:
             group: content
         <<: *language_defaults
 
+resources:
+    name: Resources
+    singular_name: Resource
+    slug: resources
+    singular_slug: resources
+    fields:
+        address:
+            label: Адрес
+            type: text
+            is_translateable: true
+            group: content
+        email:
+            label: Email
+            type: text
+            group: content
+        phones:
+            label: Телефоны
+            type: repeater
+            group: content
+            fields:
+                number:
+                    type: text
+                    label: Телефон
+        <<: *language_defaults
+
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.

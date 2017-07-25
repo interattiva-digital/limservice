@@ -1,82 +1,86 @@
 {
     "business": {
-        "ru": "",
+        "ru": "business",
         "en": ""
     },
     "glavnaya": {
-        "ru": "",
+        "ru": "главная",
         "en": ""
     },
     "home": {
-        "ru": "",
+        "ru": "home",
         "en": ""
     },
     "horeca": {
-        "ru": "",
+        "ru": "horeca",
         "en": ""
     },
     "kak nas nayti": {
-        "ru": "",
+        "ru": "как нас найти",
         "en": ""
     },
     "karera": {
-        "ru": "",
+        "ru": "карьера",
         "en": ""
     },
     "karera v lim servis": {
-        "ru": "",
+        "ru": "карьера в лим сервис",
         "en": ""
     },
     "kontakty": {
-        "ru": "",
+        "ru": "контакты",
         "en": ""
     },
     "menyu": {
-        "ru": "",
+        "ru": "Меню",
         "en": ""
     },
     "messages.form.submit.body": {
-        "nl": "",
-        "la": "",
-        "en": "",
-        "sl": "",
-        "de": "",
-        "fr": "",
-        "it": "",
-        "pt": ""
+        "ru": "",
+        "en": ""
     },
     "messages.form.submit.title": {
-        "nl": "",
-        "la": "",
-        "en": "",
-        "sl": "",
-        "de": "",
-        "fr": "",
-        "it": "",
-        "pt": ""
+        "ru": "",
+        "en": ""
+    },
+    "napishite nam ob etom i my obyazatelno svyazhemsya s vami": {
+        "ru": "напишите нам об этом и мы обязательно свяжемся с вами",
+        "en": ""
     },
     "o nas": {
-        "ru": "",
+        "ru": "о нас",
         "en": ""
     },
     "podrobnee": {
-        "ru": "",
+        "ru": "подробнее",
         "en": ""
     },
     "portfolio": {
-        "ru": "",
+        "ru": "портфолио",
         "en": ""
     },
     "posmotret portfolio": {
-        "ru": "",
+        "ru": "посмотреть портфолио",
+        "en": ""
+    },
+    "posmotret produkciyu": {
+        "ru": "посмотреть продукцию",
         "en": ""
     },
     "produkciya": {
+        "ru": "продукция",
+        "en": ""
+    },
+    "too lim servis": {
         "ru": "",
         "en": ""
     },
     "uslugi": {
-        "ru": "",
+        "ru": "услуги",
+        "en": ""
+    },
+    "voznikli voprosy": {
+        "ru": "возникли вопросы",
         "en": ""
     }
 }

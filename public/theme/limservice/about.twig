@@ -1,5 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent resource = 'resources/1' %}
+
 {% block content %}
 
     <section class="about__hero lim-hero">
@@ -102,16 +104,17 @@
                 <div class="column medium-8 small-12 contacts__map" id="map">
                 </div>
                 <div class="column medium-5 small-12 contacts__info">
-                    <h2 class="info__title">ТОО ЛИМ СЕРВИС</h2>
+                    <h2 class="info__title">{{ l('ТОО Лим Сервис') }}</h2>
 
                     <div class="info__wrapper">
-                        <div class="info__item info__text">г. Алматы, ул. Богенбай батыра 86/47; оф. 510</div>
+                        <div class="info__item info__text">{{ resource.address }}</div>
 
-                        <div class="info__item info__text">info@limservice.kz</div>
+                        <div class="info__item info__text">{{ resource.email }}</div>
 
                         <ul class="info__phones">
-                            <li class="info__phones-item info__text">+7 727 382 12 19</li><li class="info__phones-item info__text">+7 771 460 00 50</li>
-                            <li class="info__phones-item info__text">+7 727 393 84 87</li><li class="info__phones-item info__text">+7 707 277 77 30</li>
+                            {% for item in resource.phones %}
+                                <li class="info__phones-item info__text">{{ item.number }}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
