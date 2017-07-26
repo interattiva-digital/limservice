@@ -49,6 +49,12 @@
         line-height: 30px;
     }
 
+    .heading__content {
+        p {
+            font-size: 18px!important;
+        }
+    }
+
     @include breakpoint(small down) {
         @include flex-grid-column(12);
 
@@ -62,6 +68,7 @@
     position: relative;
     z-index: 2;
     min-height: 300px;
+    max-height: 500px;
 
     @include breakpoint(small down) {
         @include flex-grid-column(12);
