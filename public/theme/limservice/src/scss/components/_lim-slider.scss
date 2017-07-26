@@ -34,7 +34,6 @@
 
             .controls__list {
                 position: relative;
-                left: 25%;
                 transition: transform 0.5s;
             }
 
@@ -49,6 +48,14 @@
 
                 &:last-child {
                     margin-right: 0;
+                }
+
+                @include breakpoint(small down) {
+                    width: 90vw;
+                    span {
+                        display: block;
+                        height: 100%;
+                    }
                 }
             }
         }

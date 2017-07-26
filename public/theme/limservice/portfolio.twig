@@ -26,6 +26,9 @@
                                         <div class="lim-portfolio__slide" style="background-image: url('{{ image|image() }}')"></div>
                                     {% endfor %}
                                 </div>
+                                <div class="lim-portfolio__slider-counter">
+                                    <span>1/{{ item.images|length }}</span>
+                                </div>
                             </div>
                         </div>
                     </div>

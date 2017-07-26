@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "60d1c6dff93aa54811abe9636edd1462",
+    "content-hash": "0658e0aae631c0e30d850a2aa1a908a7",
     "packages": [
         {
             "name": "animal/translate",
-            "version": "4.0.8",
+            "version": "4.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AnimalDesign/bolt-translate.git",
-                "reference": "ffb25358e3ee9177a091f942848f89331e9590fe"
+                "reference": "428c0904a4bb432efdb4a300dbdc117ff1adb59e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AnimalDesign/bolt-translate/zipball/ffb25358e3ee9177a091f942848f89331e9590fe",
-                "reference": "ffb25358e3ee9177a091f942848f89331e9590fe",
+                "url": "https://api.github.com/repos/AnimalDesign/bolt-translate/zipball/428c0904a4bb432efdb4a300dbdc117ff1adb59e",
+                "reference": "428c0904a4bb432efdb4a300dbdc117ff1adb59e",
                 "shasum": ""
             },
             "require": {
@@ -68,10 +68,10 @@
                 "i18n"
             ],
             "support": {
-                "source": "https://github.com/AnimalDesign/bolt-translate/tree/4.0.8",
+                "source": "https://github.com/AnimalDesign/bolt-translate/tree/4.0.9",
                 "issues": "https://github.com/AnimalDesign/bolt-translate/issues"
             },
-            "time": "2017-07-21T13:45:04+00:00"
+            "time": "2017-07-24T11:55:02+00:00"
         },
         {
             "name": "bobdenotter/seo",

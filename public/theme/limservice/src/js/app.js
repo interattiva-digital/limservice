@@ -1,6 +1,7 @@
 require('./bootstrap.js');
 require('./nav-menu.js');
 require('./slider.js');
+require('./portfolio-slider.js');
 require('./products.js');
 require('./portfolio.js');
 require('./landing.js');

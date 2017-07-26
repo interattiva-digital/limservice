@@ -18,7 +18,7 @@ $(document).ready(() => {
         $('body').toggleClass('menu-open');
     });
 
-    $(window).on('scroll', () => {
+    $(window).scroll(() => {
         if($(window).scrollTop() > 0) {
             $('.header').addClass('white');
         } else {
