@@ -46,7 +46,10 @@ if(mix.config.inProduction) {
     ];
 
     options.purifyCss = {
-        paths: [].concat.apply([], paths)
+        paths: [].concat.apply([], paths),
+        purifyOptions: {
+            whitelist: ['dark', 'light']
+        }
     }
 }
 
