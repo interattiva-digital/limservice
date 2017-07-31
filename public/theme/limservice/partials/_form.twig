@@ -8,7 +8,7 @@
 
             <div class="row">
                 <div class="column medium-6">
-                    <input type="text" name="name" class="lim-input" placeholder="Имя">
+                    <input type="text" name="name" class="lim-input" placeholder="{{ l('Имя') }}">
                 </div>
 
                 <div class="column medium-6">
@@ -18,12 +18,12 @@
 
             <div class="row">
                 <div class="column medium-12">
-                    <textarea name="message" class="lim-input" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
+                    <textarea name="message" class="lim-input" cols="30" rows="5" placeholder="{{ l('Ваш вопрос') }}"></textarea>
                 </div>
             </div>
 
             <div class="contacts-form__submit">
-                <input type="submit" class="lim-button lim-button--transparent-dark" value="Отправить">
+                <input type="submit" class="lim-button lim-button--transparent-dark" value="{{ l('Отправить') }}">
             </div>
 
             <input type="hidden" name="language" value="{{ app.locale|split('_')|first }}">

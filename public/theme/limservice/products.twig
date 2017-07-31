@@ -35,14 +35,14 @@
             <form method="get" data-reloading-form>
                 <div class="row products__categories">
                     <div class="column medium-4">
-                        <h1 class="lim-heading text-uppercase">Продукция</h1>
+                        <h1 class="lim-heading text-uppercase">{{ l('Продукция') }}</h1>
                     </div>
 
                     <div class="column medium-8 products__categories-list hide-for-small-only">
                         <ul class="products__categories-list">
                             <li class="products__categories-item">
                                 <input type="radio" name="category" id="category-all" value="" {{ category is empty ? 'checked':'' }}>
-                                <label for="category-all">Все</label>
+                                <label for="category-all">{{ l('Все') }}</label>
                             </li>
 
                             <li class="products__categories-item">
@@ -66,12 +66,12 @@
                 <div class="products__filters hide-for-small-only">
                     <div class="row">
                         <div class="column medium-5 flex-container align-middle">
-                            <span>Показано {{ filtered_products|length }} продукта</span>
+                            <span>{{ l('Показано') }} {{ filtered_products|length }} {{ l('продукта') }}</span>
                         </div>
 
                         <div class="column medium-2 flex-container align-middle">
                             <select name="type" class="lim-input" title="type" data-sync-select="#product-types-mobile" id="product-types">
-                                <option value="0">Тип (все)</option>
+                                <option value="0">{{ l('Тип (все)') }}</option>
                                 {% for item in product_types %}
                                     <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
                                 {% endfor %}
@@ -79,7 +79,7 @@
                         </div>
 
                         <div class="column medium-3 flex-container align-middle">
-                            <input type="text" name="search" placeholder="Поиск" class="lim-input filters__search">
+                            <input type="text" name="search" placeholder="{{ l('Поиск') }}" class="lim-input filters__search">
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                             <ul class="products__categories-list">
                                 <li class="products__categories-item">
                                     <input type="radio" name="category" id="category-all" value="" {{ category is empty ? 'checked':'' }} >
-                                    <label for="category-all">Все</label>
+                                    <label for="category-all">{{ l('Все') }}</label>
                                 </li>
 
                                 <li class="products__categories-item">
@@ -110,7 +110,7 @@
                             </ul>
 
                             <select name="type" class="lim-input lim-input--bright" title="type" id="product-types-mobile" data-sync-select="#product-types" >
-                                <option value="0">Тип (все)</option>
+                                <option value="0">{{ l('Тип (все)') }}</option>
                                 {% for item in product_types %}
                                     <option value="{{ item.id }}" {{ type.id == item.id ? 'selected':'' }}>{{ item.title }}</option>
                                 {% endfor %}
@@ -153,7 +153,7 @@
                                 </div>
 
                                 <div class="item__modal">
-                                    <button class="lim-button lim-button--dark" data-open="product-modal-{{ item.id }}">Узнать цену</button>
+                                    <button class="lim-button lim-button--dark" data-open="product-modal-{{ item.id }}">{{ l('Узнать цену') }}</button>
                                     <div class="reveal" id="product-modal-{{ item.id }}" data-reveal>
                                         <form action="/form" method="post">
                                             <input type="hidden" name="product-id" value="{{ item.id }}">
@@ -178,7 +178,7 @@
                                                 </div>
                                             </div>
                                             <div class="row text-center flex-container align-center">
-                                                <button type="submit" class="lim-button lim-button--dark">Отправить</button>
+                                                <button type="submit" class="lim-button lim-button--dark">{{ l('Отправить') }}</button>
                                             </div>
                                         </form>
                                     </div>
