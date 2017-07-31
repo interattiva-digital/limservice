@@ -26,6 +26,11 @@ class LimserviceExtension extends SimpleExtension
         $app = $this->getContainer();
         $mailer = $app['mailer'];
 
+        $product = false;
+        if($request->request->has('product-id')) {
+            $product = $app['storage']->getContent('products', ['id' => $request->request->get('product-id')]);
+        }
+
         $message = \Swift_Message::newInstance()
             ->setSubject('Заявка с сайта')
             ->setFrom(['manager@limservice.kz' => 'Lim Service'])
@@ -33,7 +38,8 @@ class LimserviceExtension extends SimpleExtension
             ->setBody($this->renderTemplate('email.twig', [
                 'name' => $request->request->get('name'),
                 'email' => $request->request->get('email'),
-                'message' => $request->request->get('email')
+                'message' => $request->request->get('message'),
+                'product' => $product
             ]), 'text/html');
 
         $mailer->send($message);

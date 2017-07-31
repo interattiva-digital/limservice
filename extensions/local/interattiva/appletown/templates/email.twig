@@ -104,6 +104,14 @@
                                     </td>
                                 </tr>
                             </table>
+
+                            {% if message is not empty %}
+                                <p>{{ message }}</p>
+                            {% endif %}
+
+                            {% if product is not empty %}
+                                <h2>Продукт: {{ product.title }}</h2>
+                            {% endif %}
                         </td>
                     </tr>
                     <!-- END MAIN CONTENT AREA -->

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "398f396d44afdf33630c429326a9e459",
+    "content-hash": "60d934c9fef47489838658ff057edd70",
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "v3.2.17",
+            "version": "v3.2.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "56843ea78c5c008bae8f7d6ba2a0f8ccfdd22d7a"
+                "reference": "8a273846205910cc8a35336ee4918c14398a478e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/56843ea78c5c008bae8f7d6ba2a0f8ccfdd22d7a",
-                "reference": "56843ea78c5c008bae8f7d6ba2a0f8ccfdd22d7a",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/8a273846205910cc8a35336ee4918c14398a478e",
+                "reference": "8a273846205910cc8a35336ee4918c14398a478e",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-release/3.2": "3.2.x-dev"
+                    "dev-3.2": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -120,7 +120,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2017-07-25T10:40:12+00:00"
+            "time": "2017-07-30T09:19:40+00:00"
         },
         {
             "name": "bolt/filesystem",

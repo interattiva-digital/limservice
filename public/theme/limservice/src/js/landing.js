@@ -1,7 +1,9 @@
 $(document).ready(() => {
-    $('[data-landing-slider]').slick({
+
+    let options = {
         prevArrow: $('.slider__prev'),
         nextArrow: $('.slider__next'),
+        fade: true,
         responsive: [
             {
                 breakpoint: 640,
@@ -12,5 +14,13 @@ $(document).ready(() => {
                 }
             }
         ]
-    });
+    };
+
+    $('[data-landing-slider]').slick(options);
+
+    options.prevArrow = false;
+    options.nextArrow = false;
+    options.draggable = false;
+
+    $('[data-landing-slider-titles]').slick(options);
 });

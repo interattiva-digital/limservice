@@ -151,6 +151,38 @@
                                 <div class="item__description html-content">
                                     {{ item.description|raw }}
                                 </div>
+
+                                <div class="item__modal">
+                                    <button class="lim-button lim-button--dark" data-open="product-modal-{{ item.id }}">Узнать цену</button>
+                                    <div class="reveal" id="product-modal-{{ item.id }}" data-reveal>
+                                        <form action="/form" method="post">
+                                            <input type="hidden" name="product-id" value="{{ item.id }}">
+                                            <input type="hidden" name="language" value="{{ app.locale|split('_')|first }}">
+                                            <div class="row">
+                                                <div class="column small-12 medium-6">
+                                                    <label>Email
+                                                        <input type="email" name="email" class="lim-input">
+                                                    </label>
+                                                </div>
+
+                                                <div class="column small-12 medium-6">
+                                                    <label>{{ l('Имя') }}
+                                                        <input type="text" name="name" class="lim-input">
+                                                    </label>
+                                                </div>
+
+                                                <div class="column small-12 medium-6">
+                                                    <label>{{ l('Телефон') }}
+                                                        <input type="text" name="phone" class="lim-input">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center flex-container align-center">
+                                                <button type="submit" class="lim-button lim-button--dark">Отправить</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

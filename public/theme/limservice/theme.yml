@@ -194,7 +194,7 @@ templatefields:
         category:
             label: Категория
             type: select
-            values: {'horeca': 'HoReCa', 'home': 'Home', 'business': 'Business'}
+            values: {'HoReCa': 'HoReCa', 'Home': 'Home', 'Business': 'Business'}
         about_heading:
             label: Заголовок Описание
             type: text
@@ -257,3 +257,6 @@ templatefields:
                 description:
                     label: Описание
                     type: html
+        email:
+            label: Email
+            type: text

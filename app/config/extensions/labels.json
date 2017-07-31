@@ -15,6 +15,10 @@
         "ru": "horeca",
         "en": ""
     },
+    "imya": {
+        "ru": "",
+        "en": ""
+    },
     "kak nas nayti": {
         "ru": "как нас найти",
         "en": ""
@@ -36,15 +40,15 @@
         "en": ""
     },
     "messages.form.submit.body": {
-        "ru": "",
+        "ru": "Мы обязательно свяжемся с вами в ближайшее время",
         "en": ""
     },
     "messages.form.submit.title": {
-        "ru": "",
+        "ru": "Спасибо за вашу заявку",
         "en": ""
     },
     "napishite nam ob etom i my obyazatelno svyazhemsya s vami": {
-        "ru": "напишите нам об этом и мы обязательно свяжемся с вами",
+        "ru": "Напишите нам об этом и мы обязательно свяжемся с вами",
         "en": ""
     },
     "o nas": {
@@ -72,7 +76,7 @@
         "en": ""
     },
     "too lim servis": {
-        "ru": "",
+        "ru": "ТОО \"ЛИМ СЕРВИС\"",
         "en": ""
     },
     "uslugi": {

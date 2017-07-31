@@ -47,7 +47,7 @@
                             {% for item in page.templatefields.vacancies %}
                                 <div class="vacancies__tab tabs-panel {{ loop.first ? 'is-active':'' }}" id="vacancy-{{ loop.index }}">
 
-                                    <h3 class="tab__title">Требования к сотруднику:</h3>
+                                    <h3 class="tab__title">{{ l('Требования к сотруднику:') }}</h3>
 
                                     <div class="tab__content html-content">{{ item.description|raw }}</div>
                                 </div>
@@ -60,10 +60,10 @@
     </section>
 
     <section class="career__action text-center">
-        <h2 class="text-uppercase">Станьте частью нашей команды</h2>
-        <h3 class="action__subtitle">Отправьте свое резюме к нам на почту</h3>
+        <h2 class="text-uppercase">{{ l('Станьте частью нашей команды') }}</h2>
+        <h3 class="action__subtitle">{{ l('Отправьте свое резюме к нам на почту') }}</h3>
 
-        <a href="mailto:info@limservice.kz" class="lim-button lim-button--transparent-dark">info@limservice.kz</a>
+        <a href="mailto:info@limservice.kz" class="lim-button lim-button--transparent-dark">{{ page.templatefields.email }}</a>
     </section>
 
 {% endblock content %}

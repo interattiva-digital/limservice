@@ -7,35 +7,27 @@
         <div class="column medium-4 small-12">
             <ul class="footer__nav-list">
                 <li class="footer__nav-list-item">
-                    <a href="">Главная</a>
+                    <a href="{{ path('homepage') }}">Главная</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="">О нас</a>
+                    <a href="{{ path('pagebinding', {'slug':'about'}) }}">О нас</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="">Услуги</a>
+                    <a href="{{ path('pagebinding', {'slug':'services'}) }}">Услуги</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="">Портфолио</a>
+                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}">Портфолио</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="">Продукция</a>
+                    <a href="{{ path('pagebinding', {'slug':'products'}) }}">Продукция</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="">Новости</a>
-                </li>
-
-                <li class="footer__nav-list-item">
-                    <a href="">Отзывы</a>
-                </li>
-
-                <li class="footer__nav-list-item">
-                    <a href="">Контакты</a>
+                    <a href="{{ path('pagebinding', {'slug':'news'}) }}">Новости</a>
                 </li>
             </ul>
         </div>

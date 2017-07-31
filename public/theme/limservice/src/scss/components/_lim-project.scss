@@ -67,7 +67,7 @@
 
     position: relative;
     z-index: 2;
-    min-height: 300px;
+    min-height: 400px;
     max-height: 500px;
 
     @include breakpoint(small down) {
