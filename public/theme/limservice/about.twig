@@ -49,15 +49,15 @@
     </section>
 
     <section class="about__history">
-        <div class="row column small-12 align-right history__heading">
-            <h2 class="lim-heading">{{ page.templatefields.history_heading }}</h2>
+        <div class="row history__heading">
+            <div class="column small-12"><h2 class="lim-heading">{{ page.templatefields.history_heading }}</h2></div>
         </div>
 
         <div class="history__content">
             <div class="row">
                 <div class="column medium-6 small-12">
                     <div class="history__image">
-                        <img src="{{ page.templatefields.history_image|image(300, null, 'r') }}" alt="">
+                        <img src="{{ page.templatefields.history_image|image() }}" alt="">
                     </div>
                 </div>
 

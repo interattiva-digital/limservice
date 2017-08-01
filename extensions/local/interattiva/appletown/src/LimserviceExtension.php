@@ -39,6 +39,7 @@ class LimserviceExtension extends SimpleExtension
                 'name' => $request->request->get('name'),
                 'email' => $request->request->get('email'),
                 'message' => $request->request->get('message'),
+                'phone' => $request->request->get('phone'),
                 'product' => $product
             ]), 'text/html');
 
