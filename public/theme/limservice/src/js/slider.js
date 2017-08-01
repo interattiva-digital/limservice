@@ -2,10 +2,13 @@ $(document).ready(() => {
     let $slider = $('.lim-slider__container').slick({
         arrows: false,
         infinite: false,
-        draggable: false
+        draggable: false,
+        fade: true
     });
 
-    let centered  = $('.lim-slider__controls').attr('data-centered');
+    let $controlsWrap = $('.lim-slider__controls');
+
+    let centered  = $controlsWrap.attr('data-centered');
 
     centered = (typeof centered !== typeof undefined) && (centered !== false);
 
@@ -22,7 +25,8 @@ $(document).ready(() => {
             controlsWidth += $(el).outerWidth(true);
         });
 
-        $controlsList.currentTransform = $sliderControls.first().outerWidth()/2;
+        console.log($controlsWrap.innerWidth());
+        $controlsList.currentTransform = $controlsWrap.width()/2 - $sliderControls.first().outerWidth()/2;
         $controlsList.css('transform', `translateX(${$controlsList.currentTransform}px)`);
         $controlsList.css('width', controlsWidth);
     }
