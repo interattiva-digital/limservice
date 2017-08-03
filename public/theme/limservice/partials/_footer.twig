@@ -1,3 +1,5 @@
+{% setcontent resource = 'resources/1' %}
+
 <footer class="footer">
     <div class="row">
         <div class="column medium-2 small-12 text-center">
@@ -7,27 +9,27 @@
         <div class="column medium-4 small-12">
             <ul class="footer__nav-list">
                 <li class="footer__nav-list-item">
-                    <a href="{{ path('homepage') }}">Главная</a>
+                    <a href="{{ path('homepage') }}">{{ l('Главная') }}</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="{{ path('pagebinding', {'slug':'about'}) }}">О нас</a>
+                    <a href="{{ path('pagebinding', {'slug':'about'}) }}">{{ l('О нас') }}</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="{{ path('pagebinding', {'slug':'services'}) }}">Услуги</a>
+                    <a href="{{ path('pagebinding', {'slug':'services'}) }}">{{ l('Услуги') }}</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}">Портфолио</a>
+                    <a href="{{ path('pagebinding', {'slug':'portfolio'}) }}">{{ l('Портфолио') }}</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="{{ path('pagebinding', {'slug':'products'}) }}">Продукция</a>
+                    <a href="{{ path('pagebinding', {'slug':'products'}) }}">{{ l('Продукция') }}</a>
                 </li>
 
                 <li class="footer__nav-list-item">
-                    <a href="{{ path('pagebinding', {'slug':'news'}) }}">Новости</a>
+                    <a href="{{ path('pagebinding', {'slug':'news'}) }}">{{ l('Новости') }}</a>
                 </li>
             </ul>
         </div>
@@ -35,19 +37,19 @@
         <div class="column medium-6 small-12 text-right flex-container flex-dir-column">
             <ul class="footer__social">
                 <li class="footer__social-item">
-                    <a href="">
+                    <a href="{{ resource.facebook }}">
                         <img src="{{ asset('dist/img/social-facebook.svg', 'theme') }}" alt="">
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="">
+                    <a href="{{ resource.instagram }}">
                         <img src="{{ asset('dist/img/social-instagram.svg', 'theme') }}" alt="">
                     </a>
                 </li>
             </ul>
 
             <div class="footer__copyright align-self-bottom">
-                <span>2017 © LIM SERVICE. Все права защищены <span class="hide-for-small-only">|</span> </span><a href="https://interattiva.kz">Создано в INTERATTIVA</a>
+                <span>{{ l('2017 © LIM SERVICE. Все права защищены') }} <span class="hide-for-small-only">|</span> </span><a href="https://interattiva.kz">{{ l('Создано в INTERATTIVA') }}</a>
             </div>
         </div>
     </div>

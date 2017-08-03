@@ -12,6 +12,10 @@ footer {
     height: auto;
 
     margin: 0 auto;
+
+    @include breakpoint(small down) {
+        width: 30%;
+    }
 }
 
 .footer__nav-list {

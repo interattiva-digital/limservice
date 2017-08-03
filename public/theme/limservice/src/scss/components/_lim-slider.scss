@@ -62,7 +62,7 @@
     }
 
     .slide {
-        height: 70vh;
+        height: 80vh;
 
         @include breakpoint(small down) {
             height: calc(83vh - 70px);

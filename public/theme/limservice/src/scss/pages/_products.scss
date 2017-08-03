@@ -210,6 +210,10 @@
         border-top: 1px solid $text-color;
 
         cursor: pointer;
+
+        @include breakpoint(small down) {
+            padding: 15px 10px;
+        }
     }
 
     .item__toggle {
@@ -286,10 +290,21 @@
     .item__description {
         padding: 0 20px;
 
+        p {
+            @include breakpoint(small down) {
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+
         .desc--regular, .desc--bold {
             font-size: 14px;
             letter-spacing: 0.6px;
             line-height: 22px;
+
+            @include breakpoint(small down) {
+                font-size: 12px;
+            }
         }
 
         .desc--regular {

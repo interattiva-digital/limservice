@@ -83,7 +83,7 @@
     }
 
     @include breakpoint(small down) {
-        border-width: 10px;
+        border-width: 5px 10px 5px 10px;
     }
 }
 
@@ -150,6 +150,8 @@
 
     @include breakpoint(small down) {
         padding-left: 20%;
+        margin-bottom: 0;
+        top: 10%;
     }
 }
 
@@ -171,6 +173,10 @@
     opacity: 1;
 
     transition: opacity $front-panel-animation-time;
+    @include breakpoint(small down) {
+        top: 35%;
+        font-size: 18px;
+    }
 }
 
 .front-panel__link {
