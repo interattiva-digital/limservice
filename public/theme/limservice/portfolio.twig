@@ -20,10 +20,10 @@
                                         <p class="content__text">{{ item.description }}</p>
                                     </div>
                                 </div>
-                                {#<div class="lim-portfolio__image" style="background-image: url('{{ item.image|image() }}')"></div>#}
+
                                 <div class="lim-portfolio__slider">
                                     {% for image in item.images %}
-                                        <div class="lim-portfolio__slide" style="background-image: url('{{ image|image() }}')"></div>
+                                        <div class="lim-portfolio__slide" style="background-image: url('{{ image|image(900, 900, 'r') }}')"></div>
                                     {% endfor %}
                                 </div>
                                 <div class="lim-portfolio__slider-counter">

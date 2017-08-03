@@ -1,126 +1,138 @@
 {
     "business": {
         "ru": "business",
-        "en": ""
+        "en": "business"
     },
     "glavnaya": {
-        "ru": "главная",
-        "en": ""
+        "ru": "\u0433\u043b\u0430\u0432\u043d\u0430\u044f",
+        "en": "main"
     },
     "home": {
         "ru": "home",
-        "en": ""
+        "en": "home"
     },
     "horeca": {
         "ru": "horeca",
-        "en": ""
+        "en": "horeca"
     },
     "imya": {
-        "ru": "",
-        "en": ""
+        "ru": "\u0418\u043c\u044f",
+        "en": "Name"
     },
     "kak nas nayti": {
-        "ru": "как нас найти",
-        "en": ""
+        "ru": "\u043a\u0430\u043a \u043d\u0430\u0441 \u043d\u0430\u0439\u0442\u0438",
+        "en": "how to find us"
     },
     "karera": {
-        "ru": "карьера",
-        "en": ""
+        "ru": "\u043a\u0430\u0440\u044c\u0435\u0440\u0430",
+        "en": "career"
     },
     "karera v lim servis": {
-        "ru": "карьера в лим сервис",
-        "en": ""
+        "ru": "\u043a\u0430\u0440\u044c\u0435\u0440\u0430 \u0432 \u043b\u0438\u043c \u0441\u0435\u0440\u0432\u0438\u0441",
+        "en": "career opportunities"
     },
     "kontakty": {
-        "ru": "контакты",
-        "en": ""
+        "ru": "\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "en": "contact"
     },
     "menyu": {
-        "ru": "Меню",
-        "en": ""
+        "ru": "\u041c\u0435\u043d\u044e",
+        "en": "Menu"
     },
     "messages.form.submit.body": {
-        "ru": "Мы обязательно свяжемся с вами в ближайшее время",
-        "en": ""
+        "ru": "\u041c\u044b \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u0441\u0432\u044f\u0436\u0435\u043c\u0441\u044f \u0441 \u0432\u0430\u043c\u0438 \u0432 \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0435\u0435 \u0432\u0440\u0435\u043c\u044f",
+        "en": "We will contact you shortly."
     },
     "messages.form.submit.title": {
-        "ru": "Спасибо за вашу заявку",
-        "en": ""
+        "ru": "\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u0432\u0430\u0448\u0443 \u0437\u0430\u044f\u0432\u043a\u0443!",
+        "en": "Thank you!"
     },
     "napishite nam ob etom i my obyazatelno svyazhemsya s vami": {
-        "ru": "Напишите нам об этом и мы обязательно свяжемся с вами",
-        "en": ""
+        "ru": "\u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430\u043c \u043e\u0431 \u044d\u0442\u043e\u043c \u0438 \u043c\u044b \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u0441\u0432\u044f\u0436\u0435\u043c\u0441\u044f \u0441 \u0432\u0430\u043c\u0438",
+        "en": "Please write us and we will contact you shortly."
     },
     "o nas": {
-        "ru": "о нас",
-        "en": ""
+        "ru": "\u043e \u043d\u0430\u0441",
+        "en": "about us"
     },
     "otpravit": {
-        "ru": "",
-        "en": ""
+        "ru": "\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c",
+        "en": "Send"
+    },
+    "otpravte svoe rezyume k nam na pochtu": {
+        "ru": "\u041e\u0442\u043f\u0440\u0430\u0432\u044c\u0442\u0435 \u0441\u0432\u043e\u0435 \u0440\u0435\u0437\u044e\u043c\u0435 \u043a \u043d\u0430\u043c \u043d\u0430 \u043f\u043e\u0447\u0442\u0443",
+        "en": "Send us your resume"
     },
     "podrobnee": {
-        "ru": "подробнее",
-        "en": ""
+        "ru": "\u043f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435",
+        "en": "read more"
     },
     "poisk": {
-        "ru": "",
-        "en": ""
+        "ru": "\u043f\u043e\u0438\u0441\u043a",
+        "en": "search"
     },
     "pokazano": {
-        "ru": "",
-        "en": ""
+        "ru": "\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u043e",
+        "en": "shown"
     },
     "portfolio": {
-        "ru": "портфолио",
-        "en": ""
+        "ru": "\u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+        "en": "portfolio"
     },
     "posmotret portfolio": {
-        "ru": "посмотреть портфолио",
-        "en": ""
+        "ru": "\u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+        "en": "see portfolio"
     },
     "posmotret produkciyu": {
-        "ru": "посмотреть продукцию",
-        "en": ""
+        "ru": "\u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043f\u0440\u043e\u0434\u0443\u043a\u0446\u0438\u044e",
+        "en": "see products"
     },
     "produkciya": {
-        "ru": "продукция",
-        "en": ""
+        "ru": "\u043f\u0440\u043e\u0434\u0443\u043a\u0446\u0438\u044f",
+        "en": "products"
     },
     "produkta": {
-        "ru": "",
-        "en": ""
+        "ru": "\u043f\u0440\u043e\u0434\u0443\u043a\u0442",
+        "en": "product"
+    },
+    "stante chastyu nashey komandy": {
+        "ru": "\u0421\u0442\u0430\u043d\u044c\u0442\u0435 \u0447\u0430\u0441\u0442\u044c\u044e \u043d\u0430\u0448\u0435\u0439 \u043a\u043e\u043c\u0430\u043d\u0434\u044b",
+        "en": "Join our team"
     },
     "telefon": {
-        "ru": "",
-        "en": ""
+        "ru": "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
+        "en": "Phone"
     },
     "tip vse": {
-        "ru": "",
-        "en": ""
+        "ru": "\u0432\u0441\u0435",
+        "en": "all"
     },
     "too lim servis": {
-        "ru": "ТОО \"ЛИМ СЕРВИС\"",
-        "en": ""
+        "ru": "\u0422\u041e\u041e \"\u041b\u0418\u041c \u0421\u0415\u0420\u0412\u0418\u0421\"",
+        "en": "\"Lim Service\" LLP"
+    },
+    "trebovaniya k sotrudniku:": {
+        "ru": "\u0422\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044f \u043a \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0443",
+        "en": "Requirements"
     },
     "uslugi": {
-        "ru": "услуги",
-        "en": ""
+        "ru": "\u0443\u0441\u043b\u0443\u0433\u0438",
+        "en": "service"
     },
     "uznat cenu": {
-        "ru": "",
-        "en": ""
+        "ru": "\u0423\u0437\u043d\u0430\u0442\u044c \u0446\u0435\u043d\u0443",
+        "en": "Price"
     },
     "vash vopros": {
-        "ru": "",
-        "en": ""
+        "ru": "\u0432\u0430\u0448 \u0432\u043e\u043f\u0440\u043e\u0441",
+        "en": "your question"
     },
     "voznikli voprosy": {
-        "ru": "возникли вопросы",
-        "en": ""
+        "ru": "\u0432\u043e\u0437\u043d\u0438\u043a\u043b\u0438 \u0432\u043e\u043f\u0440\u043e\u0441\u044b",
+        "en": "any questions?"
     },
     "vse": {
-        "ru": "",
-        "en": ""
+        "ru": "\u0412\u0441\u0435",
+        "en": "All"
     }
 }

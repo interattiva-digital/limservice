@@ -27,6 +27,7 @@
 
         @include breakpoint(small down) {
             margin-bottom: 10px;
+            font-size: 18px;
         }
     }
 
@@ -137,7 +138,7 @@
 
     @include breakpoint(small down) {
         right: 10px;
-        bottom: 190px;
+        bottom: 80px;
     }
 }
 
