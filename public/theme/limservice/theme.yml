@@ -136,10 +136,7 @@ templatefields:
             type: text
         clients_list:
             label: Клиенты
-            type: repeater
-            fields:
-                image:
-                    type: image
+            type: imagelist
 
         map_heading:
             label: Заголовок Карта
@@ -183,6 +180,9 @@ templatefields:
                 title:
                     label: Заголовок
                     type: text
+                body:
+                    label: Содержание
+                    type: html
                 front_image:
                     label: Большая картинка
                     type: image

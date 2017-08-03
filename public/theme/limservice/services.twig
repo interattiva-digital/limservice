@@ -71,6 +71,10 @@
                         <div class="lim-project__heading">
                             <h3 class="heading__supertext">{{ loop.index }}</h3>
                             <h3 class="heading__subtext">{{ item.title }}</h3>
+
+                            <div class="heading__content html-content">
+                                {{ item.body|raw }}
+                            </div>
                         </div>
 
                         <div class="lim-project__images">

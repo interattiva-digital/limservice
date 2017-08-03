@@ -18,8 +18,8 @@ $(document).ready(() => {
         $('body').toggleClass('menu-open');
     });
 
-    $(window).scroll(() => {
-        if($(window).scrollTop() > 0) {
+    $('body').scroll(() => {
+        if($('body').scrollTop() > 0) {
             $('.header').addClass('white');
         } else {
             $('.header').removeClass('white');

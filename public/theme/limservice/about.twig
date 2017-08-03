@@ -27,6 +27,37 @@
         </div>
     </section>
 
+    <section class="about__work">
+        <div class="work__heading text-center">
+            <h2 class="lim-heading">{{ page.templatefields.work_heading }}</h2>
+            <h3 class="lim-subtitle">{{ page.templatefields.work_subheading }}</h3>
+        </div>
+
+        <div class="row align-center">
+            <div class="column small-12 medium-8">
+                <div class="work__slider" data-work-slider>
+                    {% for item in page.templatefields.work_slides %}
+                        <div class="work__slide">
+                            {% if not loop.first %}
+                                <div class="slide__prev">{{ loop.index - 1 }}</div>
+                            {% endif %}
+
+                            <div class="slide__current">{{ loop.index }}</div>
+
+                            {% if not loop.last %}
+                                <div class="slide__next">{{ loop.index + 1 }}</div>
+                            {% endif %}
+                            <div class="slide__wrap">
+                                <h2 class="slide__title">{{ item.title }}</h2>
+                                <div class="slide__content">{{ item.content }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="about__team">
         <div class="row">
             <div class="column medium-1 small-12">
@@ -85,7 +116,7 @@
                 <div class="row align-center">
                     {% for item in batch  %}
                         <div class="column medium-2 small-6">
-                            <img src="{{ item.image|image() }}" alt="">
+                            <img src="{{ item|image() }}" alt="">
                         </div>
                     {% endfor %}
                 </div>

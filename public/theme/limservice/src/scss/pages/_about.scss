@@ -11,6 +11,142 @@
     }
 }
 
+.about__work {
+    background-image: url('../img/stick-vertical.svg');
+    background-repeat: no-repeat;
+    background-position: center 60px;
+    padding-top: 240px;
+
+    .work__slider {
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 90px;
+
+        .slick-dots {
+            position: relative;
+            z-index: 10;
+            list-style-type: none;
+            text-align: center;
+            margin: 10px 0 0;
+
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+
+                width: 12px;
+                height: 12px;
+                background-color: #d2d2d2;
+                text-indent: -9999px;
+
+                transition-property: width, height, background-color;
+                transition-duration: 0.3s;
+
+                &.slick-active {
+                    width: 18px;
+                    height: 18px;
+                    background-color: #44314D;
+                }
+            }
+        }
+    }
+
+    .work__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 240px;
+        padding: 55px 35px 35px 35px;
+        margin: 35px 100px 0 100px;
+        text-align: center;
+        border: 1px solid #D2D2D2;
+
+        @include breakpoint(small down) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .slide__current {
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            text-align: center;
+            background-color: white;
+            font-family: $font-thin;
+            font-size: 36px;
+            color: #131532;
+            line-height: 72px;
+            width: 70px;
+            height: 70px;
+        }
+
+        .slide__prev, .slide__next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            font-family: $font-thin;
+            font-size: 36px;
+            color: #929292;
+
+            cursor: pointer;
+
+            &.hide {
+                display: none;
+            }
+
+            @include breakpoint(small down) {
+                display: none;
+            }
+        }
+
+        .slide__prev {
+            left: -60px;
+        }
+
+        .slide__next {
+            right: -60px;
+        }
+
+        .slide__title {
+            font-family: $font-bold;
+            font-size: 16px;
+            color: #131532;
+            letter-spacing: 1px;
+            line-height: 20px;
+        }
+
+        .slide__content {
+            /* Работа начинается с: */
+            font-family: $font-regular;
+            font-size: 16px;
+            color: #131532;
+            line-height: 24px;
+        }
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 1px;
+            background-color: #D2D2D2;
+        }
+
+        &:before {
+            left: -30px;
+            top: 50%;
+        }
+
+        &:after {
+            right: -30px;
+            top: 50%;
+        }
+    }
+}
+
 .about__team {
     padding: 90px 0;
     text-align: center;
@@ -195,7 +331,7 @@
     background-image: url('../img/bg-patterned-rectangle.png');
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 80% 40%;
+    background-size: 80% 20%;
 
     .clients__header {
         margin-bottom: 60px;
