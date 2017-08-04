@@ -134,7 +134,7 @@
                 {% for item in filtered_products %}
                     <div class="column medium-6 small-12">
                         <div class="products__item" id="product-{{ loop.index }}">
-                            <img src="{{ item.image|image() }}" class="item__image">
+                            <img src="{{ item.image|image(600, 600, 'c') }}" class="item__image">
                             <div class="item__content">
                                 <div class="item__header" data-product-toggle="#product-{{ loop.index }}">
                                     <div class="item__name">
@@ -159,21 +159,25 @@
                                             <input type="hidden" name="product-id" value="{{ item.id }}">
                                             <input type="hidden" name="language" value="{{ app.locale|split('_')|first }}">
                                             <div class="row">
-                                                <div class="column small-12 medium-6">
-                                                    <label>Email
-                                                        <input type="email" name="email" class="lim-input">
+                                                <div class="column small-12">
+                                                    <h2 class="text-center">{{ l('Оставьте свои контакты') }}</h2>
+                                                </div>
+
+                                                <div class="column small-12">
+                                                    <label>
+                                                        <input type="email" name="email" class="lim-input" placeholder="{{ l('Email') }}">
                                                     </label>
                                                 </div>
 
-                                                <div class="column small-12 medium-6">
-                                                    <label>{{ l('Имя') }}
-                                                        <input type="text" name="name" class="lim-input">
+                                                <div class="column small-12">
+                                                    <label>
+                                                        <input type="text" name="name" class="lim-input" placeholder="{{ l('Имя') }}">
                                                     </label>
                                                 </div>
 
-                                                <div class="column small-12 medium-6">
-                                                    <label>{{ l('Телефон') }}
-                                                        <input type="text" name="phone" class="lim-input">
+                                                <div class="column small-12">
+                                                    <label>
+                                                        <input type="text" name="phone" class="lim-input" placeholder="{{ l('Телефон') }}">
                                                     </label>
                                                 </div>
                                             </div>
