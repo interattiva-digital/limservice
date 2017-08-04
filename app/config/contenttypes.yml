@@ -90,6 +90,7 @@ projects:
             type: imagelist
             group: content
         <<: *language_defaults
+    default_status: published
     viewless: true
 
 products:
@@ -119,6 +120,7 @@ products:
             group: content
 
         <<: *language_defaults
+    default_status: published
     viewless: true
     relations:
         product_types:
@@ -130,6 +132,7 @@ product_types:
     singular_name: Product Type
     slug: product_types
     singular_slug: product_types
+    default_status: published
     fields:
         title:
             label: Название
