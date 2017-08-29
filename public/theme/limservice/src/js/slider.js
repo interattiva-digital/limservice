@@ -36,6 +36,10 @@ $(document).ready(() => {
 
         let $target = $(e.currentTarget);
 
+        if($target.hasClass('active')) {
+            return;
+        }
+
         let $targetSlide = $($target.attr('data-target'));
 
         $slider.slick('slickGoTo', $slides.index($targetSlide));

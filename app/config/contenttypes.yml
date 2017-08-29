@@ -89,6 +89,10 @@ projects:
             label: Фото
             type: imagelist
             group: content
+        porder:
+            label: Порядок
+            type: integer
+            group: content
         <<: *language_defaults
     default_status: published
     viewless: true

@@ -1,6 +1,6 @@
 {% extends 'partials/_front.twig' %}
 
-{% setcontent projects = 'projects' %}
+{% setcontent projects = 'projects' orderby '-porder' %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
         <div class="lim-slider centered">
             <div class="lim-slider__container">
                 {% for item in projects %}
-                    <div id="project-{{ loop.index }}" class="slide">
+                    <div id="project-{{ item.id }}" class="slide">
                         <div class="slider-row">
                             <div class="lim-portfolio">
                                 <div class="lim-portfolio__content">
@@ -38,7 +38,7 @@
             <div class="lim-slider__controls" data-centered>
                 <ul class="controls__list">
                     {% for item in projects %}
-                        <li class="controls__list-item {% if loop.first %} active {% endif %}" data-target="#project-{{ loop.index }}">
+                        <li class="controls__list-item {% if loop.first %} active {% endif %}" data-target="#project-{{ item.id }}">
                             <span>{{ item.title }}</span>
                         </li>
                     {% endfor %}
