@@ -1,5 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent slides = 'slides' where { category: page.templatefields.category } %}
+{% setcontent projects = 'projects' where { category: page.templatefields.category } %}
+
 {% block content %}
 
     <section class="landing__hero lim-hero">
@@ -25,7 +28,7 @@
         <p class="desc__text">{{ page.templatefields.about_body }}</p>
     </section>
 
-    {% if page.templatefields.slides is not empty %}
+    {% if slides is not empty %}
         <section class="landing__slider">
             <div class="row expanded align-center">
                 <div class="column small-12">
@@ -36,7 +39,7 @@
 
                         <div class="slider__container lim-text-slider" data-landing-slider>
 
-                            {% for item in page.templatefields.slides %}
+                            {% for item in slides %}
                                 <div class="slider__slide">
                                     <h3 class="slide__title">{{ item.heading }}</h3>
                                     <p class="slide__content">{{ item.body }}</p>
@@ -57,7 +60,7 @@
             <h3 class="lim-subtitle">{{ page.templatefields.projects_subheading }}</h3>
         </div>
 
-        {% for item in page.templatefields.projects %}
+        {% for item in projects %}
             <div class="lim-project {{ loop.index % 2 == 0 ? 'lim-project--inverse':'' }}">
                 <div class="row">
                     <div class="lim-project__heading">

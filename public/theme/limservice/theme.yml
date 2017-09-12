@@ -97,16 +97,16 @@ templatefields:
         work_subheading:
             label: Подзаголовок Работа
             type: text
-        work_slides:
-            label: Слайды Работа
-            type: repeater
-            fields:
-                title:
-                    label: Слайд заголовок
-                    type: text
-                content:
-                    label: Слайд текст
-                    type: textarea
+#        work_slides:
+#            label: Слайды Работа
+#            type: repeater
+#            fields:
+#                title:
+#                    label: Слайд заголовок
+#                    type: text
+#                content:
+#                    label: Слайд текст
+#                    type: textarea
 
         team_heading:
             label: Заголовок Команда
@@ -154,16 +154,16 @@ templatefields:
             label: Заголовок Преимущества
             type: text
 
-        pros:
-            label: Преимущества
-            type: repeater
-            fields:
-                image:
-                    label: Картинка
-                    type: image
-                description:
-                    label: Описание
-                    type: textarea
+#        pros:
+#            label: Преимущества
+#            type: repeater
+#            fields:
+#                image:
+#                    label: Картинка
+#                    type: image
+#                description:
+#                    label: Описание
+#                    type: textarea
 
         offers_heading:
             label: Заголовок Предложения
@@ -173,22 +173,22 @@ templatefields:
             label: Подзаголовок Предложения
             type: text
 
-        offers:
-            label: Предложения
-            type: repeater
-            fields:
-                title:
-                    label: Заголовок
-                    type: text
-                body:
-                    label: Содержание
-                    type: html
-                front_image:
-                    label: Большая картинка
-                    type: image
-                rear_image:
-                    label: Маленькая картинка
-                    type: image
+#        offers:
+#            label: Предложения
+#            type: repeater
+#            fields:
+#                title:
+#                    label: Заголовок
+#                    type: text
+#                body:
+#                    label: Содержание
+#                    type: html
+#                front_image:
+#                    label: Большая картинка
+#                    type: image
+#                rear_image:
+#                    label: Маленькая картинка
+#                    type: image
 
     landing.twig:
         category:
@@ -201,16 +201,16 @@ templatefields:
         about_body:
             label: Текст Описание
             type: textarea
-        slides:
-            label: Слайды
-            type: repeater
-            fields:
-                heading:
-                    label: Заголовок
-                    type: text
-                body:
-                    label: Текст
-                    type: textarea
+#        slides:
+#            label: Слайды
+#            type: repeater
+#            fields:
+#                heading:
+#                    label: Заголовок
+#                    type: text
+#                body:
+#                    label: Текст
+#                    type: textarea
 
         projects_heading:
             label: Заголовок Проекты
@@ -218,22 +218,22 @@ templatefields:
         projects_subheading:
             label: Подзаголовок Проекты
             type: text
-        projects:
-            label: Проекты
-            type: repeater
-            fields:
-                title:
-                    label: Название
-                    type: text
-                body:
-                    label: Описание
-                    type: html
-                front_image:
-                    label: Большое фото
-                    type: image
-                rear_image:
-                    label: Маленькое фото
-                    type: image
+#        projects:
+#            label: Проекты
+#            type: repeater
+#            fields:
+#                title:
+#                    label: Название
+#                    type: text
+#                body:
+#                    label: Описание
+#                    type: html
+#                front_image:
+#                    label: Большое фото
+#                    type: image
+#                rear_image:
+#                    label: Маленькое фото
+#                    type: image
 
     career.twig:
         about_heading:
@@ -247,16 +247,16 @@ templatefields:
             label: Заголовок Вакансии
             type: text
 
-        vacancies:
-            label: Вакансии
-            type: repeater
-            fields:
-                title:
-                    label: Название
-                    type: text
-                description:
-                    label: Описание
-                    type: html
+#        vacancies:
+#            label: Вакансии
+#            type: repeater
+#            fields:
+#                title:
+#                    label: Название
+#                    type: text
+#                description:
+#                    label: Описание
+#                    type: html
         email:
             label: Email
             type: text

@@ -2,6 +2,8 @@
 
 {% setcontent resource = 'resources/1' %}
 
+{% setcontent work_slides = 'work_slides' %}
+
 {% block content %}
 
     <section class="about__hero lim-hero">
@@ -36,7 +38,7 @@
         <div class="row align-center">
             <div class="column small-12 medium-8">
                 <div class="work__slider" data-work-slider>
-                    {% for item in page.templatefields.work_slides %}
+                    {% for item in work_slides %}
                         <div class="work__slide">
                             {% if not loop.first %}
                                 <div class="slide__prev">{{ loop.index - 1 }}</div>

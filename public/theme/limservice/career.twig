@@ -1,5 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent vacancies = 'vacancies' %}
+
 {% block content %}
 
     <section class="career__hero lim-hero">
@@ -35,16 +37,16 @@
                 <div class="row">
                     <div class="column medium-4 small-12">
                         <ul class="tabs vacancies__tab-controls" data-tabs id="vacancies-tabs">
-                            {% for item in page.templatefields.vacancies %}
+                            {% for item in vacancies %}
                                 <li class="tabs-title {{ loop.first ? 'is-active':'' }}" aria-selected="true">
-                                    <a href="#vacancy-{{ loop.index }}">{{ item.title }}</a>
+                                    <a href="#vacancy-{{ loop.index }}">{{ item.get('title') }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
-                    </div>
+                    </div>1
                     <div class="column medium-7 small-12">
                         <div class="vacancies__tab-content tabs-content" data-tabs-content="vacancies-tabs">
-                            {% for item in page.templatefields.vacancies %}
+                            {% for item in vacancies %}
                                 <div class="vacancies__tab tabs-panel {{ loop.first ? 'is-active':'' }}" id="vacancy-{{ loop.index }}">
 
                                     <h3 class="tab__title">{{ l('Требования к сотруднику:') }}</h3>

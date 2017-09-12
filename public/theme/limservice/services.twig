@@ -1,5 +1,8 @@
 {% extends 'partials/_master.twig' %}
 
+{% setcontent pros = 'pros' %}
+{% setcontent offers = 'offers' %}
+
 {% block content %}
 
     <section class="services__hero lim-hero">
@@ -29,7 +32,7 @@
                 <div class="row">
                     <div class="column medium-2 small-12 medium-order-1 small-order-2">
                         <ul class="tabs pros__tab-controls" data-tabs id="pros-tabs">
-                            {% for item in page.templatefields.pros %}
+                            {% for item in pros %}
                                 <li class="tabs-title {{ loop.first ? 'is-active':'' }}">
                                     <a href="#pro-{{ loop.index }}">{{ loop.index }}</a>
                                 </li>
@@ -38,7 +41,7 @@
                     </div>
                     <div class="column medium-9 small-12 medium-order-2 small-order-1">
                         <div class="pros__tab-content tabs-content" data-tabs-content="pros-tabs">
-                            {% for item in page.templatefields.pros %}
+                            {% for item in pros %}
                                 <div class="pros__tab tabs-panel {{ loop.first ? 'is-active':'' }}" id="pro-{{ loop.index }}" style="background-image: url('{{ item.image|image() }}')">
                                     <div class="tab__description">{{ item.description }}</div>
                                 </div>
@@ -49,7 +52,7 @@
             </div>
 
             <div class="column small-12 pros__slider-mobile show-for-small-only lim-text-slider">
-                {% for item in page.templatefields.pros %}
+                {% for item in pros %}
                     <div class="pros__slide" style="background-image: url('{{ item.image|image() }}')">
                         <div class="slide__description">{{ item.description }}</div>
                     </div>
@@ -65,7 +68,7 @@
         </div>
 
         <div class="offers__projects">
-            {% for item in page.templatefields.offers %}
+            {% for item in offers %}
                 <div class="lim-project {{ loop.index % 2 == 0 ? 'lim-project--inverse':'' }}">
                     <div class="row">
                         <div class="lim-project__heading">
