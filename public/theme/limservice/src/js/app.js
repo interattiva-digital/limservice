@@ -13,3 +13,10 @@ require('./map.js');
 $(document).ready(() => {
     $(document).foundation();
 });
+
+window.renderCaptchas = function () {
+    $('.g-recaptcha').each(function(index, el) {
+        let sitekey = $(el).attr('data-sitekey');
+        grecaptcha.render(el, {'sitekey' : sitekey});
+    });
+};

@@ -23,8 +23,20 @@ class LimserviceExtension extends SimpleExtension
 
     public function handleFormRequest(Request $request)
     {
+
         $app = $this->getContainer();
         $mailer = $app['mailer'];
+
+        $recaptcha = new \ReCaptcha\ReCaptcha($app['config']->get('general/google_recaptcha_secret'));
+        $resp = $recaptcha->verify($request->request->get('g-recaptcha-response'));
+
+        if(!$resp->isSuccess()) {
+            $lang = $request->request->get('language');
+
+            $response = new RedirectResponse("${lang}/error");
+
+            return $response;
+        }
 
         $product = false;
         if($request->request->has('product-id')) {
