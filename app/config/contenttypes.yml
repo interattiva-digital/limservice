@@ -78,7 +78,7 @@ projects:
         category:
             label: Категория
             type: select
-            values: ['HoReCa', 'Home', 'Business']
+            values: {'HoReCa': 'HoReCa', 'Home': 'Home', 'Business': 'Business'}
             group: content
         description:
             label: Описание
@@ -92,6 +92,22 @@ projects:
         porder:
             label: Порядок
             type: integer
+            group: content
+        portfolio_order:
+            label: Порядок в портфолио
+            type: integer
+            group: content
+        in_portfolio:
+            label: В портфолио?
+            type: checkbox
+            group: content
+        front_image:
+            label: Большое фото
+            type: image
+            group: content
+        rear_image:
+            label: Маленькое фото
+            type: image
             group: content
         <<: *language_defaults
     default_status: published
@@ -120,7 +136,7 @@ products:
         category:
             label: Категория
             type: select
-            values: ['HoReCa', 'Home', 'Business']
+            values: {'HoReCa': 'HoReCa', 'Home': 'Home', 'Business': 'Business'}
             group: content
 
         <<: *language_defaults
@@ -153,8 +169,10 @@ resources:
     fields:
         facebook:
             type: text
+            group: content
         instagram:
             type: text
+            group: content
         address:
             label: Адрес
             type: text
@@ -183,11 +201,17 @@ work_slides:
         title:
             label: Слайд заголовок
             type: text
+            group: content
             is_translateable: true
         content:
             label: Слайд текст
             type: textarea
+            group: content
             is_translateable: true
+        porder:
+            label: Порядок
+            type: integer
+            group: content
         <<: *language_defaults
 
 slides:
@@ -208,6 +232,10 @@ slides:
             label: Текст
             type: textarea
             is_translateable: true
+        porder:
+            label: Порядок
+            type: integer
+            group: content
         <<: *language_defaults
 
 pros:
@@ -219,10 +247,16 @@ pros:
         image:
             label: Картинка
             type: image
+            group: content
         description:
             label: Описание
             type: textarea
             is_translateable: true
+            group: content
+        porder:
+            label: Порядок
+            type: integer
+            group: content
         <<: *language_defaults
 
 offers:
@@ -235,42 +269,24 @@ offers:
             label: Заголовок
             type: text
             is_translateable: true
+            group: content
         body:
             label: Содержание
             type: html
             is_translateable: true
+            group: content
         front_image:
             label: Большая картинка
             type: image
+            group: content
         rear_image:
             label: Маленькая картинка
             type: image
-        <<: *language_defaults
-
-projects:
-    name: Проекты
-    viewless: true
-    slug: projects
-    singular_slug: projects
-    fields:
-        title:
-            label: Название
-            type: text
-            is_translateable: true
-        category:
-            label: Категория
-            type: select
-            values: {'HoReCa': 'HoReCa', 'Home': 'Home', 'Business': 'Business'}
-        body:
-            label: Описание
-            type: html
-            is_translateable: true
-        front_image:
-            label: Большое фото
-            type: image
-        rear_image:
-            label: Маленькое фото
-            type: image
+            group: content
+        porder:
+            label: Порядок
+            type: integer
+            group: content
         <<: *language_defaults
 
 vacancies:
@@ -283,10 +299,16 @@ vacancies:
             label: Название
             type: text
             is_translateable: true
+            group: content
         description:
             label: Описание
             type: html
             is_translateable: true
+            group: content
+        porder:
+            label: Порядок
+            type: integer
+            group: content
         <<: *language_defaults
 
 # Possible field types:

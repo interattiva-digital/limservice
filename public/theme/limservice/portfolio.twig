@@ -1,6 +1,6 @@
 {% extends 'partials/_front.twig' %}
 
-{% setcontent projects = 'projects' orderby '-porder' %}
+{% setcontent projects = 'projects' where { in_portfolio: true } orderby '-portfolio_order' %}
 
 {% block content %}
 

@@ -1,7 +1,15 @@
 {
+    "2017 c lim service. vse prava zashchishcheny": {
+        "ru": "2017 c lim service. \u0432\u0441\u0435 \u043f\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u044b",
+        "en": "2017 lim service. all rights reserved"
+    },
     "business": {
         "ru": "business",
         "en": "business"
+    },
+    "email": {
+        "ru": "",
+        "en": ""
     },
     "glavnaya": {
         "ru": "\u0433\u043b\u0430\u0432\u043d\u0430\u044f",
@@ -35,6 +43,10 @@
         "ru": "\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
         "en": "contact"
     },
+    "label": {
+        "ru": "2017 c lim service. \u0432\u0441\u0435 \u043f\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043d\u044b",
+        "en": "2017 lim service. all rights reserved"
+    },
     "menyu": {
         "ru": "\u041c\u0435\u043d\u044e",
         "en": "Menu"
@@ -51,9 +63,17 @@
         "ru": "\u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430\u043c \u043e\u0431 \u044d\u0442\u043e\u043c \u0438 \u043c\u044b \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u0441\u0432\u044f\u0436\u0435\u043c\u0441\u044f \u0441 \u0432\u0430\u043c\u0438",
         "en": "Please write us and we will contact you shortly."
     },
+    "novosti": {
+        "ru": "",
+        "en": ""
+    },
     "o nas": {
         "ru": "\u043e \u043d\u0430\u0441",
         "en": "about us"
+    },
+    "ostavte svoi kontakty": {
+        "ru": "\u043e\u0441\u0442\u0430\u0432\u044c\u0442\u0435 \u0441\u0432\u043e\u0439 \u043a\u043e\u043d\u0442\u0430\u043a\u0442",
+        "en": "leave your contact"
     },
     "otpravit": {
         "ru": "\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c",
@@ -94,6 +114,10 @@
     "produkta": {
         "ru": "\u043f\u0440\u043e\u0434\u0443\u043a\u0442",
         "en": "product"
+    },
+    "sozdano v interattiva": {
+        "ru": "\u0441\u043e\u0437\u0434\u0430\u043d\u043e \u0432 \u0438\u043d\u0442\u0435\u0440\u0430\u0442\u0442\u0438\u0432\u0430",
+        "en": "made by interattiva"
     },
     "stante chastyu nashey komandy": {
         "ru": "\u0421\u0442\u0430\u043d\u044c\u0442\u0435 \u0447\u0430\u0441\u0442\u044c\u044e \u043d\u0430\u0448\u0435\u0439 \u043a\u043e\u043c\u0430\u043d\u0434\u044b",
