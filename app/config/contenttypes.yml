@@ -81,8 +81,13 @@ projects:
             values: {'HoReCa': 'HoReCa', 'Home': 'Home', 'Business': 'Business'}
             group: content
         description:
-            label: Описание
-            type: textarea
+            label: Описание портфолио
+            type: html
+            is_translateable: true
+            group: content
+        short_desc:
+            label: Описание в подразделе
+            type: html
             is_translateable: true
             group: content
         images:

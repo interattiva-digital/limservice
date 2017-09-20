@@ -47,6 +47,14 @@
         color: $text-color;
         letter-spacing: normal;
         line-height: normal;
+
+        * {
+            font-family: $font-regular;
+            font-size: 16px;
+            color: $text-color;
+            letter-spacing: normal;
+            line-height: normal;
+        }
     }
 
     @include breakpoint(small down) {

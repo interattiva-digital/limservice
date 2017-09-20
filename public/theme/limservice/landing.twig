@@ -1,7 +1,7 @@
 {% extends 'partials/_master.twig' %}
 
-{% setcontent slides = 'slides' where { category: page.templatefields.category } orderby '-porder' %}
-{% setcontent projects = 'projects' where { category: page.templatefields.category } orderby '-porder' %}
+{% setcontent slides = 'slides' where { category: page.templatefields.category } orderby 'porder' %}
+{% setcontent projects = 'projects' where { category: page.templatefields.category } orderby 'porder' %}
 
 {% block content %}
 
@@ -67,7 +67,7 @@
                         <h3 class="heading__supertext">{{ item.title }}</h3>
 
                         <div class="heading__content html-content">
-                            {{ item.description|raw }}
+                            {{ item.short_desc|raw }}
                         </div>
                     </div>
 

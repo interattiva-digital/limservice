@@ -1,6 +1,6 @@
 {% extends 'partials/_master.twig' %}
 
-{% setcontent vacancies = 'vacancies' orderby '-porder' %}
+{% setcontent vacancies = 'vacancies' orderby 'porder' %}
 
 {% block content %}
 
@@ -43,7 +43,7 @@
                                 </li>
                             {% endfor %}
                         </ul>
-                    </div>1
+                    </div>
                     <div class="column medium-7 small-12">
                         <div class="vacancies__tab-content tabs-content" data-tabs-content="vacancies-tabs">
                             {% for item in vacancies %}

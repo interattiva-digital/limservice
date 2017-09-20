@@ -1,6 +1,6 @@
 {% extends 'partials/_front.twig' %}
 
-{% setcontent projects = 'projects' where { in_portfolio: true } orderby '-portfolio_order' %}
+{% setcontent projects = 'projects' where { in_portfolio: true } orderby 'portfolio_order' %}
 
 {% block content %}
 
@@ -17,7 +17,7 @@
                                         <h2 class="content__title text-uppercase">{{ item.title }}</h2>
 
                                         <p class="content__label">Что было сделано</p>
-                                        <p class="content__text">{{ item.description }}</p>
+                                        <div class="content__text">{{ item.description|raw }}</div>
                                     </div>
                                 </div>
 
